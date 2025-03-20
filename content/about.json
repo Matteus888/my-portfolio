@@ -1,0 +1,26 @@
+{
+  "name": "Jean Dupont",
+  "title": "Développeur Web Junior",
+  "description": "Passionné par le développement web, je crée des sites et applications modernes avec JavaScript, React et Node.js. Après une formation intensive à La Capsule, j'ai réalisé plusieurs projets, dont un site e-commerce et une application sociale.",
+  "skills": ["JavaScript", "React", "Next.js", "Node.js", "Express", "MongoDB", "HTML5 & CSS3"],
+  "experience": [
+    {
+      "title": "Développeur Frontend - My 80's Store",
+      "date": "2025",
+      "description": "Conception et développement d'un site e-commerce spécialisé dans les objets vintage des années 80."
+    },
+    {
+      "title": "Développeur Fullstack - My Social App",
+      "date": "2025",
+      "description": "Création d'une plateforme sociale avec gestion des profils, messagerie et système de followers."
+    }
+  ],
+  "education": [
+    {
+      "school": "La Capsule",
+      "degree": "Bootcamp Développeur Web Fullstack",
+      "date": "2025"
+    }
+  ],
+  "hobbies": ["Jeux rétro", "Photographie", "Création de jeux en JavaScript"]
+}
