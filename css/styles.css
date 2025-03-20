@@ -1,4 +1,12 @@
 /* Styles généraux */
+:root {
+  --background-color: #163853;
+  --roboto: Roboto;
+}
+
+body {
+  font-family: var(--roboto);
+}
 
 /* Composants */
 
@@ -7,26 +15,33 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
-  background-color: #163853;
+  padding: 0 10px;
+  height: 80px;
+  background-color: var(--background-color);
   color: white;
   border: 1px solid black;
 }
 
-.nav-container {}
-
-.nav-menu {
+.nav-container {
   display: flex;
 }
 
-.logo img {
-  width: 40px;
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  /* border: 1px solid white; */
+}
+
+.logo {
   height: 40px;
+  display: block;
 }
 
 .nav-item a {
   color: inherit;
   text-decoration: none;
+  font-size: 1.5rem;
 }
 
 .option-container {
