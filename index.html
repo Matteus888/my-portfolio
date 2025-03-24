@@ -14,6 +14,7 @@
     />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./js/portfolio.js" defer></script>
     <script src="./js/translations.js" defer></script>
     <script src="./js/themeToggle.js" defer></script>
   </head>
@@ -23,11 +24,14 @@
         <ul class="nav-menu">
           <li class="nav-item">
             <a href="#top">
-              <img class="logo" src="./assets/images/logo-white.png" alt="Logo Portfolio" />
+              <img class="logo" src="./assets/images/logo-light.png" alt="Logo Portfolio" />
             </a>
           </li>
           <li class="nav-item">
             <a href="#about" data-i18n="about">À PROPOS</a>
+          </li>
+          <li class="nav-item">
+            <a href="#formations">FORMATION</a>
           </li>
           <li class="nav-item">
             <a href="#skills" data-i18n="skills">COMPÉTENCES</a>
@@ -61,8 +65,15 @@
         </div>
       </div>
     </header>
-    <main class="main">
-      <p data-i18n="welcome">Bienvenue sur mon portfolio</p>
+    <main>
+      <section class="home" id="top">
+        <div class="background-image-container">
+          <img class="background-image" src="./assets/images/vscode-dark.png" alt="Code background" />
+        </div>
+        <div class="terminal" id="terminal"><span id="text" data-i18n="welcome"></span><span class="cursor">.</span></div>
+        <!-- <p data-i18n="welcome">Bienvenue sur mon portfolio</p> -->
+      </section>
+      <section class="about" id="about"></section>
     </main>
   </body>
 </html>

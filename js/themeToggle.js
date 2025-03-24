@@ -2,17 +2,20 @@
 const themeToggle = document.querySelector("#theme-toggle");
 
 const logo = document.querySelector(".logo");
+const bcgImage = document.querySelector(".background-image");
 
 // Fonction pour basculer entre le mode jour et nuit
 function toggleTheme(isDarkMode) {
   if (isDarkMode) {
     document.body.classList.add("dark-mode");
     localStorage.setItem("theme", "dark");
-    logo.src = "./assets/images/logo-white.png";
+    logo.src = "./assets/images/logo-light.png";
+    bcgImage.src = "./assets/images/vscode-dark.png";
   } else {
     document.body.classList.remove("dark-mode");
     localStorage.setItem("theme", "light");
-    logo.src = "./assets/images/logo-blue.png";
+    logo.src = "./assets/images/logo-dark.png";
+    bcgImage.src = "./assets/images/vscode-light.png";
   }
 }
 
