@@ -8,8 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./js/translations.js" defer></script>
+    <script src="./js/themeToggle.js" defer></script>
   </head>
   <body>
     <header class="header-container">
@@ -21,23 +27,42 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#about">À propos</a>
+            <a href="#about" data-i18n="about">À PROPOS</a>
           </li>
           <li class="nav-item">
-            <a href="#skills">Compétences</a>
+            <a href="#skills" data-i18n="skills">COMPÉTENCES</a>
           </li>
           <li class="nav-item">
-            <a href="#portfolio">Portfolio</a>
+            <a href="#portfolio">PORTFOLIO</a>
           </li>
           <li class="nav-item">
-            <a href="#contact">Contact</a>
+            <a href="#contact">CONTACT</a>
           </li>
         </ul>
       </nav>
       <div class="option-container">
-        <div class="lang-container">Langue</div>
-        <div class="theme-container">Jour/Nuit</div>
+        <div class="lang-container">
+          <label class="lang-switch">
+            <input type="checkbox" id="lang-toggle" />
+            <span class="slider">
+              <img src="./assets/icons/france.png" alt="Drapeau Français" class="flag fr" />
+              <img src="./assets/icons/united-kingdom.png" alt="English flag" class="flag en" />
+            </span>
+          </label>
+        </div>
+        <div class="theme-container">
+          <label class="theme-switch">
+            <input type="checkbox" id="theme-toggle" />
+            <span class="slider">
+              <p class="theme day">☀️</p>
+              <p class="theme night">🌙</p>
+            </span>
+          </label>
+        </div>
       </div>
     </header>
+    <main class="main">
+      <p data-i18n="welcome">Bienvenue sur mon portfolio</p>
+    </main>
   </body>
 </html>
