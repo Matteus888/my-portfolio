@@ -3,18 +3,20 @@
 // Dictionnaire des traductions
 const translations = {
   fr: {
-    about: "À PROPOS",
+    home: "ACCUEIL",
+    profile: "PROFIL",
     skills: "COMPÉTENCES",
     day: "Jour",
     night: "Nuit",
-    welcome: "Bienvenue sur mon portfolio",
+    welcome: "BIENVENUE SUR MON PORTFOLIO !\nJE SUIS MATTHIEU, DÉVELOPPEUR WEB.",
   },
   en: {
-    about: "ABOUT",
+    home: "HOME",
+    profile: "PROFILE",
     skills: "SKILLS",
     day: "Day",
     night: "Night",
-    welcome: "Welcome to my portfolio",
+    welcome: "WELCOME TO MY PORTFOLIO !\nI'M MATTHIEU, WEB DEVELOPPER.",
   },
 };
 

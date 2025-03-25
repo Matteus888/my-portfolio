@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Matthieu Chatelin Portfolio | Développeur web junior</title>
-    <link rel="icon" href="./assets/images/logo.png" />
+    <link rel="icon" href="./assets/icons/logo-dark.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/styles.css" />
     <script src="./js/portfolio.js" defer></script>
@@ -24,11 +25,11 @@
         <ul class="nav-menu">
           <li class="nav-item">
             <a href="#top">
-              <img class="logo" src="./assets/images/logo-light.png" alt="Logo Portfolio" />
+              <img class="logo" src="./assets/icons/logo-light.png" alt="Logo Home" />
             </a>
           </li>
           <li class="nav-item">
-            <a href="#about" data-i18n="about">À PROPOS</a>
+            <a href="#profile" data-i18n="profile">PROFIL</a>
           </li>
           <li class="nav-item">
             <a href="#formations">FORMATION</a>
@@ -65,15 +66,60 @@
         </div>
       </div>
     </header>
+
+    <div id="sidebar" class="sidebar">
+      <a href="#top">
+        <img src="./assets/icons/logo-light.png" alt="Logo Home" id="home-logo" />
+        <p class="sidebar-text" data-i18n="home">ACCUEIL</p>
+        <span class="sidebar-indicator"></span>
+      </a>
+      <a href="#profile">
+        <img src="./assets/icons/profile-light.png" alt="Logo Profile" />
+        <p class="sidebar-text" data-i18n="profile">PROFIL</p>
+        <span class="sidebar-indicator"></span>
+      </a>
+      <a href="#formations">
+        <img src="./assets/icons/formation-light.png" alt="Logo Formation" />
+        <p class="sidebar-text">FORMATION</p>
+        <span class="sidebar-indicator"></span>
+      </a>
+      <a href="#skills">
+        <img src="./assets/icons/skills-light.png" alt="Logo Skills" />
+        <p class="sidebar-text" data-i18n="skills">COMPÉTENCES</p>
+        <span class="sidebar-indicator"></span>
+      </a>
+      <a href="#portfolio">
+        <img src="./assets/icons/portfolio-light.png" alt="Logo Portfolio" />
+        <p class="sidebar-text">PORTFOLIO</p>
+        <span class="sidebar-indicator"></span>
+      </a>
+      <a href="#contact">
+        <img src="./assets/icons/contact-light.png" alt="Logo Contact" />
+        <p class="sidebar-text">CONTACT</p>
+        <span class="sidebar-indicator"></span>
+      </a>
+    </div>
+
     <main>
       <section class="home" id="top">
         <div class="background-image-container">
           <img class="background-image" src="./assets/images/vscode-dark.png" alt="Code background" />
         </div>
-        <div class="terminal" id="terminal"><span id="text" data-i18n="welcome"></span><span class="cursor">.</span></div>
-        <!-- <p data-i18n="welcome">Bienvenue sur mon portfolio</p> -->
+        <div class="terminal" id="terminal">
+          <span id="text" data-i18n="welcome"></span>
+          <a class="btn" id="terminalBtn" data-i18n="profile" href="#profile">PROFIL</a>
+        </div>
       </section>
-      <section class="about" id="about"></section>
+
+      <section class="profile" id="profile"></section>
+
+      <section class="formation" id="formation"></section>
+
+      <section class="skills" id="skills"></section>
+
+      <section class="portfolio" id="portfolio"></section>
+
+      <section class="contact" id="contact"></section>
     </main>
   </body>
 </html>
