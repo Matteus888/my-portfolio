@@ -11,7 +11,7 @@
 
 body.dark-mode {
   --background-color: #1E1E1E;
-  --section-color: grey;
+  --section-color: #393b40;
   --text-color: white;
   --line-color: white;
 }
@@ -27,7 +27,6 @@ body {
 .btn {
   padding: 8px 15px;
   border: var(--line-color) 2px solid;
-  border-radius: 20px;
   background-color: var(--background-color);
   color: var(--text-color);
   font-size: 16px;
@@ -40,6 +39,15 @@ body {
 
 .btn:active {
   transform: scale(0.9);
+}
+
+/* Barre de défilement */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1E1E1E;
 }
 
 /* Header */
@@ -202,11 +210,11 @@ input:checked+.slider .night {
 .sidebar {
   position: fixed;
   border: var(--line-color) 1px solid;
-  top: calc(50% - 170px);
-  left: 0;
+  border-left: none;
+  top: calc(50% - 200px);
+  left: -70px;
   width: 60px;
-  padding: 5px 0 10px 0;
-  /* height: 310px; */
+  padding: 10px 0 15px 0;
   background-color: var(--background-color);
   display: flex;
   flex-direction: column;
@@ -214,11 +222,14 @@ input:checked+.slider .night {
   justify-content: center;
   gap: 20px;
   z-index: 9;
-  display: none;
+  transition: left 0.4s ease-in-out;
+}
+
+.sidebar.show {
+  left: 0;
 }
 
 .sidebar a {
-  /* border: 1px solid red; */
   min-height: 40px;
   position: relative;
   text-decoration: none;
@@ -233,24 +244,24 @@ input:checked+.slider .night {
   height: 40px;
 }
 
-.sidebar-text {
+.sidebar-tooltip {
   position: absolute;
   left: 55px;
   top: 50%;
   transform: translateY(-50%);
   background-color: var(--background-color);
   color: var(--text-color);
-  padding: 7px 12px;
+  padding: 6px 10px;
   border-radius: 2px;
   white-space: nowrap;
-  font-size: 14px;
+  font-size: 12px;
   border: 1px solid var(--line-color);
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
 }
 
-.sidebar a:hover .sidebar-text {
+.sidebar a:hover .sidebar-tooltip {
   opacity: 1;
   visibility: visible;
 }
@@ -364,35 +375,38 @@ input:checked+.slider .night {
 
 /* About Section*/
 .profile {
-  height: 500px;
-  /* background-color: var(--section-color); */
+  height: 800px;
+  background-color: var(--section-color);
 }
 
 /* Formation Section */
 .formation {
-  height: 500px;
+  height: 800px;
+  background-color: var(--background-color);
 }
 
 /* Skills Section */
 .skills {
-  height: 500px;
+  height: 800px;
+  background-color: var(--section-color);
 }
 
 /* Portfolio Section */
 .portfolio {
-  height: 500px;
+  height: 800px;
+  background-color: var(--background-color);
 }
 
 /* Contact Section */
 .contact {
-  height: 500px;
+  height: 800px;
+  background-color: var(--section-color);
 }
 
-/* Barre de défilement */
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #1E1E1E;
+/* Footer */
+.footer {
+  height: 60px;
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: space-between;
 }

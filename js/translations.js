@@ -1,7 +1,5 @@
-// Gestion des langues
-
 // Dictionnaire des traductions
-const translations = {
+export const translations = {
   fr: {
     home: "ACCUEIL",
     profile: "PROFIL",
@@ -20,30 +18,21 @@ const translations = {
   },
 };
 
-const toggle = document.querySelector("#lang-toggle");
-
 // Fonction pour switcher la langue
-function changeLanguage(lang) {
+export function changeLanguage(lang) {
   localStorage.setItem("lang", lang);
 
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
-    if (key !== "welcome") {
+    if (translations[lang][key]) {
       el.textContent = translations[lang][key];
     }
   });
 
-  toggle.checked = lang === "en";
-
   document.dispatchEvent(new Event("languageChanged"));
 }
 
-// Détection de la langue enregistrée
-const currentLang = localStorage.getItem("lang") || "fr";
-changeLanguage(currentLang);
-
-// Evènement sur le switch
-toggle.addEventListener("change", () => {
-  const newLang = toggle.checked ? "en" : "fr";
-  changeLanguage(newLang);
-});
+// Fonction pour récupérer langue actuelle
+export function getCurrentLanguage() {
+  return localStorage.getItem("lang") || "fr";
+}

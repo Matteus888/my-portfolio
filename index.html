@@ -15,16 +15,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/styles.css" />
-    <script src="./js/portfolio.js" defer></script>
-    <script src="./js/translations.js" defer></script>
-    <script src="./js/themeToggle.js" defer></script>
+    <script type="module" src="./js/main.js" defer></script>
   </head>
   <body>
     <header class="header-container">
       <nav class="nav-container">
         <ul class="nav-menu">
           <li class="nav-item">
-            <a href="#top">
+            <a href="#home">
               <img class="logo" src="./assets/icons/logo-light.png" alt="Logo Home" />
             </a>
           </li>
@@ -68,40 +66,40 @@
     </header>
 
     <div id="sidebar" class="sidebar">
-      <a href="#top">
+      <a href="#home">
         <img src="./assets/icons/logo-light.png" alt="Logo Home" id="home-logo" />
-        <p class="sidebar-text" data-i18n="home">ACCUEIL</p>
+        <p class="sidebar-tooltip" data-i18n="home">ACCUEIL</p>
         <span class="sidebar-indicator"></span>
       </a>
       <a href="#profile">
         <img src="./assets/icons/profile-light.png" alt="Logo Profile" />
-        <p class="sidebar-text" data-i18n="profile">PROFIL</p>
+        <p class="sidebar-tooltip" data-i18n="profile">PROFIL</p>
         <span class="sidebar-indicator"></span>
       </a>
       <a href="#formations">
         <img src="./assets/icons/formation-light.png" alt="Logo Formation" />
-        <p class="sidebar-text">FORMATION</p>
+        <p class="sidebar-tooltip">FORMATION</p>
         <span class="sidebar-indicator"></span>
       </a>
       <a href="#skills">
         <img src="./assets/icons/skills-light.png" alt="Logo Skills" />
-        <p class="sidebar-text" data-i18n="skills">COMPÉTENCES</p>
+        <p class="sidebar-tooltip" data-i18n="skills">COMPÉTENCES</p>
         <span class="sidebar-indicator"></span>
       </a>
       <a href="#portfolio">
         <img src="./assets/icons/portfolio-light.png" alt="Logo Portfolio" />
-        <p class="sidebar-text">PORTFOLIO</p>
+        <p class="sidebar-tooltip">PORTFOLIO</p>
         <span class="sidebar-indicator"></span>
       </a>
       <a href="#contact">
         <img src="./assets/icons/contact-light.png" alt="Logo Contact" />
-        <p class="sidebar-text">CONTACT</p>
+        <p class="sidebar-tooltip">CONTACT</p>
         <span class="sidebar-indicator"></span>
       </a>
     </div>
 
     <main>
-      <section class="home" id="top">
+      <section class="home" id="home">
         <div class="background-image-container">
           <img class="background-image" src="./assets/images/vscode-dark.png" alt="Code background" />
         </div>
@@ -121,5 +119,16 @@
 
       <section class="contact" id="contact"></section>
     </main>
+
+    <footer class="footer">
+      <div>
+        <p>@copyright</p>
+        <p>Mentions legales</p>
+      </div>
+      <div>
+        <p>Instagram</p>
+        <p>Linkedin</p>
+      </div>
+    </footer>
   </body>
 </html>
