@@ -21,7 +21,7 @@
   background-color: var(--background-color);
   border: 2px solid var(--line-color);
   color: var(--text-color);
-  font-size: 18px;
+  font-size: 1.125rem;
   white-space: pre-line;
   overflow: hidden;
   text-align: center;
@@ -43,11 +43,68 @@
   }
 }
 
+#terminalImg {
+  width: 60px;
+  height: 60px;
+  border: 2px solid var(--line-color);
+  margin: 10px 0;
+  opacity: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  transform: scale(0.8);
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  perspective: 600px;
+}
+
+.terminalImg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s ease-in-out;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.terminalImg-front {
+  background-image: url('../assets/images/avatar.webp');
+}
+
+.terminalImg-back {
+  background-image: url('../assets/images/profile.webp');
+  transform: rotateY(180deg);
+}
+
+#terminalImg:hover .terminalImg-front {
+  transform: rotateY(180deg);
+}
+
+#terminalImg:hover .terminalImg-back {
+  transform: rotateY(0deg);
+}
+
+#terminalImg:hover {
+  cursor: pointer;
+}
+
+#terminalImg.visible {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
 #text {
   display: inline-block;
   white-space: pre-line;
   line-height: 2;
-  margin-bottom: 25px;
 }
 
 .cursor {

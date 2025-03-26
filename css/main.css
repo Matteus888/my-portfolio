@@ -20,6 +20,11 @@
   --rubik: Rubik;
 }
 
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
 body.dark-mode {
   --background-color: #1E1E1E;
   --section-color: #393b40;
@@ -29,7 +34,6 @@ body.dark-mode {
 
 body {
   font-family: var(--rubik);
-  height: 400vh;
   background-color: var(--background-color);
   color: var(--text-color);
 }
@@ -40,7 +44,7 @@ body {
   border: var(--line-color) 2px solid;
   background-color: var(--background-color);
   color: var(--text-color);
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .btn:hover {

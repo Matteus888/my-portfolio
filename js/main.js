@@ -33,9 +33,28 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Mise à jour de l'animation
+  // Mise à jour de l'animation du terminal
   updateTerminalText();
 
   // Gestion de la sidebar
   handleSidebar();
+
+  // Gestion de la flêche vers le top du footer
+  const arrowUp = document.querySelector("#arrow-up");
+  const footer = document.querySelector(".footer");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          arrowUp.classList.add("visible");
+        } else {
+          arrowUp.classList.remove("visible");
+        }
+      });
+    },
+    { threshold: 0.5 } // L’élément doit être entièrement visible
+  );
+
+  observer.observe(footer);
 });

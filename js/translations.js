@@ -7,6 +7,8 @@ export const translations = {
     day: "Jour",
     night: "Nuit",
     welcome: "BIENVENUE SUR MON PORTFOLIO !\nJE SUIS MATTHIEU, DÉVELOPPEUR WEB.",
+    copyright: "@ 2025 Matthieu Chatelin. Tous droits réservés.",
+    legal: "Mentions légales & Confidentialité",
   },
   en: {
     home: "HOME",
@@ -15,6 +17,8 @@ export const translations = {
     day: "Day",
     night: "Night",
     welcome: "WELCOME TO MY PORTFOLIO !\nI'M MATTHIEU, WEB DEVELOPPER.",
+    copyright: "@ 2025 Matthieu Chatelin. All rights reserved.",
+    legal: "Terms & Legal Notices",
   },
 };
 

@@ -22,6 +22,7 @@ function typeText(text) {
       typingTimeout = setTimeout(typing, 150);
     } else {
       typingInProgress = false;
+      document.querySelector("#terminalImg").classList.add("visible");
       document.querySelector("#terminalBtn").classList.add("visible");
     }
   }
@@ -35,7 +36,9 @@ export function updateTerminalText() {
   const text = translations[currentLang]["welcome"];
 
   const terminalBtn = document.querySelector("#terminalBtn");
+  const terminalImg = document.querySelector("#terminalImg");
   terminalBtn.classList.remove("visible");
+  terminalImg.classList.remove("visible");
   document.querySelector("#text").innerHTML = "";
 
   if (typingInProgress) {

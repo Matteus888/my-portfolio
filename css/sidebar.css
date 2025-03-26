@@ -1,6 +1,6 @@
 .sidebar {
   position: fixed;
-  border: var(--line-color) 1px solid;
+  border: var(--line-color) 2px solid;
   border-left: none;
   top: calc(50% - 200px);
   left: -70px;
@@ -42,10 +42,10 @@
   transform: translateY(-50%);
   background-color: var(--background-color);
   color: var(--text-color);
-  padding: 6px 10px;
+  padding: 5px 8px;
   border-radius: 2px;
   white-space: nowrap;
-  font-size: 12px;
+  font-size: 0.75rem;
   border: 1px solid var(--line-color);
   opacity: 0;
   visibility: hidden;
