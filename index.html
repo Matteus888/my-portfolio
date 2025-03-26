@@ -13,6 +13,8 @@
       rel="stylesheet"
     />
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
+    <link rel="preload" as="image" href="./assets/images/vscode-dark.webp" />
+    <link rel="preload" as="image" href="./assets/images/vscode-light.webp" />
     <link rel="stylesheet" href="./css/main.css" />
     <script type="module" src="./js/main.js" defer></script>
   </head>
@@ -100,7 +102,9 @@
     <main>
       <section class="home" id="home">
         <div class="background-image-container">
-          <img class="background-image" src="./assets/images/vscode-dark.png" alt="Code background" />
+          <div class="blur-mask"></div>
+          <img class="background-image" src="./assets/images/vscode-dark.webp" alt="Code background" />
+          <img class="background-image-sharp" src="./assets/images/vscode-light.webp" alt="Code sharp" />
         </div>
         <div class="terminal" id="terminal">
           <span id="text" data-i18n="welcome"></span>
@@ -124,8 +128,9 @@
     </main>
 
     <footer class="footer">
-      <p data-i18n="legal">Mentions légales & Confidentialité</p>
+      <p class="legal" data-i18n="legal">Mentions légales & Confidentialité</p>
       <p class="copyright" data-i18n="copyright">@ 2025 Matthieu Chatelin. Tous droits réservés.</p>
+      <a href="#top"><img id="arrow-up" src="./assets/icons/up-arrow-light.png" alt="Arrow up pic" /></a>
       <div class="social">
         <a href="https://www.linkedin.com/in/matthieu-chatelin/" target="_blank">
           <img src="./assets/icons/linkedin-light.png" alt="Logo Linkedin" />
@@ -134,7 +139,6 @@
           <img src="./assets/icons/github-light.png" alt="Logo GitHub" />
         </a>
       </div>
-      <img id="arrow-up" src="./assets/icons/up-arrow-light.png" alt="Arrow up pic" />
     </footer>
   </body>
 </html>

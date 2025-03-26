@@ -5,6 +5,7 @@ export function toggleTheme(isDarkMode) {
 
   const logo = document.querySelector(".logo");
   const bcgImage = document.querySelector(".background-image");
+  const bcgImageSharp = document.querySelector(".background-image-sharp");
   const sidebarIcons = document.querySelectorAll(".sidebar img");
   const socialIcons = document.querySelectorAll(".social img");
   const arrowUp = document.querySelector("#arrow-up");
@@ -12,7 +13,8 @@ export function toggleTheme(isDarkMode) {
   const icons = [...sidebarIcons, ...socialIcons];
 
   logo.src = `./assets/icons/logo-${isDarkMode ? "light" : "dark"}.png`;
-  bcgImage.src = `./assets/images/vscode-${isDarkMode ? "dark" : "light"}.png`;
+  bcgImage.src = `./assets/images/vscode-${isDarkMode ? "dark" : "light"}.webp`;
+  bcgImageSharp.src = `./assets/images/vscode-${isDarkMode ? "light" : "dark"}.webp`;
   arrowUp.src = `./assets/icons/up-arrow-${isDarkMode ? "light" : "dark"}.png`;
 
   icons.forEach((icon) => {

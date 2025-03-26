@@ -10,6 +10,11 @@
   font-size: 1rem;
 }
 
+.legal:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .copyright {
   position: absolute;
   left: 50%;

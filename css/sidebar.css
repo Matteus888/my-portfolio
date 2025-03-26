@@ -5,7 +5,7 @@
   top: calc(50% - 200px);
   left: -70px;
   width: 60px;
-  padding: 10px 0 15px 0;
+  padding: 8px 0 15px 0;
   background-color: var(--background-color);
   display: flex;
   flex-direction: column;

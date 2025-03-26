@@ -2,6 +2,7 @@ import { toggleTheme } from "./themeToggle.js";
 import { changeLanguage, getCurrentLanguage } from "./translations.js";
 import { updateTerminalText } from "./terminalAnimation.js";
 import { handleSidebar } from "./sidebar.js";
+import { setupImageZoom } from "./imageZoom.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // Gestion du thème
@@ -35,6 +36,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Mise à jour de l'animation du terminal
   updateTerminalText();
+
+  // Gestion de la "loupe" nette
+  setupImageZoom();
 
   // Gestion de la sidebar
   handleSidebar();

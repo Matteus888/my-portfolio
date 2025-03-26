@@ -62,5 +62,5 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #1E1E1E;
+  background-color: var(--line-color);
 }
