@@ -1,0 +1,6 @@
+.footer {
+  height: 60px;
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: space-between;
+}
