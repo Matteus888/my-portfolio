@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     },
-    { threshold: 0.5 } // L’élément doit être entièrement visible
+    { threshold: 0.5 }
   );
 
   observer.observe(footer);
