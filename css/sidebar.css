@@ -42,7 +42,7 @@
   transform: translateY(-50%);
   background-color: var(--background-color);
   color: var(--text-color);
-  padding: 5px 8px;
+  padding: 5px 5px 4px 5px;
   border-radius: 2px;
   white-space: nowrap;
   font-size: 0.75rem;

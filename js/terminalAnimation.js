@@ -16,7 +16,7 @@ function typeText(text) {
     if (index <= text.length) {
       let displayedText = text.slice(0, index);
       let cursor = '<span class="cursor"></span>';
-      textContainer.innerHTML = displayedText.replace(/\n/g, "<br>") + cursor;
+      textContainer.innerHTML = displayedText + cursor;
 
       index++;
       typingTimeout = setTimeout(typing, 150);

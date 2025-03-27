@@ -3,6 +3,7 @@ import { changeLanguage, getCurrentLanguage } from "./translations.js";
 import { updateTerminalText } from "./terminalAnimation.js";
 import { handleSidebar } from "./sidebar.js";
 import { setupImageZoom } from "./imageZoom.js";
+import { setupModals } from "./modal.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // Gestion du thème
@@ -61,4 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   observer.observe(footer);
+
+  // Gestion des modales
+  setupModals();
 });

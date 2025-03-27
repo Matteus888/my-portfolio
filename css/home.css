@@ -98,6 +98,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .terminalImg-front {
@@ -115,10 +116,6 @@
 
 #terminalImg:hover .terminalImg-back {
   transform: rotateY(0deg);
-}
-
-#terminalImg:hover {
-  cursor: pointer;
 }
 
 #terminalImg.visible {

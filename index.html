@@ -3,15 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Matthieu Chatelin Portfolio | Développeur web junior</title>
+    <title>Matthieu Chatelin Portfolio | Développeur web</title>
     <link rel="icon" href="./assets/icons/logo-dark.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
     <link rel="preload" as="image" href="./assets/images/vscode-dark.webp" />
     <link rel="preload" as="image" href="./assets/images/vscode-light.webp" />
@@ -128,8 +123,8 @@
     </main>
 
     <footer class="footer">
-      <p class="legal" data-i18n="legal">Mentions légales & Confidentialité</p>
-      <p class="copyright" data-i18n="copyright">@ 2025 Matthieu Chatelin. Tous droits réservés.</p>
+      <p class="legal" data-modal-target="#legalModal" data-i18n="legal">Mentions légales & Confidentialité</p>
+      <p class="copyright" data-i18n="copyright">© 2025 Matthieu Chatelin. Tous droits réservés.</p>
       <a href="#top"><img id="arrow-up" src="./assets/icons/up-arrow-light.png" alt="Arrow up pic" /></a>
       <div class="social">
         <a href="https://www.linkedin.com/in/matthieu-chatelin/" target="_blank">
@@ -140,5 +135,39 @@
         </a>
       </div>
     </footer>
+
+    <div id="legalModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 data-i18n="legalTitle"></h2>
+        <div>
+          <h3 data-i18n="legalPublisherTitle"></h3>
+          <p data-i18n="legalPublisherText"></p>
+          <p>Email : <a href="mailto:matthieu888@gmail.com">matthieu888@gmail.com</a></p>
+          <p>Website : <a href="https://www.votreportfolio.com" target="_blank">https://www.votreportfolio.com</a></p>
+          <h3 data-i18n="legalHostTitle"></h3>
+          <p data-i18n="legalHostText"></p>
+          <p><strong>[Nom de l'hébergeur]</strong></p>
+          <p>[Adresse de l'hébergeur]</p>
+          <p>Website : <a href="https://www.hebergeur.com" target="_blank">https://www.hebergeur.com</a></p>
+          <h3 data-i18n="legalLiabilityTitle"></h3>
+          <p data-i18n="legalLiabilityText"></p>
+        </div>
+        <div class="modal-line"></div>
+        <h2 data-i18n="privacyTitle"></h2>
+        <div>
+          <h3 data-i18n="privacyDataTitle"></h3>
+          <p data-i18n="privacyDataText1"></p>
+          <p data-i18n="privacyDataText2"></p>
+          <p data-i18n="privacyDataText3"></p>
+          <h3 data-i18n="privacyCookiesTitle"></h3>
+          <p data-i18n="privacyCookiesText"></p>
+          <h3 data-i18n="privacyRightsTitle"></h3>
+          <p data-i18n="privacyRightsText1"></p>
+          <p data-i18n="privacyRightsText2"></p>
+        </div>
+        <button class="modal-btn btn">OK</button>
+      </div>
+    </div>
   </body>
 </html>
