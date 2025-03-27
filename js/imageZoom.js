@@ -62,6 +62,7 @@ export function setupImageZoom() {
     ctx.save(); // Sauvegarde le contexte actuel
     ctx.beginPath(); // Début du cercle de zoom
     ctx.arc(x, y, radius, 0, Math.PI * 2); // Cercle centré sur la souris
+
     ctx.clip(); // Tout dessin suivant sera limité à ce cercle
 
     // Dessine l’image nette

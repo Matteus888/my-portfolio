@@ -28,7 +28,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  clip-path: circle(50px at 50% 50%);
+  clip-path: circle(0px at 50% 50%);
   transition: clip-path 0.1s ease-out;
 }
 
