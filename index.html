@@ -8,8 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
-    <link rel="preload" as="image" href="./assets/images/vscode-dark.webp" />
-    <link rel="preload" as="image" href="./assets/images/vscode-light.webp" />
     <link rel="stylesheet" href="./css/main.css" />
     <script type="module" src="./js/main.js" defer></script>
   </head>
@@ -61,6 +59,7 @@
       </div>
     </header>
 
+    <!-- Sidebar -->
     <div id="sidebar" class="sidebar">
       <a href="#home">
         <img src="./assets/icons/logo-light.png" alt="Logo Home" id="home-logo" />
@@ -111,7 +110,50 @@
         </div>
       </section>
 
-      <section class="profile" id="profile"></section>
+      <section class="profile" id="profile">
+        <div class="profile-card">
+          <div class="profile-id">
+            <div class="profile-image-container">
+              <img src="./assets/images/avatar.webp" alt="Avatar pic" class="profile-image-front" />
+              <img src="./assets/images/profile.webp" alt="Profile Pic" class="profile-image-back" />
+            </div>
+            <div class="profile-id-text">
+              <div class="profile-id-item">
+                <img src="./assets/icons/birth-light.png" alt="Birthday logo" />
+                <p>20/03/1980</p>
+              </div>
+              <div class="profile-id-item">
+                <img src="./assets/icons/location-light.png" alt="Location logo" />
+                <p data-i18n="profileLocation"></p>
+              </div>
+            </div>
+            <div class="profile-line"></div>
+            <div class="profile-links">
+              <a href="https://www.linkedin.com/in/matthieu-chatelin/" target="_blank">
+                <img src="./assets/icons/linkedin-light.png" alt="Logo Linkedin" />
+                <p class="profile-tooltip">LINKEDIN</p>
+              </a>
+              <a href="https://github.com/Matteus888" target="_blank">
+                <img src="./assets/icons/github-light.png" alt="Logo GitHub" />
+                <p class="profile-tooltip">GITHUB</p>
+              </a>
+            </div>
+          </div>
+          <div class="profile-text">
+            <p data-i18n="profileText"></p>
+          </div>
+        </div>
+        <div class="profile-download-container">
+          <div class="cv-preview">
+            <a href="./assets/files/CV_2025_Matthieu CHATELIN.pdf" target="_blank">
+              <img src="./assets/images/cv_preview.png" alt="CV Preview" />
+            </a>
+          </div>
+          <a href="./assets/files/CV_2025_Matthieu CHATELIN.pdf" download="CV_2025_Matthieu CHATELIN.pdf">
+            <button class="btn" data-i18n="downloadBtn"></button>
+          </a>
+        </div>
+      </section>
 
       <section class="formation" id="formations"></section>
 
@@ -123,23 +165,29 @@
     </main>
 
     <footer class="footer">
-      <p class="legal" data-modal-target="#legalModal" data-i18n="legal">Mentions légales & Confidentialité</p>
+      <div class="legal-container">
+        <p class="legal" data-modal-target="#legalModal" data-i18n="legal">Mentions légales & Confidentialité</p>
+      </div>
       <p class="copyright" data-i18n="copyright">© 2025 Matthieu Chatelin. Tous droits réservés.</p>
       <a href="#top"><img id="arrow-up" src="./assets/icons/up-arrow-light.png" alt="Arrow up pic" /></a>
       <div class="social">
         <a href="https://www.linkedin.com/in/matthieu-chatelin/" target="_blank">
           <img src="./assets/icons/linkedin-light.png" alt="Logo Linkedin" />
+          <p class="social-tooltip">LINKEDIN</p>
         </a>
         <a href="https://github.com/Matteus888" target="_blank">
           <img src="./assets/icons/github-light.png" alt="Logo GitHub" />
+          <p class="social-tooltip">GITHUB</p>
         </a>
       </div>
     </footer>
 
+    <!-- Modale - Mentions légales -->
     <div id="legalModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
         <h2 data-i18n="legalTitle"></h2>
+        <img src="./assets/icons/legal-light.png" alt="Legal Icon" />
         <div>
           <h3 data-i18n="legalPublisherTitle"></h3>
           <p data-i18n="legalPublisherText"></p>
@@ -155,6 +203,7 @@
         </div>
         <div class="modal-line"></div>
         <h2 data-i18n="privacyTitle"></h2>
+        <img src="./assets/icons/confidentiality-light.png" alt="Confidentiality Icon" />
         <div>
           <h3 data-i18n="privacyDataTitle"></h3>
           <p data-i18n="privacyDataText1"></p>

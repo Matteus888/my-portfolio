@@ -7,6 +7,10 @@ export const translations = {
     day: "Jour",
     night: "Nuit",
     welcome: "BIENVENUE SUR MON PORTFOLIO !\nJE SUIS MATTHIEU, DÉVELOPPEUR WEB.",
+    profileLocation: "Région lyonnaise",
+    downloadBtn: "Télécharger mon CV",
+    profileText:
+      "Bonjour, je suis <span class='colored-text'>Matthieu Chatelin</span>, développeur web en reconversion professionnelle, basé dans la région lyonnaise et à la recherche d'une alternance.<br /><br />Après plusieurs années dans la production audiovisuelle, j'ai choisi de me réorienter vers le développement web, un secteur qui me passionne depuis longtemps. Pour concrétiser ce projet, j'ai suivi une formation intensive où j'ai acquis des compétences solides en programmation et en conception d'applications web et mobile modernes.<br /><br />Mon expérience passée m'a apporté des qualités essentielles pour ce métier: rigueur, adaptabilité, communication, gestion de projet et travail en équipe. Habitué à résoudre des problèmes et à organiser efficacement mon travail, je mets aujourd'hui ces atouts au service du développement web, en veillant à produire du code clair et maintenable.<br /><br />Curieux et persévérant, j'aime apprendre et relever de nouveaux défis techniques. Je suis à la recherche d'une alternance pour continuer à progresser et mettre mes compétences en pratique dans un environnement dynamique. Mon objectif est d'évoluer en tant que développeur et de contribuer à des projets ambitieux, en apportant mon esprit d'analyse et ma capacité à collaborer efficacement.",
     copyright: "© 2025 Matthieu Chatelin. Tous droits réservés.",
     legal: "Mentions légales & Confidentialité",
     legalTitle: "Mentions légales",
@@ -38,6 +42,10 @@ export const translations = {
     day: "Day",
     night: "Night",
     welcome: "WELCOME TO MY PORTFOLIO !\nI'M MATTHIEU, WEB DEVELOPPER.",
+    profileLocation: "Lyon Area",
+    downloadBtn: "Download my CV",
+    profileText:
+      "Hi, I'm <span class='colored-text'>Matthieu Chatelin</span>, a web developer in retraining, based in the Lyon area and looking for a work-study placement.<br /><br />After several years in audiovisual production, I decided to move into web development, a sector I've long been passionate about. To make this project a reality, I took an intensive training course where I acquired solid skills in programming and designing modern web and mobile applications.<br/><br />My past experience has given me essential qualities for this job: rigor, adaptability, communication, project management and teamwork. I'm used to solving problems and organizing my work efficiently, and I'm now applying these skills to web development, with a focus on producing clear, maintainable code.<br /><br />Curious and persevering, I enjoy learning and taking on new technical challenges. I'm looking for a work-study placement to continue to progress and put my skills into practice in a dynamic environment. My aim is to evolve as a developer and contribute to ambitious projects, bringing my analytical mind and ability to collaborate effectively.",
     copyright: "© 2025 Matthieu Chatelin. All rights reserved.",
     legal: "Terms of use & Privacy Policy",
     legalTitle: "Terms of use",

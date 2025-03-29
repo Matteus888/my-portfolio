@@ -5,7 +5,11 @@ export function setupModals() {
     trigger.addEventListener("click", () => {
       const targetSelector = trigger.getAttribute("data-modal-target");
       const modal = document.querySelector(targetSelector);
-      if (modal) modal.style.display = "flex";
+      if (modal) {
+        modal.style.display = "flex";
+        const modalContent = document.querySelector(".modal-content");
+        if (modalContent) modalContent.scrollTop = 0;
+      }
     });
   });
 

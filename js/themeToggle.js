@@ -6,11 +6,15 @@ export function toggleTheme(isDarkMode) {
   const logo = document.querySelector(".logo");
   const bcgImage = document.querySelector(".background-image");
   const bcgImageSharp = document.querySelector(".background-image-sharp");
-  const sidebarIcons = document.querySelectorAll(".sidebar img");
-  const socialIcons = document.querySelectorAll(".social img");
   const arrowUp = document.querySelector("#arrow-up");
 
-  const icons = [...sidebarIcons, ...socialIcons];
+  const sidebarIcons = document.querySelectorAll(".sidebar img");
+  const socialIcons = document.querySelectorAll(".social img");
+  const legalIcons = document.querySelectorAll(".modal-content img");
+  const profileIdIcons = document.querySelectorAll(".profile-id-item img");
+  const profileSocialIcons = document.querySelectorAll(".profile-links img");
+
+  const icons = [...sidebarIcons, ...socialIcons, ...legalIcons, ...profileIdIcons, ...profileSocialIcons];
 
   logo.src = `./assets/icons/logo-${isDarkMode ? "light" : "dark"}.png`;
   bcgImage.src = `./assets/images/vscode-${isDarkMode ? "dark" : "light"}.webp`;
