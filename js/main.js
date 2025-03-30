@@ -50,7 +50,9 @@ document.addEventListener("DOMContentLoaded", () => {
   function checkScroll() {
     profileCards.forEach((card) => {
       const rect = card.getBoundingClientRect();
-      if (rect.top < window.innerHeight * 0.85) {
+      const windowHeight = window.innerHeight;
+
+      if (rect.top < windowHeight * 1 && rect.bottom > 0) {
         card.classList.add("show");
       } else {
         card.classList.remove("show");
