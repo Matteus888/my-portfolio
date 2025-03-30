@@ -9,13 +9,31 @@
 }
 
 .profile-card {
-  max-width: 800px;
+  width: 800px;
   border: 2px solid var(--line-color);
   background-color: var(--background-color);
   padding: 40px;
   display: flex;
-  align-items: flex-start;
+  justify-content: space-around;
+  align-items: stretch;
   gap: 40px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.profile-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.profile-id {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
 }
 
 .profile-image-container {
@@ -24,6 +42,23 @@
   border: 3px solid var(--line-color);
   overflow: hidden;
   position: relative;
+}
+
+@keyframes fadeImages {
+
+  0%,
+  40% {
+    opacity: 1;
+  }
+
+  50%,
+  90% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .profile-image-front,
@@ -39,22 +74,11 @@
 .profile-image-front {
   z-index: 2;
   opacity: 1;
-  transition: opacity 0.5s ease;
+  animation: fadeImages 5s infinite ease-in-out;
 }
 
 .profile-image-back {
   z-index: 1;
-}
-
-.profile-image-front:hover {
-  opacity: 0;
-}
-
-.profile-id {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
 }
 
 .profile-id-text {
@@ -77,9 +101,35 @@
   align-items: center;
 }
 
-.profile-line {
-  width: 50%;
-  height: 1px;
+.profile-text p {
+  line-height: 1.2;
+  text-align: justify;
+}
+
+.profile-download-container {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.profile-download-container p {
+  text-align: center;
+  line-height: 1.2;
+}
+
+.profile-line-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-horizontal-line {
+  width: 35%;
+  height: 1.6px;
   background-color: var(--line-color);
 }
 
@@ -121,16 +171,11 @@
   visibility: visible;
 }
 
-.profile-text p {
-  line-height: 1.2;
-  text-align: justify;
-}
-
-.profile-download-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+.profile-vertical-line {
+  width: 2px;
+  height: 350px;
+  background-color: var(--line-color);
+  margin: auto 0;
 }
 
 .cv-preview img {

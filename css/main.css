@@ -25,6 +25,7 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body.dark-mode {
@@ -39,6 +40,7 @@ body {
   font-family: var(--rubik);
   background-color: var(--background-color);
   color: var(--text-color);
+  overflow-x: hidden;
 }
 
 .colored-text {

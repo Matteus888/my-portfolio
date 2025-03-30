@@ -44,6 +44,22 @@ document.addEventListener("DOMContentLoaded", () => {
   // Gestion de la sidebar
   handleSidebar();
 
+  // Gestion de l'apparition des profile-card
+  const profileCards = document.querySelectorAll(".profile-card");
+
+  function checkScroll() {
+    profileCards.forEach((card) => {
+      const rect = card.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.85) {
+        card.classList.add("show");
+      } else {
+        card.classList.remove("show");
+      }
+    });
+  }
+  window.addEventListener("scroll", checkScroll);
+  checkScroll();
+
   // Gestion de la flêche vers le top du footer
   const arrowUp = document.querySelector("#arrow-up");
   const footer = document.querySelector(".footer");
