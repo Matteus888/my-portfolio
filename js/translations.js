@@ -12,11 +12,28 @@ export const translations = {
     profileText:
       "Bonjour, je suis <span class='colored-text'>Matthieu Chatelin</span>, développeur web en reconversion professionnelle, basé dans la région lyonnaise et à la recherche d'une alternance.<br /><br />Après plusieurs années dans la production audiovisuelle, j'ai choisi de me réorienter vers le développement web, un secteur qui me passionne depuis longtemps. Pour concrétiser ce projet, j'ai suivi une formation intensive où j'ai acquis des compétences solides en programmation et en conception d'applications web et mobile modernes.<br /><br />Mon expérience passée m'a apporté des qualités essentielles pour ce métier: rigueur, adaptabilité, communication, gestion de projet et travail en équipe. Habitué à résoudre des problèmes et à organiser efficacement mon travail, je mets aujourd'hui ces atouts au service du développement web, en veillant à produire du code clair et maintenable.<br /><br />Curieux et persévérant, j'aime apprendre et relever de nouveaux défis techniques. Je suis à la recherche d'une alternance pour continuer à progresser et mettre mes compétences en pratique dans un environnement dynamique. Mon objectif est d'évoluer en tant que développeur et de contribuer à des projets ambitieux, en apportant mon esprit d'analyse et ma capacité à collaborer efficacement.",
     profileCV: "Quelques lignes de code, quelques lignes sur mon parcours… Un clic suffit pour en savoir plus sur moi !",
-    downloadBtn: "Télécharger mon CV",
+    profileDownloadBtn: "Télécharger mon CV",
     or: "OU",
     profileContactText: "Un message, une opportunité ! Écrivons la suite ensemble.",
-    contactBtn: "Contactez moi",
+    profileContactBtn: "Contactez moi",
+    contactTitle: "CONTACTEZ MOI",
+    phoneCallText: "Un appel",
+    emailText: "Un email",
+    whatsappText: "Un texto",
+    lastnameForm: "Nom",
+    firstnameForm: "Prénom",
+    phoneForm: "Téléphone",
+    subjectForm: "Objet",
+    checkboxText:
+      "En soumettant ce formulaire, j'accepte que mes données personnelles soient utilisées pour me recontacter. Aucun autre traitement ne sera effectué avec mes informations. Pour connaître et exercer vos droits, veuillez consultez la <span class='policy-text' data-modal-target='#legalModal'>Politique de confidentialité</span>.",
+    submitBtn: "ENVOYER",
+    successMessage: "Message envoyé avec succès !",
+    errorMessage: "Une erreur est survenue, veuillez réessayer.",
+    emptyFields: "Veuillez remplir tous les champs obligatoires.",
+    invalidEmail: "Veuillez entrer une adresse email valide.",
+    shortMessage: "Votre message doit contenir au moins 10 caractères.",
     copyright: "© 2025 Matthieu Chatelin. Tous droits réservés.",
+    top: "HAUT DE PAGE",
     legal: "Mentions légales & Confidentialité",
     legalTitle: "Mentions légales",
     legalPublisherTitle: "Éditeur du site",
@@ -52,11 +69,28 @@ export const translations = {
     profileText:
       "Hi, I'm <span class='colored-text'>Matthieu Chatelin</span>, a web developer in retraining, based in the Lyon area and looking for a work-study placement.<br /><br />After several years in audiovisual production, I decided to move into web development, a sector I've long been passionate about. To make this project a reality, I took an intensive training course where I acquired solid skills in programming and designing modern web and mobile applications.<br/><br />My past experience has given me essential qualities for this job: rigor, adaptability, communication, project management and teamwork. I'm used to solving problems and organizing my work efficiently, and I'm now applying these skills to web development, with a focus on producing clear, maintainable code.<br /><br />Curious and persevering, I enjoy learning and taking on new technical challenges. I'm looking for a work-study placement to continue to progress and put my skills into practice in a dynamic environment. My aim is to evolve as a developer and contribute to ambitious projects, bringing my analytical mind and ability to collaborate effectively.",
     profileCV: "A few lines of code, a few lines about my career... One click is all it takes to find out more about me!",
-    downloadBtn: "Download my CV",
+    profileDownloadBtn: "Download my CV",
     or: "OR",
     profileContactText: "A message, an opportunity! Let's write the rest together.",
-    contactBtn: "Contact me",
+    profileContactBtn: "Contact me",
+    contactTitle: "CONTACT ME",
+    phoneCallText: "A phone call",
+    emailText: "An email",
+    whatsappText: "A message",
+    lastnameForm: "Lastname",
+    firstnameForm: "Firstname",
+    phoneForm: "Phone",
+    subjectForm: "Subject",
+    checkboxText:
+      "By submitting this form, I agree to my personal data being used to contact me. My information will not be used for any other purpose. To know and exercise your rights, please consult the <span class='policy-text' data-modal-target='#legalModal'>Privacy Policy</span>.",
+    submitBtn: "SEND",
+    successMessage: "Message sent successfully!",
+    errorMessage: "An error occurred, please try again.",
+    emptyFields: "Please fill in all required fields.",
+    invalidEmail: "Please enter a valid email address.",
+    shortMessage: "Your message must be at least 10 characters long.",
     copyright: "© 2025 Matthieu Chatelin. All rights reserved.",
+    top: "BACK TO TOP",
     legal: "Terms of use & Privacy Policy",
     legalTitle: "Terms of use",
     legalPublisherTitle: "Site Publisher",
@@ -99,4 +133,11 @@ export function changeLanguage(lang) {
 // Fonction pour récupérer langue actuelle
 export function getCurrentLanguage() {
   return localStorage.getItem("lang") || "fr";
+}
+
+// Fonction pour récupérer la traduction d'une clé donnée
+export function getTranslation(key) {
+  const lang = getCurrentLanguage();
+  const translation = translations[lang][key];
+  return translation || key;
 }

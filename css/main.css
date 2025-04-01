@@ -8,6 +8,7 @@
 @import url("portfolio.css");
 @import url("contact.css");
 @import url("modal.css");
+@import url("toast.css");
 @import url("footer.css");
 
 /* Styles généraux */
@@ -17,7 +18,8 @@
   --section-color: #F3F3F3;
   --text-color: #1E1E1E;
   --line-color: #1E1E1E;
-  --link: #27548A;
+  --link: #78A6BB;
+  --blue-dark: #27548A;
   --yellow: #FBD000;
   --rubik: Rubik;
 }

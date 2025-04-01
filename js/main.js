@@ -1,39 +1,63 @@
 import { toggleTheme } from "./themeToggle.js";
-import { changeLanguage, getCurrentLanguage } from "./translations.js";
+import { changeLanguage, getCurrentLanguage, getTranslation } from "./translations.js";
 import { updateTerminalText } from "./terminalAnimation.js";
 import { handleSidebar } from "./sidebar.js";
 import { setupImageZoom } from "./imageZoom.js";
-import { setupModals } from "./modal.js";
+import { setupModals, reattachModalListeners } from "./modal.js";
+import { setupEmailForm } from "./email.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // Gestion du thème
-  const themeToggle = document.querySelector("#theme-toggle");
+  const themeToggles = document.querySelectorAll(".theme-toggle");
 
-  if (!themeToggle) return;
+  if (themeToggles.length === 0) return;
 
   const savedTheme = localStorage.getItem("theme");
   const isDarkMode = savedTheme !== "light";
 
-  themeToggle.checked = isDarkMode;
-  toggleTheme(isDarkMode);
-
-  themeToggle.addEventListener("change", () => {
-    toggleTheme(themeToggle.checked);
+  themeToggles.forEach((toggle) => {
+    toggle.checked = isDarkMode;
+    toggle.addEventListener("change", () => {
+      toggleTheme(toggle.checked);
+      themeToggles.forEach((t) => (t.checked = toggle.checked));
+    });
   });
 
-  // Gestion de la traduction
-  const langToggle = document.querySelector("#lang-toggle");
+  toggleTheme(isDarkMode);
 
-  if (langToggle) {
+  // Gestion de la traduction
+  const langToggles = document.querySelectorAll(".lang-toggle");
+
+  if (langToggles.length > 0) {
     const currentLang = getCurrentLanguage();
-    langToggle.checked = currentLang === "en";
+    const isEnglish = currentLang === "en";
+
+    langToggles.forEach((toggle) => (toggle.checked = isEnglish));
+
     changeLanguage(currentLang);
 
-    langToggle.addEventListener("change", () => {
-      const newLang = langToggle.checked ? "en" : "fr";
-      changeLanguage(newLang);
+    langToggles.forEach((toggle) => {
+      toggle.addEventListener("change", () => {
+        const newLang = toggle.checked ? "en" : "fr";
+        if (newLang !== getCurrentLanguage()) {
+          changeLanguage(newLang);
+          langToggles.forEach((t) => (t.checked = toggle.checked));
+          reattachModalListeners();
+        }
+      });
     });
   }
+
+  // Gestion de la mise à jour des toasts sur changement de langue
+  document.addEventListener("languageChanged", () => {
+    const activeToasts = document.querySelectorAll(".toast");
+    activeToasts.forEach((toast) => {
+      const messageKey = toast.getAttribute("data-key");
+      if (messageKey) {
+        toast.textContent = getTranslation(messageKey);
+      }
+    });
+  });
 
   // Mise à jour de l'animation du terminal
   updateTerminalText();
@@ -66,21 +90,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const arrowUp = document.querySelector("#arrow-up");
   const footer = document.querySelector(".footer");
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          arrowUp.classList.add("visible");
-        } else {
-          arrowUp.classList.remove("visible");
-        }
-      });
-    },
-    { threshold: 0.5 }
-  );
+  window.addEventListener("scroll", () => {
+    if (footer) {
+      const footerRect = footer.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
 
-  observer.observe(footer);
+      if (footerRect.top < windowHeight) {
+        arrowUp.classList.add("visible");
+      } else {
+        arrowUp.classList.remove("visible");
+      }
+    }
+  });
 
   // Gestion des modales
   setupModals();
+
+  // Contact
+  setupEmailForm();
 });

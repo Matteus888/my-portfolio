@@ -1,17 +1,29 @@
-// Fonction pour ouvrir une modale
-export function setupModals() {
-  // Ouverture modale
-  document.querySelectorAll("[data-modal-target]").forEach((trigger) => {
-    trigger.addEventListener("click", () => {
-      const targetSelector = trigger.getAttribute("data-modal-target");
-      const modal = document.querySelector(targetSelector);
-      if (modal) {
-        modal.style.display = "flex";
-        const modalContent = document.querySelector(".modal-content");
-        if (modalContent) modalContent.scrollTop = 0;
-      }
-    });
+// Gestion des modales
+
+// Fonction pour ré-attacher les événements aux nouveaux éléments
+export function reattachModalListeners() {
+  document.querySelectorAll("[data-modal-target]").forEach((span) => {
+    span.removeEventListener("click", handleModalClick); // Supprime l'ancien écouteur
+    span.addEventListener("click", handleModalClick);
   });
+}
+
+// Fonction pour gérer l'ouverture d'une modale
+function handleModalClick(event) {
+  event.preventDefault();
+  event.stopPropagation();
+  const targetSelector = event.currentTarget.getAttribute("data-modal-target");
+  const modal = document.querySelector(targetSelector);
+  if (modal) {
+    modal.style.display = "flex";
+    const modalContent = modal.querySelector(".modal-content");
+    if (modalContent) modalContent.scrollTop = 0;
+  }
+}
+
+// Fonction de départ pour la modale légale
+export function setupModals() {
+  reattachModalListeners();
 
   // Fermeture modale au clic sur X
   document.querySelectorAll(".modal .close").forEach((closeBtn) => {

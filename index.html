@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./css/main.css" />
     <script type="module" src="./js/main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   </head>
   <body>
     <header class="header-container" id="top">
@@ -40,7 +41,7 @@
       <div class="option-container">
         <div class="lang-container">
           <label class="lang-switch">
-            <input type="checkbox" id="lang-toggle" />
+            <input type="checkbox" class="lang-toggle" />
             <span class="slider">
               <img src="./assets/icons/france.png" alt="Drapeau Français" class="flag fr" />
               <img src="./assets/icons/united-kingdom.png" alt="English flag" class="flag en" />
@@ -49,7 +50,7 @@
         </div>
         <div class="theme-container">
           <label class="theme-switch">
-            <input type="checkbox" id="theme-toggle" />
+            <input type="checkbox" class="theme-toggle" />
             <span class="slider">
               <p class="theme day">☀️</p>
               <p class="theme night">🌙</p>
@@ -58,6 +59,28 @@
         </div>
       </div>
     </header>
+
+    <!-- Option-bar -->
+    <div id="option-bar" class="option-bar">
+      <div class="lang-container">
+        <label class="lang-switch">
+          <input type="checkbox" class="lang-toggle" />
+          <span class="slider">
+            <img src="./assets/icons/france.png" alt="Drapeau Français" class="flag fr" />
+            <img src="./assets/icons/united-kingdom.png" alt="English flag" class="flag en" />
+          </span>
+        </label>
+      </div>
+      <div class="theme-container">
+        <label class="theme-switch">
+          <input type="checkbox" class="theme-toggle" />
+          <span class="slider">
+            <p class="theme day">☀️</p>
+            <p class="theme night">🌙</p>
+          </span>
+        </label>
+      </div>
+    </div>
 
     <!-- Sidebar -->
     <div id="sidebar" class="sidebar">
@@ -90,6 +113,14 @@
         <img src="./assets/icons/contact-light.png" alt="Logo Contact" />
         <p class="sidebar-tooltip">CONTACT</p>
         <span class="sidebar-indicator"></span>
+      </a>
+    </div>
+
+    <!-- Arrow-bar -->
+    <div id="arrow-bar" class="arrow-bar">
+      <a href="#top">
+        <img src="./assets/icons/up-arrow-light.png" alt="Arrow up pic" />
+        <p class="arrow-bar-tooltip" data-i18n="top"></p>
       </a>
     </div>
 
@@ -140,7 +171,7 @@
           <div class="profile-download-container">
             <p data-i18n="profileCV"></p>
             <a href="./assets/files/CV_2025_Matthieu CHATELIN.pdf" download="CV_2025_Matthieu CHATELIN.pdf">
-              <button class="btn" data-i18n="downloadBtn"></button>
+              <button class="btn" data-i18n="profileDownloadBtn"></button>
             </a>
             <div class="profile-links">
               <a href="https://www.linkedin.com/in/matthieu-chatelin/" target="_blank">
@@ -159,7 +190,7 @@
             </div>
             <p data-i18n="profileContactText"></p>
             <a href="#contact">
-              <button class="btn" data-i18n="contactBtn"></button>
+              <button class="btn" data-i18n="profileContactBtn"></button>
             </a>
           </div>
           <div class="profile-vertical-line"></div>
@@ -177,7 +208,63 @@
 
       <section class="portfolio" id="portfolio"></section>
 
-      <section class="contact" id="contact"></section>
+      <section class="contact" id="contact">
+        <div class="contact-container">
+          <h2 data-i18n="contactTitle"></h2>
+          <div class="contact-card">
+            <a href="tel:+33680175771">
+              <img src="./assets/icons/phone-light.png" alt="Phone logo" />
+              <p class="contact-tooltip" data-i18n="phoneCallText"></p>
+              <p>+33 6 80 17 57 71</p>
+            </a>
+            <a href="mailto:matthieu888@gmail.com" target="_blank">
+              <img src="./assets/icons/mail-light.png" alt="Email logo" />
+              <p class="contact-tooltip" data-i18n="emailText"></p>
+              <p>matthieu888@gmail.com</p>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=+33680175771&text=Hello" target="_blank">
+              <img src="./assets/icons/whatsapp-light.png" alt="Whatsapp logo" />
+              <p class="contact-tooltip" data-i18n="whatsappText"></p>
+              <p>+33 6 80 17 57 71</p>
+            </a>
+          </div>
+          <form action="submit" class="form-card">
+            <div class="double-input-container">
+              <div class="input-container">
+                <label for="lastname" data-i18n="lastnameForm">Lastname</label>
+                <input type="text" id="lastname" name="lastname" required />
+              </div>
+              <div class="input-container">
+                <label for="firstname" data-i18n="firstnameForm">Firstname</label>
+                <input type="text" id="firstname" name="firstname" required />
+              </div>
+            </div>
+            <div class="double-input-container">
+              <div class="input-container">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="input-container">
+                <label for="phone" data-i18n="phoneForm">Phone</label>
+                <input type="text" id="phone" name="phone" />
+              </div>
+            </div>
+            <div class="input-container">
+              <label for="object" data-i18n="subjectForm">Object</label>
+              <input type="text" id="object" name="subject" required />
+            </div>
+            <div class="input-container">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="10" required></textarea>
+            </div>
+            <div class="checkbox-container">
+              <input type="checkbox" id="accept" name="accept" required />
+              <label for="accept" data-i18n="checkboxText"></label>
+            </div>
+            <button class="btn submitBtn" data-i18n="submitBtn" type="submit"></button>
+          </form>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
@@ -185,7 +272,11 @@
         <p class="legal" data-modal-target="#legalModal" data-i18n="legal">Mentions légales & Confidentialité</p>
       </div>
       <p class="copyright" data-i18n="copyright">© 2025 Matthieu Chatelin. Tous droits réservés.</p>
-      <a href="#top"><img id="arrow-up" src="./assets/icons/up-arrow-light.png" alt="Arrow up pic" /></a>
+      <a id="arrow-up" href="#top"
+        ><img src="./assets/icons/up-arrow-light.png" alt="Arrow up pic" />
+        <p data-i18n="top">BACK TO TOP</p>
+        <img src="./assets/icons/up-arrow-light.png" alt="Arrow up pic" />
+      </a>
       <div class="social">
         <a href="https://www.linkedin.com/in/matthieu-chatelin/" target="_blank">
           <img src="./assets/icons/linkedin-light.png" alt="Logo Linkedin" />
@@ -234,5 +325,8 @@
         <button class="modal-btn btn">OK</button>
       </div>
     </div>
+
+    <!-- Toast - Formulaire de contact -->
+    <div id="toastContainer"></div>
   </body>
 </html>
