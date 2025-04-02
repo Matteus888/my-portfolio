@@ -21,6 +21,21 @@
   width: 800px;
 }
 
+.contact-title,
+.contact-card,
+.form-card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.contact-title.show,
+.contact-card.show,
+.form-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .contact-card,
 .form-card {
   border: 2px solid var(--line-color);
@@ -152,7 +167,7 @@
 .checkbox-container input[type="checkbox"]::after {
   content: "✔";
   font-size: 14px;
-  color: var(--text-color);
+  color: var(--link);
   position: absolute;
   top: 50%;
   left: 50%;

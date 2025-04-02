@@ -6,7 +6,6 @@ export function showToast(messageKey, type = "success", duration = 4000) {
   if (!toastContainer) return;
 
   const toast = document.createElement("div");
-  // toast.className = `toast ${type}`;
   toast.className = "toast";
   toast.innerHTML = getTranslation(messageKey);
 

@@ -68,11 +68,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // Gestion de la sidebar
   handleSidebar();
 
-  // Gestion de l'apparition des profile-card
+  // Gestion de l'apparition des cards
   const profileCards = document.querySelectorAll(".profile-card");
+  const contactTitle = document.querySelector(".contact-title");
+  const contactCard = document.querySelector(".contact-card");
+  const formCard = document.querySelector(".form-card");
+
+  const totalCards = [...profileCards, contactTitle, contactCard, formCard];
 
   function checkScroll() {
-    profileCards.forEach((card) => {
+    totalCards.forEach((card) => {
       const rect = card.getBoundingClientRect();
       const windowHeight = window.innerHeight;
 

@@ -150,12 +150,36 @@
             </div>
             <div class="profile-id-text">
               <div class="profile-id-item">
-                <img src="./assets/icons/birth-light.png" alt="Birthday logo" />
-                <p>20/03/1980</p>
+                <a href="#contact">
+                  <img src="./assets/icons/phone-light.png" alt="Phone logo" />
+                </a>
+                <a href="#contact">
+                  <p>+33 6 80 17 57 71</p>
+                </a>
               </div>
               <div class="profile-id-item">
-                <img src="./assets/icons/location-light.png" alt="Location logo" />
-                <p data-i18n="profileLocation"></p>
+                <a href="#contact">
+                  <img src="./assets/icons/mail-light.png" alt="Email logo" />
+                </a>
+                <a href="#contact">
+                  <p>matthieu888@gmail.com</p>
+                </a>
+              </div>
+              <div class="profile-id-item">
+                <a href="https://www.lemonde.fr/archives-du-monde/20-03-1980/" target="_blank">
+                  <img src="./assets/icons/birth-light.png" alt="Birthday logo" />
+                </a>
+                <a href="https://www.lemonde.fr/archives-du-monde/20-03-1980/" target="_blank">
+                  <p>20/03/1980</p>
+                </a>
+              </div>
+              <div class="profile-id-item">
+                <a href="https://www.google.fr/maps/place/69290+Craponne/" target="_blank">
+                  <img src="./assets/icons/location-light.png" alt="Location logo" />
+                </a>
+                <a href="https://www.google.fr/maps/place/69290+Craponne/" target="_blank">
+                  <p data-i18n="profileLocation"></p>
+                </a>
               </div>
               <div class="profile-id-item">
                 <img src="./assets/icons/driving-license-light.png" alt="Driving License logo" />
@@ -210,7 +234,7 @@
 
       <section class="contact" id="contact">
         <div class="contact-container">
-          <h2 data-i18n="contactTitle"></h2>
+          <h2 class="contact-title" data-i18n="contactTitle"></h2>
           <div class="contact-card">
             <a href="tel:+33680175771">
               <img src="./assets/icons/phone-light.png" alt="Phone logo" />
@@ -255,7 +279,7 @@
             </div>
             <div class="input-container">
               <label for="message">Message</label>
-              <textarea id="message" name="message" rows="10" required></textarea>
+              <textarea id="message" name="message" rows="6" required></textarea>
             </div>
             <div class="checkbox-container">
               <input type="checkbox" id="accept" name="accept" required />

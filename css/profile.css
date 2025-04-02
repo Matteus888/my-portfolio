@@ -86,19 +86,28 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
 }
 
 .profile-id-text img {
-  width: 30px;
-  height: 30px;
+  width: 22px;
+  height: 22px;
 }
 
 .profile-id-item {
-  width: 180px;
+  width: 90%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.profile-id-item a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.profile-id-item p {
+  font-size: 0.75rem;
 }
 
 .profile-text p {
