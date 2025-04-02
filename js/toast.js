@@ -6,8 +6,9 @@ export function showToast(messageKey, type = "success", duration = 4000) {
   if (!toastContainer) return;
 
   const toast = document.createElement("div");
-  toast.className = `toast ${type}`;
-  toast.textContent = getTranslation(messageKey);
+  // toast.className = `toast ${type}`;
+  toast.className = "toast";
+  toast.innerHTML = getTranslation(messageKey);
 
   toastContainer.appendChild(toast);
 
@@ -21,7 +22,7 @@ export function showToast(messageKey, type = "success", duration = 4000) {
   }, duration);
 
   const updateToastText = () => {
-    toast.textContent = getTranslation(messageKey);
+    toast.innerHTML = getTranslation(messageKey);
   };
 
   document.addEventListener("languageChanged", updateToastText);

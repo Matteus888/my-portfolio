@@ -11,6 +11,9 @@
 }
 
 .toast {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   background-color: var(--background-color);
   color: var(--text-color);
   border: 2px solid var(--line-color);
@@ -23,12 +26,4 @@
 .toast.show {
   opacity: 1;
   transform: translateY(0);
-}
-
-.toast.success {
-  background-color: #28a745;
-}
-
-.toast.error {
-  background-color: #dc3545;
 }
