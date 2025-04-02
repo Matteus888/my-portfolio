@@ -1,4 +1,5 @@
 .portfolio {
   height: 100vh;
   background-color: var(--background-color);
+  border-top: 2px solid var(--line-color);
 }

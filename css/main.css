@@ -72,6 +72,7 @@ body {
 /* Barre de défilement */
 ::-webkit-scrollbar {
   width: 5px;
+  border-left: 2px solid var(--line-color);
 }
 
 ::-webkit-scrollbar-thumb {

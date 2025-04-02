@@ -3,9 +3,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 80px;
+  gap: 40px;
   background-color: var(--section-color);
-  padding: 80px;
+  padding: 50px;
+  border-top: 2px solid var(--line-color);
 }
 
 .profile-card {
