@@ -32,25 +32,32 @@
 .modal-content img {
   width: 40px;
   height: auto;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .modal-content h2 {
-  text-decoration: blink;
   text-align: center;
   font-size: 1.5rem;
-  font-weight: 600;
+  letter-spacing: 3px;
+  font-weight: 500;
   margin-top: 20px;
+  border: 2px solid var(--line-color);
+  padding: 4px;
 }
 
 .modal-content h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin: 20px 0 10px 10px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin: 20px 0 5px 10px;
 }
 
 .modal-content a {
   color: var(--link);
+}
+
+.modal-content p {
+  text-align: justify;
 }
 
 .close {

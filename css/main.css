@@ -18,9 +18,13 @@
   --section-color: #F3F3F3;
   --text-color: #1E1E1E;
   --line-color: #1E1E1E;
-  --link: #78A6BB;
+  --link: #5D8191;
+
+  --cv: #163853;
+  --blue-light: #78A6BB;
   --blue-dark: #27548A;
   --yellow: #FBD000;
+  --green: #25d366;
   --rubik: Rubik;
 }
 
@@ -47,7 +51,7 @@ body {
 
 .colored-text {
   color: var(--link);
-  font-weight: 700;
+  font-weight: 800;
 }
 
 /* Boutons */

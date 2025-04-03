@@ -10,7 +10,7 @@ export const translations = {
     profileLocation: "Région lyonnaise",
     profileDriving: "Permis B",
     profileText:
-      "Bonjour, je suis <span class='colored-text'>Matthieu Chatelin</span>, développeur web en reconversion professionnelle, basé dans la région lyonnaise et à la recherche d'une alternance.<br /><br />Après plusieurs années dans la production audiovisuelle, j'ai choisi de me réorienter vers le développement web, un secteur qui me passionne depuis longtemps. Pour concrétiser ce projet, j'ai suivi une formation intensive où j'ai acquis des compétences solides en programmation et en conception d'applications web et mobile modernes.<br /><br />Mon expérience passée m'a apporté des qualités essentielles pour ce métier: rigueur, adaptabilité, communication, gestion de projet et travail en équipe. Habitué à résoudre des problèmes et à organiser efficacement mon travail, je mets aujourd'hui ces atouts au service du développement web, en veillant à produire du code clair et maintenable.<br /><br />Curieux et persévérant, j'aime apprendre et relever de nouveaux défis techniques. Je suis à la recherche d'une alternance pour continuer à progresser et mettre mes compétences en pratique dans un environnement dynamique. Mon objectif est d'évoluer en tant que développeur et de contribuer à des projets ambitieux, en apportant mon esprit d'analyse et ma capacité à collaborer efficacement.",
+      "Bonjour, je suis <span class='colored-text'>Matthieu Chatelin</span>, développeur web en reconversion professionnelle, basé dans la région lyonnaise et à la recherche d'une alternance.<br /><br />Après plusieurs années dans la production audiovisuelle, j'ai choisi de me réorienter vers le <span class='colored-text'>développement</span> web, un secteur qui me passionne depuis longtemps. Pour concrétiser ce projet, j'ai suivi une formation intensive où j'ai acquis des compétences solides en programmation et en conception d'applications <span class='colored-text'>web et mobile</span> modernes.<br /><br />Mon expérience passée m'a apporté des qualités essentielles pour ce métier: rigueur, adaptabilité, <span class='colored-text'>communication</span>, gestion de projet et travail en équipe. Habitué à résoudre des problèmes et à organiser efficacement mon <span class='colored-text'>travail</span>, je mets aujourd'hui ces atouts au service du développement web, en veillant à produire du code clair et maintenable.<br /><br />Curieux et persévérant, j'aime <span class='colored-text'>apprendre</span> et relever de nouveaux défis techniques. Je suis à la recherche d'une alternance pour continuer à progresser et mettre mes compétences en pratique dans un environnement <span class='colored-text'>dynamique</span>. Mon objectif est d'évoluer en tant que développeur et de contribuer à des projets ambitieux, en apportant mon esprit d'analyse et ma capacité à collaborer efficacement.",
     profileCV: "Quelques lignes de code, quelques lignes sur mon parcours… Un clic suffit pour en savoir plus sur moi !",
     profileDownloadBtn: "Télécharger mon CV",
     or: "OU",
@@ -36,16 +36,16 @@ export const translations = {
     copyright: "© 2025 Matthieu Chatelin. Tous droits réservés.",
     top: "HAUT DE PAGE",
     legal: "Mentions légales & Confidentialité",
-    legalTitle: "Mentions légales",
-    legalPublisherTitle: "Éditeur du site",
-    legalPublisherText: "Ce site est édité par : Matthieu CHATELIN, Développeur Web",
+    legalTitle: "MENTIONS LÈGALES",
+    legalPublisherTitle: "Éditeur du Site",
+    legalPublisherText: "Ce site est édité par : <span class='colored-text'>Matthieu CHATELIN</span>, Développeur Web",
     legalHostTitle: "Hébergement",
     legalHostText: "Le site est hébergé par :",
     legalLiabilityTitle: "Responsabilité",
     legalLiabilityText:
       "Les informations présentées sur ce site le sont à titre informatif. L'éditeur ne saurait être tenu responsable des erreurs ou omissions. Les liens vers des sites externes ne sont pas sous le contrôle de l'éditeur, qui ne peut être tenu responsable de leur contenu.",
-    privacyTitle: "Politique de confidentialité",
-    privacyDataTitle: "Données personnelles",
+    privacyTitle: "POLITIQUE DE CONFIDENTIALITÉ",
+    privacyDataTitle: "Données Personnelles",
     privacyDataText1: "Ce site ne collecte pas de données personnelles à l’insu des visiteurs.",
     privacyDataText2:
       "Le seul formulaire présent permet de contacter le développeur. Les données saisies (nom, email, message) sont utilisées uniquement pour répondre à la demande envoyée via ce formulaire.",
@@ -53,7 +53,7 @@ export const translations = {
     privacyCookiesTitle: "Cookies",
     privacyCookiesText:
       "Ce site ne dépose pas de cookies à des fins de suivi, de publicité ou d’analyse. Seuls des cookies strictement nécessaires au bon fonctionnement du site peuvent être utilisés (par exemple, ceux liés à l’affichage ou à la navigation).",
-    privacyRightsTitle: "Vos droits",
+    privacyRightsTitle: "Vos Droits",
     privacyRightsText1:
       "Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d’un droit d’accès, de rectification ou de suppression des données vous concernant.",
     privacyRightsText2: 'Pour exercer ce droit, vous pouvez écrire à : <a href="mailto:matthieu888@gmail.com">matthieu888@gmail.com</a>',
@@ -68,7 +68,7 @@ export const translations = {
     profileLocation: "Lyon Area",
     profileDriving: "B license",
     profileText:
-      "Hi, I'm <span class='colored-text'>Matthieu Chatelin</span>, a web developer in retraining, based in the Lyon area and looking for a work-study placement.<br /><br />After several years in audiovisual production, I decided to move into web development, a sector I've long been passionate about. To make this project a reality, I took an intensive training course where I acquired solid skills in programming and designing modern web and mobile applications.<br/><br />My past experience has given me essential qualities for this job: rigor, adaptability, communication, project management and teamwork. I'm used to solving problems and organizing my work efficiently, and I'm now applying these skills to web development, with a focus on producing clear, maintainable code.<br /><br />Curious and persevering, I enjoy learning and taking on new technical challenges. I'm looking for a work-study placement to continue to progress and put my skills into practice in a dynamic environment. My aim is to evolve as a developer and contribute to ambitious projects, bringing my analytical mind and ability to collaborate effectively.",
+      "Hi, I'm <span class='colored-text'>Matthieu Chatelin</span>, a web developer in retraining, based in the Lyon area and looking for a work-study placement.<br /><br />After several years in audiovisual production, I decided to move into web <span class='colored-text'>development</span>, a sector I've long been passionate about. To make this project a reality, I took an intensive training course where I acquired solid skills in programming and designing modern <span class='colored-text'>web and mobile</span> applications.<br/><br />My past experience has given me essential qualities for this job: rigor, adaptability, <span class='colored-text'>communication</span>, project management and teamwork. I'm used to solving problems and organizing my <span class='colored-text'>work</span> efficiently, and I'm now applying these skills to web development, with a focus on producing clear, maintainable code.<br /><br />Curious and persevering, I enjoy <span class='colored-text'>learning</span> and taking on new technical challenges. I'm looking for a work-study placement to continue to progress and put my skills into practice in a <span class='colored-text'>dynamic</span> environment. My aim is to evolve as a developer and contribute to ambitious projects, bringing my analytical mind and ability to collaborate effectively.",
     profileCV: "A few lines of code, a few lines about my career... One click is all it takes to find out more about me!",
     profileDownloadBtn: "Download my CV",
     or: "OR",
@@ -94,15 +94,15 @@ export const translations = {
     copyright: "© 2025 Matthieu Chatelin. All rights reserved.",
     top: "BACK TO TOP",
     legal: "Terms of use & Privacy Policy",
-    legalTitle: "Terms of use",
+    legalTitle: "TERMS OF USE",
     legalPublisherTitle: "Site Publisher",
-    legalPublisherText: "This site is published by: Matthieu CHATELIN, Web Developper",
+    legalPublisherText: "This site is published by: <span class='colored-text'>Matthieu CHATELIN</span>, Web Developper",
     legalHostTitle: "Hosting",
     legalHostText: "This site is hosted by:",
     legalLiabilityTitle: "Liability",
     legalLiabilityText:
       "The information provided on this site is for informational purposes only. The publisher cannot be held responsible for any errors or omissions. Links to external websites are beyond the control of the publisher, who cannot be held liable for their content.",
-    privacyTitle: "Privacy Policy",
+    privacyTitle: "PRIVACY POLICY",
     privacyDataTitle: "Personal Data",
     privacyDataText1: "This site does not collect personal data without the visitor’s knowledge.",
     privacyDataText2:
