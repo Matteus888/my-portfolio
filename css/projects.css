@@ -1,0 +1,7 @@
+.projects {
+  background-color: var(--background-color);
+  border-top: 2px solid var(--line-color);
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
