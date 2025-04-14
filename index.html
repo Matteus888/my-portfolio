@@ -1,67 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Matthieu Chatelin Portfolio | Développeur web</title>
-    <link rel="icon" href="./assets/icons/logo-dark.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/main.css" />
-    <script type="module" src="./js/main.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  </head>
-  <body>
-    <header class="header-container" id="top">
-      <nav class="nav-container">
-        <ul class="nav-menu">
-          <li class="nav-item">
-            <a href="#top">
-              <img class="logo" src="./assets/icons/logo-light.png" alt="Logo Home" />
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#profile" data-i18n="profile">PROFIL</a>
-          </li>
-          <li class="nav-item">
-            <a href="#formations">FORMATION</a>
-          </li>
-          <li class="nav-item">
-            <a href="#skills" data-i18n="skills">COMPÉTENCES</a>
-          </li>
-          <li class="nav-item">
-            <a href="#projects" data-i18n="projects">PROJETS</a>
-          </li>
-          <li class="nav-item">
-            <a href="#contact">CONTACT</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="option-container">
-        <div class="lang-container">
-          <label class="lang-switch">
-            <input type="checkbox" class="lang-toggle" />
-            <span class="slider">
-              <img src="./assets/icons/france.png" alt="Drapeau Français" class="flag fr" />
-              <img src="./assets/icons/united-kingdom.png" alt="English flag" class="flag en" />
-            </span>
-          </label>
-        </div>
-        <div class="theme-container">
-          <label class="theme-switch">
-            <input type="checkbox" class="theme-toggle" />
-            <span class="slider">
-              <p class="theme day">☀️</p>
-              <p class="theme night">🌙</p>
-            </span>
-          </label>
-        </div>
-      </div>
-    </header>
 
-    <!-- Option-bar -->
-    <div id="option-bar" class="option-bar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matthieu Chatelin Portfolio | Développeur web</title>
+  <link rel="icon" href="./assets/icons/logo-dark.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <script type="module" src="./js/main.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+
+<body>
+  <header class="header-container" id="top">
+    <nav class="nav-container">
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="#top">
+            <img class="logo" src="./assets/icons/logo-light.png" alt="Logo Home" />
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#profile" data-i18n="profile">PROFIL</a>
+        </li>
+        <li class="nav-item">
+          <a href="#formations">FORMATION</a>
+        </li>
+        <li class="nav-item">
+          <a href="#skills" data-i18n="skills">COMPÉTENCES</a>
+        </li>
+        <li class="nav-item">
+          <a href="#projects" data-i18n="projects">PROJETS</a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact">CONTACT</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="option-container">
       <div class="lang-container">
         <label class="lang-switch">
           <input type="checkbox" class="lang-toggle" />
@@ -81,296 +61,338 @@
         </label>
       </div>
     </div>
+  </header>
 
-    <!-- Sidebar -->
-    <div id="sidebar" class="sidebar">
-      <a href="#home">
-        <img src="./assets/icons/logo-light.png" alt="Logo Home" id="home-logo" />
-        <p class="sidebar-tooltip" data-i18n="home">ACCUEIL</p>
-        <span class="sidebar-indicator"></span>
-      </a>
-      <a href="#profile">
-        <img src="./assets/icons/profile-light.png" alt="Logo Profile" />
-        <p class="sidebar-tooltip" data-i18n="profile">PROFIL</p>
-        <span class="sidebar-indicator"></span>
-      </a>
-      <a href="#formations">
-        <img src="./assets/icons/formation-light.png" alt="Logo Formation" />
-        <p class="sidebar-tooltip">FORMATION</p>
-        <span class="sidebar-indicator"></span>
-      </a>
-      <a href="#skills">
-        <img src="./assets/icons/skills-light.png" alt="Logo Skills" />
-        <p class="sidebar-tooltip" data-i18n="skills">COMPÉTENCES</p>
-        <span class="sidebar-indicator"></span>
-      </a>
-      <a href="#projects">
-        <img src="./assets/icons/projects-light.png" alt="Logo Projects" />
-        <p class="sidebar-tooltip" data-i18n="projects">PROJETS</p>
-        <span class="sidebar-indicator"></span>
-      </a>
-      <a href="#contact">
-        <img src="./assets/icons/contact-light.png" alt="Logo Contact" />
-        <p class="sidebar-tooltip">CONTACT</p>
-        <span class="sidebar-indicator"></span>
-      </a>
+  <!-- Option-bar -->
+  <div id="option-bar" class="option-bar">
+    <div class="lang-container">
+      <label class="lang-switch">
+        <input type="checkbox" class="lang-toggle" />
+        <span class="slider">
+          <img src="./assets/icons/france.png" alt="Drapeau Français" class="flag fr" />
+          <img src="./assets/icons/united-kingdom.png" alt="English flag" class="flag en" />
+        </span>
+      </label>
     </div>
-
-    <!-- Arrow-bar -->
-    <div id="arrow-bar" class="arrow-bar">
-      <a href="#top">
-        <img src="./assets/icons/up-arrow-light.png" alt="Arrow up pic" />
-        <p class="arrow-bar-tooltip" data-i18n="top"></p>
-      </a>
+    <div class="theme-container">
+      <label class="theme-switch">
+        <input type="checkbox" class="theme-toggle" />
+        <span class="slider">
+          <p class="theme day">☀️</p>
+          <p class="theme night">🌙</p>
+        </span>
+      </label>
     </div>
+  </div>
 
-    <main>
-      <section class="home" id="home">
-        <div class="background-image-container">
-          <img class="background-image" src="./assets/images/vscode-dark.webp" alt="Code background" />
-          <img class="background-image-sharp" src="./assets/images/vscode-light.webp" alt="Code sharp" />
-          <canvas id="zoom-canvas"></canvas>
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <a href="#home">
+      <img src="./assets/icons/logo-light.png" alt="Logo Home" id="home-logo" />
+      <p class="sidebar-tooltip" data-i18n="home">ACCUEIL</p>
+      <span class="sidebar-indicator"></span>
+    </a>
+    <a href="#profile">
+      <img src="./assets/icons/profile-light.png" alt="Logo Profile" />
+      <p class="sidebar-tooltip" data-i18n="profile">PROFIL</p>
+      <span class="sidebar-indicator"></span>
+    </a>
+    <a href="#formations">
+      <img src="./assets/icons/formation-light.png" alt="Logo Formation" />
+      <p class="sidebar-tooltip">FORMATION</p>
+      <span class="sidebar-indicator"></span>
+    </a>
+    <a href="#skills">
+      <img src="./assets/icons/skills-light.png" alt="Logo Skills" />
+      <p class="sidebar-tooltip" data-i18n="skills">COMPÉTENCES</p>
+      <span class="sidebar-indicator"></span>
+    </a>
+    <a href="#projects">
+      <img src="./assets/icons/projects-light.png" alt="Logo Projects" />
+      <p class="sidebar-tooltip" data-i18n="projects">PROJETS</p>
+      <span class="sidebar-indicator"></span>
+    </a>
+    <a href="#contact">
+      <img src="./assets/icons/contact-light.png" alt="Logo Contact" />
+      <p class="sidebar-tooltip">CONTACT</p>
+      <span class="sidebar-indicator"></span>
+    </a>
+  </div>
+
+  <!-- Arrow-bar -->
+  <div id="arrow-bar" class="arrow-bar">
+    <a href="#top">
+      <img src="./assets/icons/up-arrow-light.png" alt="Arrow up pic" />
+      <p class="arrow-bar-tooltip" data-i18n="top"></p>
+    </a>
+  </div>
+
+  <main>
+    <section class="home" id="home">
+      <div class="background-image-container">
+        <img class="background-image" src="./assets/images/vscode-dark.webp" alt="Code background" />
+        <img class="background-image-sharp" src="./assets/images/vscode-light.webp" alt="Code sharp" />
+        <canvas id="zoom-canvas"></canvas>
+      </div>
+      <div class="terminal" id="terminal">
+        <span id="text" data-i18n="welcome"></span>
+        <a id="terminalImg" href="#profile">
+          <div class="terminalImg terminalImg-front"></div>
+          <div class="terminalImg terminalImg-back"></div>
+        </a>
+        <a class="btn" id="terminalBtn" data-i18n="profile" href="#profile">PROFIL</a>
+      </div>
+    </section>
+
+    <section class="profile" id="profile">
+      <div class="profile-card">
+        <div class="profile-id">
+          <div class="profile-image-container">
+            <img src="./assets/images/avatar.webp" alt="Avatar pic" class="profile-image-front" />
+            <img src="./assets/images/profile.webp" alt="Profile Pic" class="profile-image-back" />
+          </div>
+          <div class="profile-id-text">
+            <div class="profile-id-item">
+              <a href="#contact">
+                <img src="./assets/icons/phone-light.png" alt="Phone logo" />
+              </a>
+              <a href="#contact">
+                <p>+33 6 80 17 57 71</p>
+              </a>
+            </div>
+            <div class="profile-id-item">
+              <a href="#contact">
+                <img src="./assets/icons/mail-light.png" alt="Email logo" />
+              </a>
+              <a href="#contact">
+                <p>matthieu888@gmail.com</p>
+              </a>
+            </div>
+            <div class="profile-id-item">
+              <a href="https://www.lemonde.fr/archives-du-monde/20-03-1980/" target="_blank">
+                <img src="./assets/icons/birth-light.png" alt="Birthday logo" />
+              </a>
+              <a href="https://www.lemonde.fr/archives-du-monde/20-03-1980/" target="_blank">
+                <p>20/03/1980</p>
+              </a>
+            </div>
+            <div class="profile-id-item">
+              <a href="https://www.google.fr/maps/place/69290+Craponne/" target="_blank">
+                <img src="./assets/icons/location-light.png" alt="Location logo" />
+              </a>
+              <a href="https://www.google.fr/maps/place/69290+Craponne/" target="_blank">
+                <p data-i18n="profileLocation"></p>
+              </a>
+            </div>
+            <div class="profile-id-item">
+              <img src="./assets/icons/driving-license-light.png" alt="Driving License logo" />
+              <p data-i18n="profileDriving"></p>
+            </div>
+          </div>
         </div>
-        <div class="terminal" id="terminal">
-          <span id="text" data-i18n="welcome"></span>
-          <a id="terminalImg" href="#profile">
-            <div class="terminalImg terminalImg-front"></div>
-            <div class="terminalImg terminalImg-back"></div>
+        <div class="profile-text">
+          <p data-i18n="profileText"></p>
+        </div>
+      </div>
+      <div class="profile-card">
+        <div class="profile-download-container">
+          <p data-i18n="profileCV"></p>
+          <a href="./assets/files/CV_2025_Matthieu CHATELIN.pdf" download="CV_2025_Matthieu CHATELIN.pdf">
+            <button class="btn" data-i18n="profileDownloadBtn"></button>
           </a>
-          <a class="btn" id="terminalBtn" data-i18n="profile" href="#profile">PROFIL</a>
-        </div>
-      </section>
-
-      <section class="profile" id="profile">
-        <div class="profile-card">
-          <div class="profile-id">
-            <div class="profile-image-container">
-              <img src="./assets/images/avatar.webp" alt="Avatar pic" class="profile-image-front" />
-              <img src="./assets/images/profile.webp" alt="Profile Pic" class="profile-image-back" />
-            </div>
-            <div class="profile-id-text">
-              <div class="profile-id-item">
-                <a href="#contact">
-                  <img src="./assets/icons/phone-light.png" alt="Phone logo" />
-                </a>
-                <a href="#contact">
-                  <p>+33 6 80 17 57 71</p>
-                </a>
-              </div>
-              <div class="profile-id-item">
-                <a href="#contact">
-                  <img src="./assets/icons/mail-light.png" alt="Email logo" />
-                </a>
-                <a href="#contact">
-                  <p>matthieu888@gmail.com</p>
-                </a>
-              </div>
-              <div class="profile-id-item">
-                <a href="https://www.lemonde.fr/archives-du-monde/20-03-1980/" target="_blank">
-                  <img src="./assets/icons/birth-light.png" alt="Birthday logo" />
-                </a>
-                <a href="https://www.lemonde.fr/archives-du-monde/20-03-1980/" target="_blank">
-                  <p>20/03/1980</p>
-                </a>
-              </div>
-              <div class="profile-id-item">
-                <a href="https://www.google.fr/maps/place/69290+Craponne/" target="_blank">
-                  <img src="./assets/icons/location-light.png" alt="Location logo" />
-                </a>
-                <a href="https://www.google.fr/maps/place/69290+Craponne/" target="_blank">
-                  <p data-i18n="profileLocation"></p>
-                </a>
-              </div>
-              <div class="profile-id-item">
-                <img src="./assets/icons/driving-license-light.png" alt="Driving License logo" />
-                <p data-i18n="profileDriving"></p>
-              </div>
-            </div>
-          </div>
-          <div class="profile-text">
-            <p data-i18n="profileText"></p>
-          </div>
-        </div>
-        <div class="profile-card">
-          <div class="profile-download-container">
-            <p data-i18n="profileCV"></p>
-            <a href="./assets/files/CV_2025_Matthieu CHATELIN.pdf" download="CV_2025_Matthieu CHATELIN.pdf">
-              <button class="btn" data-i18n="profileDownloadBtn"></button>
+          <div class="profile-links">
+            <a href="https://www.linkedin.com/in/matthieu-chatelin/" target="_blank">
+              <img src="./assets/icons/linkedin-light.png" alt="Logo Linkedin" />
+              <p class="profile-tooltip">LINKEDIN</p>
             </a>
-            <div class="profile-links">
-              <a href="https://www.linkedin.com/in/matthieu-chatelin/" target="_blank">
-                <img src="./assets/icons/linkedin-light.png" alt="Logo Linkedin" />
-                <p class="profile-tooltip">LINKEDIN</p>
-              </a>
-              <a href="https://github.com/Matteus888" target="_blank">
-                <img src="./assets/icons/github-light.png" alt="Logo GitHub" />
-                <p class="profile-tooltip">GITHUB</p>
-              </a>
-            </div>
-            <div class="profile-line-container">
-              <div class="profile-horizontal-line"></div>
-              <p data-i18n="or">OR</p>
-              <div class="profile-horizontal-line"></div>
-            </div>
-            <p data-i18n="profileContactText"></p>
-            <a href="#contact">
-              <button class="btn" data-i18n="profileContactBtn"></button>
+            <a href="https://github.com/Matteus888" target="_blank">
+              <img src="./assets/icons/github-light.png" alt="Logo GitHub" />
+              <p class="profile-tooltip">GITHUB</p>
             </a>
           </div>
-          <div class="profile-vertical-line"></div>
-          <div class="cv-preview">
-            <a href="./assets/files/CV_2025_Matthieu CHATELIN.pdf" target="_blank">
-              <img src="./assets/images/cv_preview.webp" alt="CV Preview" />
-            </a>
+          <div class="profile-line-container">
+            <div class="profile-horizontal-line"></div>
+            <p data-i18n="or">OR</p>
+            <div class="profile-horizontal-line"></div>
           </div>
+          <p data-i18n="profileContactText"></p>
+          <a href="#contact">
+            <button class="btn" data-i18n="profileContactBtn"></button>
+          </a>
         </div>
-      </section>
+        <div class="profile-vertical-line"></div>
+        <div class="cv-preview">
+          <a href="./assets/files/CV_2025_Matthieu CHATELIN.pdf" target="_blank">
+            <img src="./assets/images/cv_preview.webp" alt="CV Preview" />
+          </a>
+        </div>
+      </div>
+    </section>
 
-      <section class="formation" id="formations"></section>
+    <section class="formation" id="formations"></section>
 
-      <section class="skills" id="skills"></section>
+    <section class="skills" id="skills"></section>
 
-      <section class="projects" id="projects">
-        <div class="projects-container">
-          <h2 class="projects-title" data-i18n="projectsTitle"></h2>
-          <div class="projects-wrapper">
-            <div class="projects-thumbnail-container">
-              <div class="projects-thumbnail" data-title="My Social App">
-                <div class="projects-thumbnail-body"></div>
-              </div>
-              <div class="projects-thumbnail" data-title="My 80's Store">
-                <div class="projects-thumbnail-body"></div>
-              </div>
-              <div class="projects-thumbnail" data-title="Roll-In New-York">
-                <div class="projects-thumbnail-body"></div>
+    <section class="projects" id="projects">
+      <div class="projects-container">
+        <h2 class="projects-title" data-i18n="projectsTitle"></h2>
+        <div class="projects-wrapper">
+          <div class="projects-thumbnail-container">
+            <div class="projects-thumbnail">
+              <div class="projects-thumbnail-title">----------</div>
+              <div class="projects-thumbnail-body">
+                <p>My Social App</p>
+                <div class="projects-thumbnail-line"></div>
+                <p data-i18n="mySocialApp"></p>
               </div>
             </div>
-            <div class="projects-focused" data-title="My 80's Store">
-              <div class="projects-focused-body"></div>
+            <div class="projects-thumbnail">
+              <div class="projects-thumbnail-title">----------</div>
+              <div class="projects-thumbnail-body">
+                <p>My 80's Store</p>
+                <div class="projects-thumbnail-line"></div>
+                <p data-i18n="my80Store"></p>
+              </div>
+            </div>
+            <div class="projects-thumbnail">
+              <div class="projects-thumbnail-title">----------</div>
+              <div class="projects-thumbnail-body">
+                <p>Roll-In New-York</p>
+                <div class="projects-thumbnail-line"></div>
+                <p data-i18n="rollInNewYork"></p>
+              </div>
+            </div>
+          </div>
+          <div class="projects-focused">
+            <div class="projects-focused-title"></div>
+            <div class="projects-focused-body">
+              <div class="projects-focused-images"></div>
+              <p class="projects-focused-description"></p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="contact" id="contact">
-        <div class="contact-container">
-          <h2 class="contact-title" data-i18n="contactTitle"></h2>
-          <div class="contact-card">
-            <a href="tel:+33680175771">
-              <img src="./assets/icons/phone-light.png" alt="Phone logo" />
-              <p class="contact-tooltip" data-i18n="phoneCallText"></p>
-              <p>+33 6 80 17 57 71</p>
-            </a>
-            <a href="mailto:matthieu888@gmail.com" target="_blank">
-              <img src="./assets/icons/mail-light.png" alt="Email logo" />
-              <p class="contact-tooltip" data-i18n="emailText"></p>
-              <p>matthieu888@gmail.com</p>
-            </a>
-            <a href="https://api.whatsapp.com/send?phone=+33680175771&text=Hello" target="_blank">
-              <img src="./assets/icons/whatsapp-green.png" alt="Whatsapp logo" />
-              <p class="contact-tooltip" data-i18n="whatsappText"></p>
-              <p>+33 6 80 17 57 71</p>
-            </a>
-          </div>
-          <form action="submit" class="form-card">
-            <div class="double-input-container">
-              <div class="input-container">
-                <label for="lastname" data-i18n="lastnameForm">Lastname</label>
-                <input type="text" id="lastname" name="lastname" required />
-              </div>
-              <div class="input-container">
-                <label for="firstname" data-i18n="firstnameForm">Firstname</label>
-                <input type="text" id="firstname" name="firstname" required />
-              </div>
-            </div>
-            <div class="double-input-container">
-              <div class="input-container">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required />
-              </div>
-              <div class="input-container">
-                <label for="phone" data-i18n="phoneForm">Phone</label>
-                <input type="text" id="phone" name="phone" />
-              </div>
+    <section class="contact" id="contact">
+      <div class="contact-container">
+        <h2 class="contact-title" data-i18n="contactTitle"></h2>
+        <div class="contact-card">
+          <a href="tel:+33680175771">
+            <img src="./assets/icons/phone-light.png" alt="Phone logo" />
+            <p class="contact-tooltip" data-i18n="phoneCallText"></p>
+            <p>+33 6 80 17 57 71</p>
+          </a>
+          <a href="mailto:matthieu888@gmail.com" target="_blank">
+            <img src="./assets/icons/mail-light.png" alt="Email logo" />
+            <p class="contact-tooltip" data-i18n="emailText"></p>
+            <p>matthieu888@gmail.com</p>
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=+33680175771&text=Hello" target="_blank">
+            <img src="./assets/icons/whatsapp-green.png" alt="Whatsapp logo" />
+            <p class="contact-tooltip" data-i18n="whatsappText"></p>
+            <p>+33 6 80 17 57 71</p>
+          </a>
+        </div>
+        <form action="submit" class="form-card">
+          <div class="double-input-container">
+            <div class="input-container">
+              <label for="lastname" data-i18n="lastnameForm">Lastname</label>
+              <input type="text" id="lastname" name="lastname" required />
             </div>
             <div class="input-container">
-              <label for="object" data-i18n="subjectForm">Object</label>
-              <input type="text" id="object" name="subject" required />
+              <label for="firstname" data-i18n="firstnameForm">Firstname</label>
+              <input type="text" id="firstname" name="firstname" required />
+            </div>
+          </div>
+          <div class="double-input-container">
+            <div class="input-container">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
             </div>
             <div class="input-container">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="6" required></textarea>
+              <label for="phone" data-i18n="phoneForm">Phone</label>
+              <input type="text" id="phone" name="phone" />
             </div>
-            <div class="checkbox-container">
-              <input type="checkbox" id="accept" name="accept" required />
-              <label for="accept" data-i18n="checkboxText"></label>
-            </div>
-            <button class="btn submitBtn" data-i18n="submitBtn" type="submit"></button>
-          </form>
-        </div>
-      </section>
-    </main>
+          </div>
+          <div class="input-container">
+            <label for="object" data-i18n="subjectForm">Object</label>
+            <input type="text" id="object" name="subject" required />
+          </div>
+          <div class="input-container">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" id="accept" name="accept" required />
+            <label for="accept" data-i18n="checkboxText"></label>
+          </div>
+          <button class="btn submitBtn" data-i18n="submitBtn" type="submit"></button>
+        </form>
+      </div>
+    </section>
+  </main>
 
-    <footer class="footer">
-      <div class="legal-container">
-        <p class="legal" data-modal-target="#legalModal" data-i18n="legal">Mentions légales & Confidentialité</p>
-      </div>
-      <p class="copyright" data-i18n="copyright">© 2025 Matthieu Chatelin. Tous droits réservés.</p>
-      <a id="arrow-up" href="#top"
-        ><img src="./assets/icons/up-arrow-light.png" alt="Arrow up pic" />
-        <p data-i18n="top">BACK TO TOP</p>
-        <img src="./assets/icons/up-arrow-light.png" alt="Arrow up pic" />
-      </a>
-      <div class="social">
-        <a href="https://www.linkedin.com/in/matthieu-chatelin/" target="_blank">
-          <img src="./assets/icons/linkedin-light.png" alt="Logo Linkedin" />
-          <p class="social-tooltip">LINKEDIN</p>
-        </a>
-        <a href="https://github.com/Matteus888" target="_blank">
-          <img src="./assets/icons/github-light.png" alt="Logo GitHub" />
-          <p class="social-tooltip">GITHUB</p>
-        </a>
-      </div>
-    </footer>
-
-    <!-- Modale - Mentions légales -->
-    <div id="legalModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2 data-i18n="legalTitle"></h2>
-        <img src="./assets/icons/legal-light.png" alt="Legal Icon" />
-        <div>
-          <h3 data-i18n="legalPublisherTitle"></h3>
-          <p data-i18n="legalPublisherText"></p>
-          <p>Email : <a href="mailto:matthieu888@gmail.com">matthieu888@gmail.com</a></p>
-          <p>Website : <a href="https://www.votreportfolio.com" target="_blank">https://www.votreportfolio.com</a></p>
-          <h3 data-i18n="legalHostTitle"></h3>
-          <p data-i18n="legalHostText"></p>
-          <p><strong>[Nom de l'hébergeur]</strong></p>
-          <p>[Adresse de l'hébergeur]</p>
-          <p>Website : <a href="https://www.hebergeur.com" target="_blank">https://www.hebergeur.com</a></p>
-          <h3 data-i18n="legalLiabilityTitle"></h3>
-          <p data-i18n="legalLiabilityText"></p>
-        </div>
-        <div class="modal-line"></div>
-        <h2 data-i18n="privacyTitle"></h2>
-        <img src="./assets/icons/confidentiality-light.png" alt="Confidentiality Icon" />
-        <div>
-          <h3 data-i18n="privacyDataTitle"></h3>
-          <p data-i18n="privacyDataText1"></p>
-          <p data-i18n="privacyDataText2"></p>
-          <p data-i18n="privacyDataText3"></p>
-          <h3 data-i18n="privacyCookiesTitle"></h3>
-          <p data-i18n="privacyCookiesText"></p>
-          <h3 data-i18n="privacyRightsTitle"></h3>
-          <p data-i18n="privacyRightsText1"></p>
-          <p data-i18n="privacyRightsText2"></p>
-        </div>
-        <button class="modal-btn btn">OK</button>
-      </div>
+  <footer class="footer">
+    <div class="legal-container">
+      <p class="legal" data-modal-target="#legalModal" data-i18n="legal">Mentions légales & Confidentialité</p>
     </div>
+    <p class="copyright" data-i18n="copyright">© 2025 Matthieu Chatelin. Tous droits réservés.</p>
+    <a id="arrow-up" href="#top"><img src="./assets/icons/up-arrow-light.png" alt="Arrow up pic" />
+      <p data-i18n="top">BACK TO TOP</p>
+      <img src="./assets/icons/up-arrow-light.png" alt="Arrow up pic" />
+    </a>
+    <div class="social">
+      <a href="https://www.linkedin.com/in/matthieu-chatelin/" target="_blank">
+        <img src="./assets/icons/linkedin-light.png" alt="Logo Linkedin" />
+        <p class="social-tooltip">LINKEDIN</p>
+      </a>
+      <a href="https://github.com/Matteus888" target="_blank">
+        <img src="./assets/icons/github-light.png" alt="Logo GitHub" />
+        <p class="social-tooltip">GITHUB</p>
+      </a>
+    </div>
+  </footer>
 
-    <!-- Toast - Formulaire de contact -->
-    <div id="toastContainer"></div>
-  </body>
+  <!-- Modale - Mentions légales -->
+  <div id="legalModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 data-i18n="legalTitle"></h2>
+      <img src="./assets/icons/legal-light.png" alt="Legal Icon" />
+      <div>
+        <h3 data-i18n="legalPublisherTitle"></h3>
+        <p data-i18n="legalPublisherText"></p>
+        <p>Email : <a href="mailto:matthieu888@gmail.com">matthieu888@gmail.com</a></p>
+        <p>Website : <a href="https://www.votreportfolio.com" target="_blank">https://www.votreportfolio.com</a></p>
+        <h3 data-i18n="legalHostTitle"></h3>
+        <p data-i18n="legalHostText"></p>
+        <p><strong>[Nom de l'hébergeur]</strong></p>
+        <p>[Adresse de l'hébergeur]</p>
+        <p>Website : <a href="https://www.hebergeur.com" target="_blank">https://www.hebergeur.com</a></p>
+        <h3 data-i18n="legalLiabilityTitle"></h3>
+        <p data-i18n="legalLiabilityText"></p>
+      </div>
+      <div class="modal-line"></div>
+      <h2 data-i18n="privacyTitle"></h2>
+      <img src="./assets/icons/confidentiality-light.png" alt="Confidentiality Icon" />
+      <div>
+        <h3 data-i18n="privacyDataTitle"></h3>
+        <p data-i18n="privacyDataText1"></p>
+        <p data-i18n="privacyDataText2"></p>
+        <p data-i18n="privacyDataText3"></p>
+        <h3 data-i18n="privacyCookiesTitle"></h3>
+        <p data-i18n="privacyCookiesText"></p>
+        <h3 data-i18n="privacyRightsTitle"></h3>
+        <p data-i18n="privacyRightsText1"></p>
+        <p data-i18n="privacyRightsText2"></p>
+      </div>
+      <button class="modal-btn btn">OK</button>
+    </div>
+  </div>
+
+  <!-- Toast - Formulaire de contact -->
+  <div id="toastContainer"></div>
+</body>
+
 </html>

@@ -5,6 +5,7 @@ import { handleSidebar } from "./sidebar.js";
 import { setupImageZoom } from "./imageZoom.js";
 import { setupModals, reattachModalListeners } from "./modal.js";
 import { setupEmailForm } from "./email.js";
+import { focusOnProject } from "./projects.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // Gestion du thème
@@ -113,4 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Contact
   setupEmailForm();
+
+  // Projects focused
+  focusOnProject();
 });
