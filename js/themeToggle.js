@@ -13,6 +13,7 @@ export function toggleTheme(isDarkMode) {
   const legalIcons = document.querySelectorAll(".modal-content img");
   const profileIdIcons = document.querySelectorAll(".profile-id-item img");
   const profileSocialIcons = document.querySelectorAll(".profile-links img");
+  const projectsGitHubIcons = document.querySelectorAll(".projects-techno-item img");
   const contactIcons = document.querySelectorAll(".contact-card img");
   const arrowUpIcons = document.querySelectorAll("#arrow-up img");
 
@@ -22,6 +23,7 @@ export function toggleTheme(isDarkMode) {
     ...legalIcons,
     ...profileIdIcons,
     ...profileSocialIcons,
+    ...projectsGitHubIcons,
     ...contactIcons,
     ...arrowUpIcons,
   ];

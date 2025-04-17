@@ -12,6 +12,11 @@
 }
 
 .modal-content {
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content--legal {
   background-color: var(--background-color);
   overflow: auto;
   padding: 0 20px 20px;
@@ -22,11 +27,22 @@
   max-height: 600px;
   color: var(--text-color);
   line-height: 1.2;
-  position: relative;
-  animation: fadeIn 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.modal--image {
+  background-color: var(--background-color-opacity50);
+  z-index: 1000;
+}
+
+.modal-content--image {
+  max-width: 90%;
+  max-height: 80vh;
+  display: block;
+  margin: auto;
+  border: 2px solid var(--line-color);
 }
 
 .modal-content img {
@@ -63,7 +79,6 @@
 .close {
   color: var(--text-color);
   position: absolute;
-  top: 10px;
   right: 15px;
   font-size: 2rem;
   cursor: pointer;
@@ -71,6 +86,14 @@
 
 .close:active {
   transform: scale(0.9);
+}
+
+.modal-close--legal {
+  top: 10px;
+}
+
+.modal-close--image {
+  top: 65px;
 }
 
 @keyframes fadeIn {

@@ -71,11 +71,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Gestion de l'apparition des cards
   const profileCards = document.querySelectorAll(".profile-card");
+  const projectsTitle = document.querySelector(".projects-title");
   const contactTitle = document.querySelector(".contact-title");
+  const projectsThumbnails = document.querySelector(".projects-thumbnail-container");
+  const projectsFocused = document.querySelector(".projects-focused");
   const contactCard = document.querySelector(".contact-card");
   const formCard = document.querySelector(".form-card");
 
-  const totalCards = [...profileCards, contactTitle, contactCard, formCard];
+  const totalCards = [...profileCards, projectsTitle, projectsThumbnails, projectsFocused, contactTitle, contactCard, formCard];
 
   function checkScroll() {
     totalCards.forEach((card) => {

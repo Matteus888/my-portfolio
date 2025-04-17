@@ -21,6 +21,13 @@ export const translations = {
     mySocialApp: "Réseau social",
     my80Store: "Site de e-commerce",
     rollInNewYork: "Application mobile",
+    clickOnFolder: "Cliquez sur un dossier",
+    project1_description:
+      "Une application de réseau social moderne offrant des fonctionnalités similaires à Facebook: gestion des amis, follow/unfollow, messagerie et personnalisation de sa page personnelle.",
+    project2_description:
+      "Une boutique en ligne proposant des objets vintage emblématiques des années 80-90 : jeux vidéo, consoles, vêtements, VHS, etc.",
+    project3_description: "Une application mobile pour les touristes qui souhaitent voir les lieux de tournage emblématique de New-York.",
+    visit: "VOIR LE SITE",
     contactTitle: "CONTACTEZ MOI",
     phoneCallText: "Un appel",
     emailText: "Un email",
@@ -84,6 +91,13 @@ export const translations = {
     mySocialApp: "Social Network",
     my80Store: "E-commerce Website",
     rollInNewYork: "Touristic Mobile App",
+    clickOnFolder: "Click on a folder",
+    project1_description:
+      "A modern social networking application offering features similar to Facebook: friend management, follow/unfollow, messaging and personalization of your personal page.",
+    project2_description:
+      "An online boutique featuring iconic vintage items from the 80s and 90s: video games, consoles, clothing, VHS, etc.",
+    project3_description: "A mobile app for tourists who want to see New York's iconic film locations.",
+    visit: "VIEW WEBSITE",
     contactTitle: "CONTACT ME",
     phoneCallText: "A phone call",
     emailText: "An email",

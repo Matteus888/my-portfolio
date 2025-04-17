@@ -267,7 +267,49 @@
             <div class="projects-focused-title"></div>
             <div class="projects-focused-body">
               <div class="projects-focused-images"></div>
-              <p class="projects-focused-description"></p>
+              <div class="projects-focused-details">
+                <div class="projects-details">
+                  <div class="projects-details-item">
+                    <p class="projects-details-title">Description</p>
+                    <p class="projects-description-text"></p>
+                  </div>
+                  <div class="projects-details-item">
+                    <p class="projects-details-title">Technologies</p>
+                    <div class="projects-techno">
+                      <div class="projects-techno-item">
+                        <div class="projects-techno-text">
+                          <span>Front:</span>
+                          <p class="projects-front"></p>
+                        </div>
+                        <a href="" target="_blank"><img src="./assets/icons/github-light.png" alt="GitHub logo"></a>
+                      </div>
+                      <div class="projects-techno-item">
+                        <div class="projects-techno-text">
+                          <span>Back:</span>
+                          <p class="projects-back"></p>
+                        </div>
+                        <a href="" target="_blank"><img src="./assets/icons/github-light.png" alt="GitHub logo"></a>
+                      </div>
+                      <div class="projects-techno-item">
+                        <div class="projects-techno-text">
+                          <span>BDD:</span>
+                          <p class="projects-bdd"></p>
+                        </div>
+                      </div>
+                      <div class="projects-techno-item">
+                        <div class="projects-techno-text">
+                          <span>Pack:</span>
+                          <p class="projects-pack"></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="projects-link">
+                    <a class="" href="" target="_blank"><img src="./assets/icons/www-light.png" alt="Website Logo"></a>
+                  </div>
+                </div>
+                <p class="projects-click-message" data-i18n="clickOnFolder"></p>
+              </div>
             </div>
           </div>
         </div>
@@ -354,10 +396,16 @@
     </div>
   </footer>
 
+  <!-- Modale - Agrandissement des images des projets -->
+  <div id="image-modal" class="modal modal--image">
+    <span class="close modal-close--image">&times;</span>
+    <img class="modal-content modal-content--image" id="modal-image" />
+  </div>
+
   <!-- Modale - Mentions légales -->
-  <div id="legalModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
+  <div id="legalModal" class="modal modal--legal">
+    <div class="modal-content modal-content--legal">
+      <span class="close modal-close--legal">&times;</span>
       <h2 data-i18n="legalTitle"></h2>
       <img src="./assets/icons/legal-light.png" alt="Legal Icon" />
       <div>
