@@ -7,6 +7,7 @@ export function toggleTheme(isDarkMode) {
   const bcgImage = document.querySelector(".background-image");
   const bcgImageSharp = document.querySelector(".background-image-sharp");
   const arrowBar = document.querySelector("#arrow-bar img");
+  const projectsLink = document.querySelector(".projects-link img");
 
   const sidebarIcons = document.querySelectorAll(".sidebar img");
   const socialIcons = document.querySelectorAll(".social img");
@@ -32,6 +33,7 @@ export function toggleTheme(isDarkMode) {
   bcgImage.src = `./assets/images/vscode-${isDarkMode ? "dark" : "light"}.webp`;
   bcgImageSharp.src = `./assets/images/vscode-${isDarkMode ? "light" : "dark"}.webp`;
   arrowBar.src = `./assets/icons/up-arrow-${isDarkMode ? "light" : "dark"}.png`;
+  projectsLink.src = `./assets/icons/www-${isDarkMode ? "light" : "dark"}.png`;
 
   icons.forEach((icon) => {
     const iconName = icon.src.split("/").pop();

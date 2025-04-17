@@ -5,27 +5,36 @@ const projects = [
     title: "My Social App",
     descriptionKey: "project1_description",
     front: "React/Next/JSX/CSS",
+    frontLink: "https://github.com/Matteus888/my-social-app-frontend",
     back: "NodeJS/Express",
+    backLink: "https://github.com/Matteus888/my-social-app-backend",
     bdd: "MongoDB/Cloudinary",
     pack: "FontAwesome, Redux, Moment.js, Mongoose, bcrypt, jsonwebtoken, uuid",
+    link: "https://my-social-app-frontend.vercel.app/",
     images: ["./assets/images/mySocialApp_home.webp", "./assets/images/mySocialApp_pic.webp", "./assets/images/mySocialApp_profile.webp"],
   },
   {
     title: "My 80's Store",
     descriptionKey: "project2_description",
     front: "React/Vite/JSX/CSS",
+    frontLink: "https://github.com/Matteus888/my-80store-frontend",
     back: "NodeJS/Express",
+    backLink: "https://github.com/Matteus888/my-80store-backend",
     bdd: "MongoDB",
     pack: "Material UI, Redux, Date-fns, Stripe, Prop-types, React-slider, Mongoose, bcrypt, jsonwebtoken, Slugify, uuid",
+    link: "https://my-80store-frontend.vercel.app/",
     images: ["./assets/images/my80store_home.webp", "./assets/images/my80store_products.webp", "./assets/images/my80store_cart.webp"],
   },
   {
     title: "Roll-In New-York",
     descriptionKey: "project3_description",
     front: "React Native/Expo/JSX/CSS",
+    frontLink: "https://github.com/Matteus888/Roll-in-NewYork-Frontend",
     back: "NodeJS/Express",
+    backLink: "https://github.com/Matteus888/Roll-in-NewYork-Backend",
     bdd: "MongoDB/Cloudinary",
     pack: "FontAwesome, React-Navigation, Redux, Camera, File-System, Font, Image-Picker, Expo-Location, Moment, Masonry-List, Modal, Paper, Vector Icons, Toastify, bcrypt, Mongoose, uid2",
+    link: "https://expo.dev/matthieu888/roll-in-newyork",
     images: ["./assets/images/rollinnewyork1.webp", "./assets/images/rollinnewyork2.webp", "./assets/images/rollinnewyork3.webp"],
   },
 ];
@@ -42,6 +51,9 @@ export function focusOnProject() {
   const focusedBack = document.querySelector(".projects-back");
   const focusedBDD = document.querySelector(".projects-bdd");
   const focusedPack = document.querySelector(".projects-pack");
+  const focusedLink = document.querySelector(".projects-link a");
+  const frontGitHubLink = document.querySelector("#frontGitHubLink");
+  const backGitHubLink = document.querySelector("#backGitHubLink");
 
   if (projectDetails) projectDetails.classList.add("hidden");
   if (clickMessage) clickMessage.classList.remove("hidden");
@@ -59,6 +71,9 @@ export function focusOnProject() {
     focusedBack.textContent = project.back;
     focusedBDD.textContent = project.bdd;
     focusedPack.textContent = project.pack;
+    focusedLink.href = project.link;
+    frontGitHubLink.href = project.frontLink;
+    backGitHubLink.href = project.backLink;
     focusedImages.innerHTML = "";
 
     project.images.forEach((src) => {
