@@ -1,4 +1,4 @@
-import { toggleTheme } from "./themeToggle.js";
+import { toggleTheme, initTheme } from "./themeToggle.js";
 import { changeLanguage, getCurrentLanguage, getTranslation } from "./translations.js";
 import { updateTerminalText } from "./terminalAnimation.js";
 import { handleSidebar } from "./sidebar.js";
@@ -8,6 +8,8 @@ import { setupEmailForm } from "./email.js";
 import { focusOnProject } from "./projects.js";
 
 document.addEventListener("DOMContentLoaded", () => {
+  initTheme();
+
   // Gestion du thème
   const themeToggles = document.querySelectorAll(".theme-toggle");
 

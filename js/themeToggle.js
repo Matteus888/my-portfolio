@@ -1,13 +1,17 @@
 // Fonction pour basculer entre le mode jour et nuit
 export function toggleTheme(isDarkMode) {
-  document.body.classList.toggle("dark-mode", isDarkMode);
-  localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+  document.body.classList.toggle("dark-mode");
+  const newTheme = document.body.classList.contains("dark-mode") ? "light" : "dark";
+  localStorage.setItem("theme", newTheme);
+
+  document.dispatchEvent(new CustomEvent("themeChanged"));
 
   const logo = document.querySelector(".logo");
   const bcgImage = document.querySelector(".background-image");
   const bcgImageSharp = document.querySelector(".background-image-sharp");
   const arrowBar = document.querySelector("#arrow-bar img");
-  const projectsLink = document.querySelector(".projects-link img");
+  const projectsLinkImg = document.querySelector(".projects-link img");
+  const projectsLinkAnchor = document.querySelector(".projects-link a");
 
   const sidebarIcons = document.querySelectorAll(".sidebar img");
   const socialIcons = document.querySelectorAll(".social img");
@@ -33,10 +37,30 @@ export function toggleTheme(isDarkMode) {
   bcgImage.src = `./assets/images/vscode-${isDarkMode ? "dark" : "light"}.webp`;
   bcgImageSharp.src = `./assets/images/vscode-${isDarkMode ? "light" : "dark"}.webp`;
   arrowBar.src = `./assets/icons/up-arrow-${isDarkMode ? "light" : "dark"}.png`;
-  projectsLink.src = `./assets/icons/www-${isDarkMode ? "light" : "dark"}.png`;
+
+  const currentProject = document.querySelector(".projects-thumbnail.active");
+  const isMobileProject = !projectsLinkAnchor?.getAttribute("href");
+
+  if (currentProject && !isMobileProject) {
+    projectsLinkImg.src = `./assets/icons/www-${isDarkMode ? "light" : "dark"}.png`;
+  }
 
   icons.forEach((icon) => {
     const iconName = icon.src.split("/").pop();
     icon.src = `./assets/icons/${iconName.replace(isDarkMode ? "-dark" : "-light", isDarkMode ? "-light" : "-dark")}`;
   });
+}
+
+// Initialisation du thème
+export function initTheme() {
+  const savedTheme = localStorage.getItem("theme");
+  const isDarkMode = savedTheme === "dark";
+
+  document.body.classList.toggle("dark-mode", isDarkMode);
+
+  toggleTheme(isDarkMode);
+}
+
+export function isDarkModeActive() {
+  return document.body.classList.contains("dark-mode");
 }

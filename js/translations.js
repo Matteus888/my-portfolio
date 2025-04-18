@@ -27,7 +27,7 @@ export const translations = {
     project2_description:
       "Une boutique en ligne proposant des objets vintage emblématiques des années 80-90 : jeux vidéo, consoles, vêtements, VHS, etc.",
     project3_description: "Une application mobile pour les touristes qui souhaitent voir les lieux de tournage emblématique de New-York.",
-    visit: "VOIR LE SITE",
+    projectsTooltip: "VOIR PROJET",
     contactTitle: "CONTACTEZ MOI",
     phoneCallText: "Un appel",
     emailText: "Un email",
@@ -48,7 +48,7 @@ export const translations = {
     copyright: "© 2025 Matthieu Chatelin. Tous droits réservés.",
     top: "HAUT DE PAGE",
     legal: "Mentions légales & Confidentialité",
-    legalTitle: "MENTIONS LÈGALES",
+    legalTitle: "MENTIONS LÉGALES",
     legalPublisherTitle: "Éditeur du Site",
     legalPublisherText: "Ce site est édité par : <span class='colored-text'>Matthieu CHATELIN</span>, Développeur Web",
     legalHostTitle: "Hébergement",
@@ -97,7 +97,7 @@ export const translations = {
     project2_description:
       "An online boutique featuring iconic vintage items from the 80s and 90s: video games, consoles, clothing, VHS, etc.",
     project3_description: "A mobile app for tourists who want to see New York's iconic film locations.",
-    visit: "VIEW WEBSITE",
+    projectsVisitTooltip: "VIEW PROJECT",
     contactTitle: "CONTACT ME",
     phoneCallText: "A phone call",
     emailText: "An email",

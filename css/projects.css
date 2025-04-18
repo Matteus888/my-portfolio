@@ -206,7 +206,6 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 0 20px;
-  /* border: 1px solid red; */
 }
 
 .projects-details-item {
@@ -268,15 +267,62 @@
 .projects-link {
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .projects-link a {
   text-decoration: none;
+  position: relative;
+}
+
+.projects-link:hover a {
+  cursor: pointer;
+}
+
+.projects-inner {
+  position: relative;
+}
+
+.projects-tooltip {
+  position: absolute;
+  top: 50%;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 5px 5px 3px 5px;
+  border-radius: 2px;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  border: 2px solid var(--line-color);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.code-tooltip {
+  right: 30px;
+  padding: 0 5px;
+  transform: translateY(-15px);
+}
+
+.visit-tooltip {
+  left: 65px;
+  transform: translateY(-50%);
+}
+
+.projects-inner:hover .projects-tooltip {
+  opacity: 1;
+  visibility: visible;
 }
 
 .projects-link img {
   width: 50px;
   height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.projects-link img:hover {
+  transform: scale(1.2);
 }
 
 .projects-click-message {

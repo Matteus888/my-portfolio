@@ -1,8 +1,10 @@
 import { translations, getCurrentLanguage } from "./translations.js";
+import { isDarkModeActive } from "./themeToggle.js";
 
 const projects = [
   {
     title: "My Social App",
+    type: "web",
     descriptionKey: "project1_description",
     front: "React/Next/JSX/CSS",
     frontLink: "https://github.com/Matteus888/my-social-app-frontend",
@@ -15,6 +17,7 @@ const projects = [
   },
   {
     title: "My 80's Store",
+    type: "web",
     descriptionKey: "project2_description",
     front: "React/Vite/JSX/CSS",
     frontLink: "https://github.com/Matteus888/my-80store-frontend",
@@ -27,6 +30,7 @@ const projects = [
   },
   {
     title: "Roll-In New-York",
+    type: "mobile",
     descriptionKey: "project3_description",
     front: "React Native/Expo/JSX/CSS",
     frontLink: "https://github.com/Matteus888/Roll-in-NewYork-Frontend",
@@ -34,7 +38,7 @@ const projects = [
     backLink: "https://github.com/Matteus888/Roll-in-NewYork-Backend",
     bdd: "MongoDB/Cloudinary",
     pack: "FontAwesome, React-Navigation, Redux, Camera, File-System, Font, Image-Picker, Expo-Location, Moment, Masonry-List, Modal, Paper, Vector Icons, Toastify, bcrypt, Mongoose, uid2",
-    link: "https://expo.dev/matthieu888/roll-in-newyork",
+    qrcode: "./assets/images/rollinnewyork_qrcode.png",
     images: ["./assets/images/rollinnewyork1.webp", "./assets/images/rollinnewyork2.webp", "./assets/images/rollinnewyork3.webp"],
   },
 ];
@@ -58,7 +62,10 @@ export function focusOnProject() {
   if (projectDetails) projectDetails.classList.add("hidden");
   if (clickMessage) clickMessage.classList.remove("hidden");
 
+  let currentProjectIndex = null;
+
   function updateProjectDescription(projectIndex) {
+    currentProjectIndex = projectIndex;
     const currentLang = getCurrentLanguage();
     const project = projects[projectIndex];
 
@@ -71,17 +78,55 @@ export function focusOnProject() {
     focusedBack.textContent = project.back;
     focusedBDD.textContent = project.bdd;
     focusedPack.textContent = project.pack;
-    focusedLink.href = project.link;
     frontGitHubLink.href = project.frontLink;
     backGitHubLink.href = project.backLink;
-    focusedImages.innerHTML = "";
 
+    focusedLink.innerHTML = "";
+    focusedLink.removeAttribute("href");
+    focusedLink.removeEventListener("click", openModal);
+
+    if (project.type === "web") {
+      focusedLink.href = project.link;
+      const webIcon = document.createElement("img");
+      const isDarkMode = isDarkModeActive();
+      webIcon.src = `./assets/icons/www-${isDarkMode ? "light" : "dark"}.png`;
+      webIcon.alt = "Website logo";
+      focusedLink.appendChild(webIcon);
+    } else if (project.type === "mobile") {
+      const qrImg = document.createElement("img");
+      qrImg.src = project.qrcode;
+      qrImg.alt = `${project.title} QR Code`;
+      focusedLink.appendChild(qrImg);
+      focusedLink.addEventListener("click", openModal);
+    }
+
+    focusedImages.innerHTML = "";
     project.images.forEach((src) => {
       const img = document.createElement("img");
       img.src = src;
       img.alt = project.title;
       focusedImages.appendChild(img);
     });
+  }
+
+  document.addEventListener("languageChanged", () => {
+    if (currentProjectIndex !== null) {
+      updateProjectDescription(currentProjectIndex);
+    }
+  });
+
+  document.addEventListener("themeChanged", () => {
+    if (currentProjectIndex !== null) {
+      updateProjectDescription(currentProjectIndex);
+    }
+  });
+
+  function openModal(e) {
+    if (e.target.tagName === "IMG") {
+      modal.style.display = "flex";
+      modalImg.src = e.target.src;
+      modalImg.alt = e.target.alt;
+    }
   }
 
   thumbnails.forEach((thumbnail, index) => {
@@ -97,13 +142,7 @@ export function focusOnProject() {
   const modalImg = document.querySelector("#modal-image");
   const modalClose = document.querySelector(".close");
 
-  document.querySelector(".projects-focused-images").addEventListener("click", (e) => {
-    if (e.target.tagName === "IMG") {
-      modal.style.display = "flex";
-      modalImg.src = e.target.src;
-      modalImg.alt = e.target.alt;
-    }
-  });
+  focusedImages.addEventListener("click", openModal);
 
   modalClose.addEventListener("click", (e) => {
     modal.style.display = "none";
