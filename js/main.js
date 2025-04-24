@@ -6,6 +6,7 @@ import { setupImageZoom } from "./imageZoom.js";
 import { setupModals, reattachModalListeners } from "./modal.js";
 import { setupEmailForm } from "./email.js";
 import { focusOnProject } from "./projects.js";
+import { setupTimeline } from "./timeline.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   initTheme();
@@ -122,4 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Projects focused
   focusOnProject();
+
+  // Timeline
+  setupTimeline();
 });
