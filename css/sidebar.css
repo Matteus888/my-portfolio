@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
-  z-index: 9;
+  z-index: 10;
   transition: left 0.4s ease-in-out;
 }
 
