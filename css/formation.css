@@ -1,83 +1,81 @@
-.formation-scroll-wrapper {
-  width: 300vh;
-  height: 300vh;
-  position: relative;
-  border-top: 2px solid var(--line-color);
-}
-
 .formation {
   position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
+  padding: 50px 0;
+  /* height: 200vh; */
+  border-top: 2px solid var(--line-color);
   background-color: var(--background-color);
-  z-index: 8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  opacity: 1;
-  transition: transform 0.5s ease;
+  /* overflow: hidden; */
 }
 
-.formation.sticky {
+/* .formation.fixed {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100vh;
+  width: 100%;
   z-index: 9;
-  transform: translate(0, 0);
-}
+  overflow: hidden;
+} */
 
-.formation-container {
+.timeline {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 80%;
+  width: 4px;
+  height: 100%;
+  margin: 0 auto;
+  background: #ccc;
 }
 
 .progress-line {
   position: absolute;
-  top: 50%;
-  left: 0;
-  width: 0%;
-  background-color: pink;
-  height: 2px;
-  z-index: 1;
-  transition: width 0.3s ease;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 0%;
+  background: black;
+  transition: height 0.1s linear;
 }
 
 .formation-item {
   position: relative;
-  opacity: 0.3;
-  transform: scale(1);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  text-align: center;
+  width: 300px;
+  padding: 10px 20px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 40px 0;
+  opacity: 0.5;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-.formation-item.active {
+.formation-item.visible {
   opacity: 1;
+  transform: translateY(0);
+}
+
+.formation-item.left {
+  left: -380px;
+  /* distance à gauche de la timeline */
+  text-align: right;
+}
+
+.formation-item.right {
+  left: 40px;
+  /* distance à droite de la timeline */
+  text-align: left;
+}
+
+.formation-item span {
   font-weight: bold;
-  transform: scale(1.05);
-  transition: opacity 0.5s ease 0.1s, transform 0.5s ease 0.1s;
+  display: block;
 }
 
-.formation-item::before {
-  content: '';
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 20px;
-  height: 20px;
-  background: #333;
-  border-radius: 50%;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+.formation-item p {
+  margin: 0;
+  font-size: 0.9em;
 }
 
-.formation-item.active::before {
-  background-color: #ff69b4;
-  transform: translateX(-50%) scale(1.2);
+.timeline-placeholder {
+  width: 100%;
 }

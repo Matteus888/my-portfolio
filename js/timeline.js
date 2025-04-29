@@ -1,70 +1,46 @@
 export function setupTimeline() {
-  const section = document.querySelector("#formations");
-  const wrapper = document.querySelector(".formation-scroll-wrapper");
-  const steps = document.querySelectorAll(".formation-item");
-  const progressLine = document.querySelector(".progress-line");
+  const section = document.querySelector(".formation");
+  const progressLine = section.querySelector(".progress-line");
+  const items = [...section.querySelectorAll(".formation-item")];
 
-  if (!section || !wrapper || !steps.length || !progressLine) return;
-
-  let ticking = false;
+  const ACTIVATION_OFFSET = 0.05; // Active l'étape un peu en avance
 
   function handleScroll() {
-    const wrapperTop = wrapper.offsetTop;
-    const wrapperHeight = wrapper.offsetHeight;
-    const windowHeight = window.innerHeight;
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
     const scrollY = window.scrollY;
+    const windowHeight = window.innerHeight;
 
-    const start = wrapperTop;
-    const end = start + wrapperHeight - windowHeight;
-    const totalScrollableDistance = end - start;
+    const visibleRatio = 0.5; // Début quand 50% de la section est visible
+    const triggerStart = sectionTop - windowHeight * (1 - visibleRatio);
+    const triggerEnd = sectionTop + sectionHeight - windowHeight * visibleRatio;
 
-    // On vérifie si on est dans la zone de la section
-    if (scrollY >= start && scrollY <= end) {
-      // Fixer la section en haut de la page
-      section.classList.add("sticky");
+    let progress = 0;
+
+    if (scrollY < triggerStart) {
+      progress = 0;
+    } else if (scrollY > triggerEnd) {
+      progress = 1;
     } else {
-      // Relâcher la section dès que l'on sort de la zone sticky
-      section.classList.remove("sticky");
+      const scrollRange = triggerEnd - triggerStart;
+      progress = (scrollY - triggerStart) / scrollRange;
     }
 
-    // Calcul de la progression de la barre de progression
-    if (scrollY < start) {
-      // Avant la section : réinitialiser la barre et les étapes
-      progressLine.style.width = `0%`;
-      steps.forEach((step) => step.classList.remove("active"));
-    } else if (scrollY >= end) {
-      // Après la section : barre pleine et toutes les étapes activées
-      progressLine.style.width = `100%`;
-      steps.forEach((step) => step.classList.add("active"));
-    } else {
-      // Pendant la section : calculer la progression
-      const scrolled = scrollY - start;
-      const progress = scrolled / totalScrollableDistance;
-      progressLine.style.width = `${progress * 100}%`;
+    // Mise à jour directe de la barre de progression
+    progressLine.style.height = `${progress * 100}%`;
 
-      const progressWidth = progressLine.offsetWidth;
-
-      // Activation progressive des étapes
-      steps.forEach((step) => {
-        const circleLeft = step.offsetLeft + step.offsetWidth / 2;
-        if (progressWidth >= circleLeft) {
-          step.classList.add("active");
-        } else {
-          step.classList.remove("active");
-        }
-      });
-    }
-
-    ticking = false;
+    // Affichage des étapes
+    items.forEach((item, index) => {
+      const itemTrigger = (index + 1) / items.length;
+      if (progress + ACTIVATION_OFFSET >= itemTrigger) {
+        item.classList.add("visible");
+      } else {
+        item.classList.remove("visible");
+      }
+    });
   }
 
-  window.addEventListener("scroll", () => {
-    if (!ticking) {
-      window.requestAnimationFrame(handleScroll);
-      ticking = true;
-    }
-  });
-
-  // Lancer au chargement
+  window.addEventListener("scroll", handleScroll);
+  window.addEventListener("resize", handleScroll);
   handleScroll();
 }
