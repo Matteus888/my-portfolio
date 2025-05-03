@@ -10,6 +10,7 @@ export function toggleTheme(isDarkMode) {
   const bcgImage = document.querySelector(".background-image");
   const bcgImageSharp = document.querySelector(".background-image-sharp");
   const arrowBar = document.querySelector("#arrow-bar img");
+  const portfolioLogo = document.querySelector("#portfolio-logo");
   const projectsLinkImg = document.querySelector(".projects-link img");
   const projectsLinkAnchor = document.querySelector(".projects-link a");
 
@@ -37,6 +38,7 @@ export function toggleTheme(isDarkMode) {
   bcgImage.src = `./assets/images/vscode-${isDarkMode ? "dark" : "light"}.webp`;
   bcgImageSharp.src = `./assets/images/vscode-${isDarkMode ? "light" : "dark"}.webp`;
   arrowBar.src = `./assets/icons/up-arrow-${isDarkMode ? "light" : "dark"}.png`;
+  portfolioLogo.src = `./assets/icons/logo-${isDarkMode ? "light" : "dark"}.png`;
 
   const currentProject = document.querySelector(".projects-thumbnail.active");
   const isMobileProject = !projectsLinkAnchor?.getAttribute("href");
