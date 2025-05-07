@@ -1,8 +1,7 @@
 // Fonction pour basculer entre le mode jour et nuit
-export function toggleTheme(isDarkMode) {
-  document.body.classList.toggle("dark-mode");
-  const newTheme = document.body.classList.contains("dark-mode") ? "light" : "dark";
-  localStorage.setItem("theme", newTheme);
+export function applyTheme(isDarkMode) {
+  document.body.classList.toggle("dark-mode", isDarkMode);
+  localStorage.setItem("theme", isDarkMode ? "dark" : "light");
 
   document.dispatchEvent(new CustomEvent("themeChanged"));
 
@@ -57,10 +56,7 @@ export function toggleTheme(isDarkMode) {
 export function initTheme() {
   const savedTheme = localStorage.getItem("theme");
   const isDarkMode = savedTheme === "dark";
-
   document.body.classList.toggle("dark-mode", isDarkMode);
-
-  toggleTheme(isDarkMode);
 }
 
 export function isDarkModeActive() {

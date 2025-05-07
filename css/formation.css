@@ -60,14 +60,14 @@
   background-color: var(--section-color);
   border: 2px solid var(--line-color);
   color: var(--text-color);
-  opacity: 0.3;
-  transform: translateY(20px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .formation-item.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: scale(1);
 }
 
 .formation-item.left {
@@ -106,7 +106,7 @@
 }
 
 #portfolio-logo {
-  transform: translateY(5px);
+  transform: translateY(6px);
   object-fit: contain;
 }
 

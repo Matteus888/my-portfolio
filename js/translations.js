@@ -8,6 +8,7 @@ export const translations = {
     day: "Jour",
     night: "Nuit",
     welcome: "BIENVENUE SUR MON PORTFOLIO !\nJE SUIS MATTHIEU, DÉVELOPPEUR WEB.",
+    profileTitle: "QUI SUIS-JE ?",
     profileLocation: "Région lyonnaise",
     profileDriving: "Permis B",
     profileText:
@@ -17,7 +18,7 @@ export const translations = {
     or: "OU",
     profileContactText: "Un message, une opportunité ! Écrivons la suite ensemble.",
     profileContactBtn: "Contactez moi",
-    formationsTitle: "MA FORMATION",
+    formationsTitle: "MON PARCOURS",
     projectsTitle: "MES PROJETS",
     mySocialApp: "Réseau social",
     my80Store: "Site de e-commerce",
@@ -79,6 +80,7 @@ export const translations = {
     day: "Day",
     night: "Night",
     welcome: "WELCOME TO MY PORTFOLIO !\nI'M MATTHIEU, WEB DEVELOPPER.",
+    profileTitle: "WHO AM I ?",
     profileLocation: "Lyon Area",
     profileDriving: "B license",
     profileText:
@@ -88,7 +90,7 @@ export const translations = {
     or: "OR",
     profileContactText: "A message, an opportunity! Let's write the rest together.",
     profileContactBtn: "Contact me",
-    formationsTitle: "MY FORMATION",
+    formationsTitle: "MY BACKGROUND",
     projectsTitle: "MY PROJECTS",
     mySocialApp: "Social Network",
     my80Store: "E-commerce Website",

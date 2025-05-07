@@ -1,4 +1,4 @@
-import { toggleTheme, initTheme } from "./themeToggle.js";
+import { applyTheme, initTheme } from "./themeToggle.js";
 import { changeLanguage, getCurrentLanguage, getTranslation } from "./translations.js";
 import { updateTerminalText } from "./terminalAnimation.js";
 import { handleSidebar } from "./sidebar.js";
@@ -17,17 +17,19 @@ document.addEventListener("DOMContentLoaded", () => {
   if (themeToggles.length === 0) return;
 
   const savedTheme = localStorage.getItem("theme");
-  const isDarkMode = savedTheme !== "light";
+  const isDarkMode = savedTheme === "dark";
 
+  // Applique visuellement le thème
+  applyTheme(isDarkMode);
+
+  // Synchronise l'état de l'interrupteur
   themeToggles.forEach((toggle) => {
     toggle.checked = isDarkMode;
     toggle.addEventListener("change", () => {
-      toggleTheme(toggle.checked);
+      applyTheme(toggle.checked);
       themeToggles.forEach((t) => (t.checked = toggle.checked));
     });
   });
-
-  toggleTheme(isDarkMode);
 
   // Gestion de la traduction
   const langToggles = document.querySelectorAll(".lang-toggle");
@@ -73,6 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
   handleSidebar();
 
   // Gestion de l'apparition des cards
+  const profileTitle = document.querySelector(".profile-title");
   const profileCards = document.querySelectorAll(".profile-card");
   const formationsTitle = document.querySelector(".formation-title");
   const timeline = document.querySelector(".timeline");
@@ -85,6 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const totalCards = [
     ...profileCards,
+    profileTitle,
     formationsTitle,
     timeline,
     projectsTitle,
