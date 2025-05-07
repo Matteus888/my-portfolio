@@ -54,9 +54,17 @@ export function applyTheme(isDarkMode) {
 
 // Initialisation du thème
 export function initTheme() {
-  const savedTheme = localStorage.getItem("theme");
+  let savedTheme = localStorage.getItem("theme");
+
+  // Si aucun thème n'est enregistré, on utilise la préférence système
+  if (!savedTheme) {
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    savedTheme = prefersDark ? "dark" : "light";
+    localStorage.setItem("theme", savedTheme);
+  }
+
   const isDarkMode = savedTheme === "dark";
-  document.body.classList.toggle("dark-mode", isDarkMode);
+  applyTheme(isDarkMode);
 }
 
 export function isDarkModeActive() {
