@@ -13,7 +13,11 @@ const projects = [
     bdd: "MongoDB/Cloudinary",
     pack: "FontAwesome, Redux, Moment.js, Mongoose, bcrypt, jsonwebtoken, uuid",
     link: "https://my-social-app-frontend.vercel.app/",
-    images: ["./assets/images/mySocialApp_home.webp", "./assets/images/mySocialApp_pic.webp", "./assets/images/mySocialApp_profile.webp"],
+    images: [
+      "./assets/images/projects/mySocialApp/mySocialApp_home.webp",
+      "./assets/images/projects/mySocialApp/mySocialApp_pic.webp",
+      "./assets/images/projects/mySocialApp/mySocialApp_profile.webp",
+    ],
   },
   {
     title: "My 80's Store",
@@ -26,7 +30,11 @@ const projects = [
     bdd: "MongoDB",
     pack: "Material UI, Redux, Date-fns, Stripe, Prop-types, React-slider, Mongoose, bcrypt, jsonwebtoken, Slugify, uuid",
     link: "https://my-80store-frontend.vercel.app/",
-    images: ["./assets/images/my80store_home.webp", "./assets/images/my80store_products.webp", "./assets/images/my80store_cart.webp"],
+    images: [
+      "./assets/images/projects/my80store/my80store_home.webp",
+      "./assets/images/projects/my80store/my80store_products.webp",
+      "./assets/images/projects/my80store/my80store_cart.webp",
+    ],
   },
   {
     title: "Roll-In New-York",
@@ -38,8 +46,12 @@ const projects = [
     backLink: "https://github.com/Matteus888/Roll-in-NewYork-Backend",
     bdd: "MongoDB/Cloudinary",
     pack: "FontAwesome, React-Navigation, Redux, Camera, File-System, Font, Image-Picker, Expo-Location, Moment, Masonry-List, Modal, Paper, Vector Icons, Toastify, bcrypt, Mongoose, uid2",
-    qrcode: "./assets/images/rollinnewyork_qrcode.png",
-    images: ["./assets/images/rollinnewyork1.webp", "./assets/images/rollinnewyork2.webp", "./assets/images/rollinnewyork3.webp"],
+    qrcode: "./assets/images/projects/rollinnewyork/rollinnewyork_qrcode.png",
+    images: [
+      "./assets/images/projects/rollinnewyork/rollinnewyork1.webp",
+      "./assets/images/projects/rollinnewyork/rollinnewyork2.webp",
+      "./assets/images/projects/rollinnewyork/rollinnewyork3.webp",
+    ],
   },
 ];
 

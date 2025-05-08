@@ -10,7 +10,8 @@
 }
 
 .profile-title {
-  width: 800px;
+  width: 900px;
+  box-sizing: border-box;
   font-size: 2rem;
   letter-spacing: 4px;
   border: 2px solid var(--line-color);
@@ -23,7 +24,8 @@
 }
 
 .profile-card {
-  width: 800px;
+  width: 900px;
+  box-sizing: border-box;
   border: 2px solid var(--line-color);
   background-color: var(--background-color);
   padding: 40px;
