@@ -79,6 +79,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const profileCards = document.querySelectorAll(".profile-card");
   const formationsTitle = document.querySelector(".formation-title");
   const timeline = document.querySelector(".timeline");
+  const skillsTitle = document.querySelector(".skills-title");
+  const skillsHardTitle = document.querySelector(".skills-hard-title");
+  const skillsSoftTitle = document.querySelector(".skills-soft-title");
+  const skillsNextTitle = document.querySelector(".skills-next-title");
+  const skillsHardContent = document.querySelector(".skills-hard-content");
+  const skillsSoftContent = document.querySelector(".skills-soft-content");
+  const skillsNextContent = document.querySelector(".skills-next-content");
   const projectsTitle = document.querySelector(".projects-title");
   const contactTitle = document.querySelector(".contact-title");
   const projectsThumbnails = document.querySelector(".projects-thumbnail-container");
@@ -91,6 +98,13 @@ document.addEventListener("DOMContentLoaded", () => {
     profileTitle,
     formationsTitle,
     timeline,
+    skillsTitle,
+    skillsHardTitle,
+    skillsSoftTitle,
+    skillsNextTitle,
+    skillsHardContent,
+    skillsSoftContent,
+    skillsNextContent,
     projectsTitle,
     projectsThumbnails,
     projectsFocused,

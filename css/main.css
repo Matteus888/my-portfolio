@@ -78,7 +78,7 @@ body {
 
 /* Barre de défilement */
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 8px;
   border-left: 2px solid var(--line-color);
 }
 

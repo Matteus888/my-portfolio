@@ -1,4 +1,3 @@
-// Fonction pour masquer/afficher sidebar, option-bar et arrow-bar
 export function handleSidebar() {
   const header = document.querySelector(".header-container");
   const sidebar = document.querySelector("#sidebar");
@@ -9,29 +8,24 @@ export function handleSidebar() {
   let lastScrollY = window.scrollY;
   let headerHidden = false;
 
-  window.addEventListener("scroll", () => {
+  function checkScrollPosition() {
     const headerHeight = header.offsetHeight;
 
-    if (window.scrollY > lastScrollY && !headerHidden) {
-      if (window.scrollY > headerHeight) {
-        header.style.top = `-${headerHeight}px`;
-        sidebar.classList.add("show");
-        optionBar.classList.add("show");
-        arrowBar.classList.add("show");
-        headerHidden = true;
-      }
-    } else if (window.scrollY < lastScrollY && headerHidden) {
-      if (window.scrollY <= 0) {
-        header.style.top = "0";
-        sidebar.classList.remove("show");
-        optionBar.classList.remove("show");
-        arrowBar.classList.remove("show");
-        headerHidden = false;
-      }
+    if (window.scrollY > headerHeight) {
+      header.style.top = `-${headerHeight}px`;
+      sidebar.classList.add("show");
+      optionBar.classList.add("show");
+      arrowBar.classList.add("show");
+      headerHidden = true;
+    } else {
+      header.style.top = "0";
+      sidebar.classList.remove("show");
+      optionBar.classList.remove("show");
+      arrowBar.classList.remove("show");
+      headerHidden = false;
     }
 
-    lastScrollY = window.scrollY;
-
+    // ArrowBar masquée si le footer est visible
     if (footer) {
       const footerRect = footer.getBoundingClientRect();
       const windowHeight = window.innerHeight;
@@ -42,13 +36,20 @@ export function handleSidebar() {
         arrowBar.classList.add("show");
       }
     }
+  }
+
+  window.addEventListener("scroll", () => {
+    checkScrollPosition();
+    lastScrollY = window.scrollY;
   });
 
-  // Sidebar soulignement des icônes
+  checkScrollPosition(); // 👈 appel immédiat au chargement
+
+  // Gestion de la surbrillance dans la sidebar
   const sections = document.querySelectorAll("section");
   const sidebarLinks = document.querySelectorAll(".sidebar a");
 
-  window.addEventListener("scroll", () => {
+  function updateActiveLink() {
     let currentSection = "";
 
     sections.forEach((section) => {
@@ -65,5 +66,8 @@ export function handleSidebar() {
         link.classList.add("active");
       }
     });
-  });
+  }
+
+  window.addEventListener("scroll", updateActiveLink);
+  updateActiveLink(); // 👈 appel immédiat aussi pour la surbrillance
 }

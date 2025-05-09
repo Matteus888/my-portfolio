@@ -30,7 +30,7 @@
 
 .timeline {
   position: relative;
-  width: 5px;
+  width: 8px;
   height: 100%;
   margin: 30px auto 0 auto;
   border: 2px solid var(--line-color);
@@ -78,7 +78,7 @@
 }
 
 .formation-item.right {
-  left: 25px;
+  left: 28px;
   text-align: left;
   flex-direction: row-reverse;
 }
@@ -140,7 +140,7 @@
   width: 150px;
   flex-shrink: 0;
   overflow: hidden;
-  background-color: var(--background-color);
+  background-color: white;
   border-left: 2px solid var(--line-color);
   border-right: 2px solid var(--line-color);
 }
@@ -160,11 +160,6 @@
   height: 100%;
   object-fit: cover;
   display: block;
-}
-
-#portfolio-logo {
-  transform: translateY(6px);
-  object-fit: contain;
 }
 
 .formation-text-container {
