@@ -156,4 +156,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Timeline
   setupTimeline();
+
+  // Retournement automatique aléatoire des .skills-card
+  const skillCards = document.querySelectorAll(".skills-card");
+
+  function flipRandomSkillCard() {
+    const randomIndex = Math.floor(Math.random() * skillCards.length);
+    const card = skillCards[randomIndex];
+
+    // Ne pas flipper une carte déjà retournée ou survolée
+    if (card.classList.contains("flip") || card.matches(":hover")) return;
+
+    card.classList.add("flip");
+
+    setTimeout(() => {
+      card.classList.remove("flip");
+    }, 2000); // reste retournée 2 secondes
+  }
+
+  setInterval(flipRandomSkillCard, 2000); // une carte toutes les 2 secondes
 });
