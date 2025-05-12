@@ -1,16 +1,18 @@
 .header-container {
-  position: relative;
-  top: 0;
   z-index: 11;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding-inline: 20px;
   width: calc(100% - 40px);
-  height: 60px;
+  height: var(--header-height, 60px);
   background-color: var(--background-color);
   color: var(--text-color);
   border-bottom: 2px solid var(--line-color);
+}
+
+.burger {
+  display: none;
 }
 
 .nav-container {
@@ -39,6 +41,7 @@
   font-size: 1.1rem;
   position: relative;
   display: inline-block;
+  cursor: pointer;
 }
 
 .nav-item:not(:first-child) a::after {
@@ -154,23 +157,81 @@ input:checked+.slider .night {
   opacity: 1;
 }
 
-/* .option-bar {
-  position: fixed;
-  top: -60px;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  padding: 0 20px;
-  background-color: var(--background-color);
-  height: 60px;
-  border-bottom: 2px solid var(--line-color);
-  border-left: 2px solid var(--line-color);
-  z-index: 9;
-  transition: top 0.4s ease-in-out;
+@media screen and (max-width: 1024px) {
+  .header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
 }
 
-.option-bar.show {
-  top: 0;
-} */
+@media screen and (max-width: 768px) {
+  .header-container {
+    width: calc(100% - 25px);
+    height: var(--header-height, 40px);
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: var(--header-height, 40px);
+    left: 0;
+    background-color: var(--background-color);
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 10px 20px;
+    gap: 10px;
+    border-bottom: 2px solid var(--line-color);
+    display: none;
+  }
+
+  .nav-menu.show {
+    display: flex;
+  }
+
+  .nav-item:not(:first-child) a::after {
+    bottom: 0;
+  }
+
+  .logo {
+    height: 30px;
+  }
+
+  .option-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transform: scale(0.85);
+  }
+
+  /* Burger menu icon */
+  .burger {
+    display: block;
+    cursor: pointer;
+    width: 25px;
+    height: 20px;
+    position: relative;
+    z-index: 12;
+  }
+
+  .burger span {
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: var(--text-color);
+    left: 0;
+    transition: 0.3s;
+  }
+
+  .burger span:nth-child(1) {
+    top: 0;
+  }
+
+  .burger span:nth-child(2) {
+    top: 9px;
+  }
+
+  .burger span:nth-child(3) {
+    top: 18px;
+  }
+}

@@ -29,9 +29,13 @@
   --my80store-color: #FF0CB2;
   --rollinnewyork-color: #DEB973;
   --rubik: Rubik;
+
+  --header-height: 60px;
+  --footer-height: 60px;
 }
 
 html {
+  min-width: 320px;
   font-size: 16px;
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -46,11 +50,13 @@ body.dark-mode {
 }
 
 body {
+  min-width: 320px;
   font-family: var(--rubik);
   background-color: var(--background-color);
   color: var(--text-color);
   overflow-x: hidden;
 }
+
 
 .colored-text {
   color: var(--link);
@@ -84,4 +90,22 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--line-color);
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --header-height: 40px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  :root {
+    --footer-height: 40px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    padding-top: calc(var(--header-height) + 2px);
+  }
 }

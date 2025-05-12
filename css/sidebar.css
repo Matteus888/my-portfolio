@@ -77,7 +77,7 @@
 
 .option-bar {
   position: fixed;
-  top: -60px;
+  top: -62px;
   right: 0;
   display: flex;
   justify-content: center;
@@ -85,7 +85,7 @@
   gap: 20px;
   padding: 0 20px;
   background-color: var(--background-color);
-  height: 60px;
+  height: var(--header-height, 60px);
   border-bottom: 2px solid var(--line-color);
   border-left: 2px solid var(--line-color);
   z-index: 10;

@@ -5,6 +5,17 @@ export function handleSidebar() {
   const arrowBar = document.querySelector("#arrow-bar");
   const footer = document.querySelector("footer");
 
+  const isMobile = window.innerWidth <= 1024;
+  if (isMobile) {
+    header.style.top = "0";
+
+    sidebar?.classList.remove("show");
+    optionBar?.classList.remove("show");
+    arrowBar?.classList.remove("show");
+
+    return; // ⛔ stop ici, on ne met pas de scroll listener
+  }
+
   let lastScrollY = window.scrollY;
   let headerHidden = false;
 

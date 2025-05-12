@@ -175,4 +175,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   setInterval(flipRandomSkillCard, 2000); // une carte toutes les 2 secondes
+
+  // Menu burger pour petit écran
+  const burger = document.querySelector(".burger");
+  const navMenu = document.querySelector(".nav-menu");
+
+  if (burger && navMenu) {
+    burger.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+      burger.classList.toggle("show");
+    });
+  }
 });
