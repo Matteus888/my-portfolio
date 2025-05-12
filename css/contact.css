@@ -210,7 +210,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .contact-title {
     font-size: 1.5rem;
     letter-spacing: 2px;

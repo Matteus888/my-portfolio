@@ -196,3 +196,152 @@
 .timeline-placeholder {
   width: 100%;
 }
+
+@media screen and (max-width: 1024px) {
+  .formation {
+    padding: 30px 20px 50px;
+  }
+
+  .formation-title {
+    width: 100%;
+  }
+
+  .formation-item {
+    width: 300px;
+    height: 72px;
+  }
+
+  .formation-item.left {
+    left: -325px;
+  }
+
+  .formation-item.right {
+    left: 30px;
+  }
+
+  .formation-img-wrapper {
+    width: 100px;
+    height: 72px;
+  }
+
+  .formation-text-container h3 {
+    font-size: 0.85rem;
+  }
+
+  .formation-text-container .location {
+    font-size: 0.65rem;
+  }
+
+  .formation-text-container .details {
+    font-size: 0.75rem;
+  }
+
+  .year {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .formation-title {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    padding: 8px 15px;
+  }
+
+  .formation-item {
+    width: 260px;
+    height: 64px;
+  }
+
+  .formation-item.left {
+    left: -285px;
+  }
+
+  .formation-item.right {
+    left: 28px;
+  }
+
+  .formation-img-wrapper {
+    width: 80px;
+    height: 64px;
+  }
+
+  .formation-text-container h3 {
+    font-size: 0.8rem;
+  }
+
+  .formation-text-container .location {
+    font-size: 0.6rem;
+  }
+
+  .formation-text-container .details {
+    font-size: 0.7rem;
+  }
+
+  .year {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .formation {
+    padding: 20px 10px 50px;
+  }
+
+  .timeline {
+    margin: 10px auto 0 auto;
+  }
+
+  .formation-img-wrapper {
+    display: none;
+  }
+
+  .formation-item {
+    width: 150px;
+    height: 85px;
+  }
+
+  .formation-item::before {
+    width: 12px;
+  }
+
+  .formation-item.left::before {
+    right: -12px;
+  }
+
+  .formation-item.right::before {
+    left: -12px;
+  }
+
+  .formation-item.left .year::before {
+    left: -12px;
+  }
+
+  .formation-item.right .year::before {
+    right: -12px;
+  }
+
+  .formation-item.left {
+    left: -165px;
+  }
+
+  .formation-item.right {
+    left: 20px;
+  }
+
+  .formation-text-container {
+    padding: 3px;
+  }
+
+  .year {
+    font-size: 1rem;
+  }
+
+  .formation-item.left .year {
+    left: calc(100% + 30px);
+  }
+
+  .formation-item.right .year {
+    right: calc(100% + 30px);
+  }
+}
