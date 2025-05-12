@@ -41,8 +41,8 @@
 
 .terminal {
   position: absolute;
-  top: 200px;
-  left: calc(50% - 300px);
+  top: 50%;
+  left: 50%;
   width: 600px;
   height: 250px;
   background-color: var(--background-color);
@@ -56,17 +56,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transform: scale(0);
+  transform: translate(-50%, calc(-50% - 50px)) scale(0);
   animation: growTerminal 1s ease-out forwards;
 }
 
 @keyframes growTerminal {
   from {
-    transform: scale(0);
+    transform: translate(-50%, calc(-50% - 50px)) scale(0);
   }
 
   to {
-    transform: scale(1);
+    transform: translate(-50%, calc(-50% - 50px)) scale(1);
   }
 }
 
@@ -165,4 +165,79 @@
 
 #terminalBtn:active {
   transform: scale(0.9);
+}
+
+@media screen and (max-width: 1024px) {
+  .terminal {
+    top: 50%;
+    transform: translateY(calc(-50% - 50px));
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  #terminalImg {
+    width: 55px;
+    height: 55px;
+    margin: 10px 0;
+  }
+
+  .terminalImg {
+    width: 51px;
+    height: 51px;
+  }
+
+  #text {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .terminal {
+    top: 50%;
+    transform: translateY(calc(-50% - 50px));
+    width: 90%;
+    max-width: 400px;
+  }
+
+  #terminalImg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .terminalImg {
+    width: 46px;
+    height: 46px;
+  }
+
+  #text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  #terminalBtn {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .terminal {
+    top: 50%;
+    transform: translateY(calc(-50% - 50px));
+    width: 80%;
+    max-width: 320px;
+    font-size: 0.8rem;
+  }
+
+  #text {
+    font-size: 0.85rem;
+  }
+
+  #terminalBtn {
+    font-size: 0.85rem;
+    padding: 5px 10px;
+  }
 }

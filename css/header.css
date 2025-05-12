@@ -15,6 +15,10 @@
   display: none;
 }
 
+.header-container h1 {
+  display: none;
+}
+
 .nav-container {
   display: flex;
 }
@@ -171,6 +175,13 @@ input:checked+.slider .night {
     height: var(--header-height, 40px);
   }
 
+  .header-container h1 {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   .nav-menu {
     position: absolute;
     top: var(--header-height, 40px);
@@ -204,7 +215,6 @@ input:checked+.slider .night {
     transform: scale(0.85);
   }
 
-  /* Burger menu icon */
   .burger {
     display: block;
     cursor: pointer;
@@ -233,5 +243,14 @@ input:checked+.slider .night {
 
   .burger span:nth-child(3) {
     top: 18px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header-container h1 {
+    font-size: 0.8rem;
+    position: relative;
+    left: 0;
+    transform: translateX(10px);
   }
 }

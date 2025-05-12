@@ -251,8 +251,13 @@
 }
 
 @media screen and (max-width: 510px) {
+  .contact {
+    padding: 20px 0 30px;
+  }
+
   .contact-container {
     width: 95%;
+    gap: 10px;
   }
 
   .contact-title {
