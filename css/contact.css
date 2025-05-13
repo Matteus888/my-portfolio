@@ -288,10 +288,14 @@
   }
 
   .checkbox-container,
-  .input-container label,
   .input-container input,
   .input-container textarea {
     font-size: 0.85rem;
     padding: 8px;
+  }
+
+  .input-container label {
+    font-size: 0.85rem;
+    top: -0.5rem;
   }
 }
