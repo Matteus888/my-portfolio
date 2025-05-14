@@ -182,8 +182,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (burger && navMenu) {
     burger.addEventListener("click", () => {
+      const expanded = burger.getAttribute("aria-expanded") === "true";
+      burger.setAttribute("aria-expanded", String(!expanded));
       navMenu.classList.toggle("show");
       burger.classList.toggle("show");
+    });
+
+    // Accessibilité clavier
+    burger.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        burger.click();
+      }
     });
   }
 });

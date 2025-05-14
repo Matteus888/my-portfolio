@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Matthieu Chatelin Portfolio | Développeur web</title>
-  <link rel="icon" href="./assets/icons/logo-dark.png" />
+  <meta name="description"
+    content="Portfolio de Matthieu Chatelin, développeur web passionné par le JavaScript, React, et les projets créatifs. Découvrez mes réalisations et contactez-moi." />
+  <meta name="color-scheme" content="light dark">
+  <title>Matthieu Chatelin | Développeur Web Javascript & React - Portfolio</title>
+  <link rel="icon" href="./assets/icons/logo-dark.ico" title="Logo Matthieu Chatelin" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
@@ -16,53 +19,54 @@
 </head>
 
 <body>
+  <a href="#main" class="skip-link">Aller au contenu principal</a>
   <header class="header-container" id="top">
-    <div class="burger" id="burger">
+    <div class="burger" id="burger" role="button" aria-label="Ouvrir le menu" aria-expanded="false" tabindex="0">
       <span></span>
       <span></span>
       <span></span>
     </div>
     <h1 class="site-title">MATTHIEU CHATELIN - PORTFOLIO</h1>
-    <nav class="nav-container">
+    <nav class="nav-container" role="navigation" aria-label="Menu principal">
       <ul class="nav-menu">
         <li class="nav-item">
-          <a href="#home">
-            <img class="logo" src="./assets/icons/logo-light.png" alt="Logo Home" />
+          <a href="#home" aria-label="Accueil - Matthieu Chatelin">
+            <img class="logo" src="./assets/icons/logo-light.png" alt="Logo Home" role="presentation" />
           </a>
         </li>
         <li class="nav-item">
-          <a href="#profile" data-i18n="profile">PROFIL</a>
+          <a href="#profile" data-i18n="profile" aria-label="Profils - Matthieu Chatelin">PROFIL</a>
         </li>
         <li class="nav-item">
-          <a href="#formations">FORMATION</a>
+          <a href="#formations" aria-label="Formation - Matthieu Chatelin">FORMATION</a>
         </li>
         <li class="nav-item">
-          <a href="#skills" data-i18n="skills">COMPÉTENCES</a>
+          <a href="#skills" data-i18n="skills" aria-label="Compétences - Matthieu Chatelin">COMPÉTENCES</a>
         </li>
         <li class="nav-item">
-          <a href="#projects" data-i18n="projects">PROJETS</a>
+          <a href="#projects" data-i18n="projects" aria-label="Projets - Matthieu Chatelin">PROJETS</a>
         </li>
         <li class="nav-item">
-          <a href="#contact">CONTACT</a>
+          <a href="#contact" aria-label="Contact - Matthieu Chatelin">CONTACT</a>
         </li>
       </ul>
     </nav>
     <div class="option-container">
       <div class="lang-container">
-        <label class="lang-switch">
-          <input type="checkbox" class="lang-toggle" />
+        <label class="lang-switch" aria-label="Changer la langue">
+          <input type="checkbox" class="lang-toggle" aria-label="Changer la langue en anglais ou français" />
           <span class="slider">
-            <img src="./assets/icons/france.png" alt="Drapeau Français" class="flag fr" />
-            <img src="./assets/icons/united-kingdom.png" alt="English flag" class="flag en" />
+            <img src="./assets/icons/france.png" alt="Passer en français" class="flag fr" />
+            <img src="./assets/icons/united-kingdom.png" alt="Switch to English" class="flag en" />
           </span>
         </label>
       </div>
       <div class="theme-container">
-        <label class="theme-switch">
-          <input type="checkbox" class="theme-toggle" />
+        <label class="theme-switch" aria-label="Changer le thème clair/sombre">
+          <input type="checkbox" class="theme-toggle" aria-label="Basculer entre thème clair et sombre" />
           <span class="slider">
-            <p class="theme day">☀️</p>
-            <p class="theme night">🌙</p>
+            <p class="theme day" aria-hidden="true">☀️</p>
+            <p class="theme night" aria-hidden="true">🌙</p>
           </span>
         </label>
       </div>
@@ -70,70 +74,73 @@
   </header>
 
   <!-- Option-bar -->
-  <div id="option-bar" class="option-bar">
+  <div id="option-bar" class="option-bar" role="region" aria-label="Options d'affichage">
     <div class="lang-container">
-      <label class="lang-switch">
-        <input type="checkbox" class="lang-toggle" />
+      <label class="lang-switch" for="lang-toggle">
+        <span class="visually-hidden">Changer la langue</span>
+        <input type="checkbox" class="lang-toggle" id="lang-toggle"
+          aria-label="Changer la langue : français ou anglais" />
         <span class="slider">
-          <img src="./assets/icons/france.png" alt="Drapeau Français" class="flag fr" />
-          <img src="./assets/icons/united-kingdom.png" alt="English flag" class="flag en" />
+          <img src="./assets/icons/france.png" alt="Français" class="flag fr" />
+          <img src="./assets/icons/united-kingdom.png" alt="English" class="flag en" />
         </span>
       </label>
     </div>
     <div class="theme-container">
-      <label class="theme-switch">
-        <input type="checkbox" class="theme-toggle" />
-        <span class="slider">
-          <p class="theme day">☀️</p>
-          <p class="theme night">🌙</p>
+      <label class="theme-switch" for="theme-toggle">
+        <span class="visually-hidden">Changer le thème</span>
+        <input type="checkbox" class="theme-toggle" id="theme-toggle" aria-label="Changer le thème : clair ou sombre" />
+        <span class="slider" aria-hidden="true">
+          <p class="theme day" aria-hidden="true">☀️</p>
+          <p class="theme night" aria-hidden="true">🌙</p>
         </span>
       </label>
     </div>
   </div>
 
   <!-- Sidebar -->
-  <div id="sidebar" class="sidebar">
-    <a href="#home">
-      <img src="./assets/icons/logo-light.png" alt="Logo Home" id="home-logo" />
-      <p class="sidebar-tooltip" data-i18n="home">ACCUEIL</p>
+  <nav id="sidebar" class="sidebar" aria-label="Navigation secondaire">
+    <a href="#home" aria-label="Section Accueil">
+      <img src="./assets/icons/logo-light.png" alt="" id="home-logo" aria-hidden="true" />
+      <p class="sidebar-tooltip" data-i18n="home" aria-hidden="true">ACCUEIL</p>
       <span class="sidebar-indicator"></span>
     </a>
-    <a href="#profile">
-      <img src="./assets/icons/profile-light.png" alt="Logo Profile" />
-      <p class="sidebar-tooltip" data-i18n="profile">PROFIL</p>
+    <a href="#profile" aria-label="Section Profil">
+      <img src="./assets/icons/profile-light.png" alt="" aria-hidden="true" />
+      <p class="sidebar-tooltip" data-i18n="profile" aria-hidden="true">PROFIL</p>
       <span class="sidebar-indicator"></span>
     </a>
-    <a href="#formations">
-      <img src="./assets/icons/formation-light.png" alt="Logo Formation" />
-      <p class="sidebar-tooltip">FORMATION</p>
+    <a href="#formations" aria-label="Section Formation">
+      <img src="./assets/icons/formation-light.png" alt="" aria-hidden="true" />
+      <p class="sidebar-tooltip" aria-hidden="true">FORMATION</p>
       <span class="sidebar-indicator"></span>
     </a>
-    <a href="#skills">
-      <img src="./assets/icons/skills-light.png" alt="Logo Skills" />
-      <p class="sidebar-tooltip" data-i18n="skills">COMPÉTENCES</p>
+    <a href="#skills" aria-label="Section Compétences">
+      <img src="./assets/icons/skills-light.png" alt="" aria-hidden="true" />
+      <p class="sidebar-tooltip" data-i18n="skills" aria-hidden="true">COMPÉTENCES</p>
       <span class="sidebar-indicator"></span>
     </a>
-    <a href="#projects">
-      <img src="./assets/icons/projects-light.png" alt="Logo Projects" />
-      <p class="sidebar-tooltip" data-i18n="projects">PROJETS</p>
+    <a href="#projects" aria-label="Section Projets">
+      <img src="./assets/icons/projects-light.png" alt="" aria-hidden="true" />
+      <p class="sidebar-tooltip" data-i18n="projects" aria-hidden="true">PROJETS</p>
       <span class="sidebar-indicator"></span>
     </a>
-    <a href="#contact">
-      <img src="./assets/icons/contact-light.png" alt="Logo Contact" />
-      <p class="sidebar-tooltip">CONTACT</p>
+    <a href="#contact" aria-label="Section Contact">
+      <img src="./assets/icons/contact-light.png" alt="" aria-hidden="true" />
+      <p class="sidebar-tooltip" aria-hidden="true">CONTACT</p>
       <span class="sidebar-indicator"></span>
     </a>
-  </div>
+  </nav>
 
   <!-- Arrow-bar -->
   <div id="arrow-bar" class="arrow-bar">
-    <a href="#top">
-      <img src="./assets/icons/up-arrow-light.png" alt="Arrow up pic" />
-      <p class="arrow-bar-tooltip" data-i18n="top"></p>
+    <a href="#top" aria-label="Retour en haut de la page">
+      <img src="./assets/icons/up-arrow-light.png" alt="" aria-hidden="true" />
+      <p class="arrow-bar-tooltip" data-i18n="top" aria-hidden="true"></p>
     </a>
   </div>
 
-  <main>
+  <main id="main">
     <!-- Home Section -->
     <section class="home" id="home">
       <div class="background-image-container">
