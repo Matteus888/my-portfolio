@@ -53,7 +53,6 @@
   font-size: 1.1rem;
   position: relative;
   display: inline-block;
-  cursor: pointer;
 }
 
 .nav-item:not(:first-child) a::after {

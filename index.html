@@ -171,30 +171,30 @@
           <div class="profile-id-text">
             <div class="profile-id-item">
               <a href="#contact">
-                <img src="./assets/icons/phone-light.png" alt="Phone logo" />
+                <img src="./assets/icons/phone-light.png" alt="" aria-hidden="true" />
                 <p>+33 6 80 17 57 71</p>
               </a>
             </div>
             <div class="profile-id-item">
               <a href="#contact">
-                <img src="./assets/icons/mail-light.png" alt="Email logo" />
+                <img src="./assets/icons/mail-light.png" alt="" aria-hidden="true" />
                 <p>matthieu888@gmail.com</p>
               </a>
             </div>
             <div class="profile-id-item">
               <a href="https://www.lemonde.fr/archives-du-monde/20-03-1980/" target="_blank" rel="noopener">
-                <img src="./assets/icons/birth-light.png" alt="Birthday logo" />
+                <img src="./assets/icons/birth-light.png" alt="" aria-hidden="true" />
                 <p>20/03/1980</p>
               </a>
             </div>
             <div class="profile-id-item">
               <a href="https://www.google.fr/maps/place/69290+Craponne/" target="_blank" rel="noopener">
-                <img src="./assets/icons/location-light.png" alt="Location logo" />
+                <img src="./assets/icons/location-light.png" alt="" aria-hidden="true" />
                 <p data-i18n="profileLocation"></p>
               </a>
             </div>
             <div class="profile-id-item">
-              <img src="./assets/icons/driving-license-light.png" alt="Driving License logo" />
+              <img src="./assets/icons/driving-license-light.png" alt="" aria-hidden="true" />
               <p data-i18n="profileDriving"></p>
             </div>
           </div>
@@ -212,12 +212,12 @@
           <div class="profile-links">
             <a href="https://www.linkedin.com/in/matthieu-chatelin/" target="_blank" rel="noopener"
               aria-label="Voir le profil LinkedIn de Matthieu Chatelin">
-              <img src="./assets/icons/linkedin-light.png" alt="Logo Linkedin" />
+              <img src="./assets/icons/linkedin-light.png" alt="" aria-hidden="true" />
               <p class="profile-tooltip">LINKEDIN</p>
             </a>
             <a href="https://github.com/Matteus888" target="_blank" rel="noopener"
               aria-label="Voir le GitHub de Matthieu Chatelin">
-              <img src="./assets/icons/github-light.png" alt="Logo GitHub" />
+              <img src="./assets/icons/github-light.png" alt="" aria-hidden="true" />
               <p class="profile-tooltip">GITHUB</p>
             </a>
           </div>
@@ -981,21 +981,27 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="legal-container">
-      <p class="legal" data-modal-target="#legalModal" data-i18n="legal">Mentions légales & Confidentialité</p>
+      <button class="legal" data-modal-target="#legalModal" data-i18n="legal" aria-haspopup="dialog"
+        aria-controls="legalModal" aria-expanded="false">
+        Mentions légales & Confidentialité
+      </button>
     </div>
     <p class="copyright" data-i18n="copyright">© 2025 Matthieu Chatelin. Tous droits réservés.</p>
-    <a id="arrow-up" href="#top"><img src="./assets/icons/up-arrow-light.png" alt="Arrow up pic" />
+    <a id="arrow-up" href="#top" aria-label="Revenir en haut de la page">
+      <img src="./assets/icons/up-arrow-light.png" alt="" aria-hidden="true" />
       <p data-i18n="top">BACK TO TOP</p>
-      <img src="./assets/icons/up-arrow-light.png" alt="Arrow up pic" />
+      <img src="./assets/icons/up-arrow-light.png" alt="" aria-hidden="true" />
     </a>
     <div class="social">
-      <a href="https://www.linkedin.com/in/matthieu-chatelin/" target="_blank" rel="noopener">
+      <a href="https://www.linkedin.com/in/matthieu-chatelin/" target="_blank" rel="noopener"
+        aria-label="Profil LinkedIn de Matthieu Chatelin">
         <img src="./assets/icons/linkedin-light.png" alt="Logo Linkedin" />
         <p class="social-tooltip">LINKEDIN</p>
       </a>
-      <a href="https://github.com/Matteus888" target="_blank" rel="noopener">
+      <a href="https://github.com/Matteus888" target="_blank" rel="noopener"
+        aria-label="Profil GitHub de Matthieu Chatelin">
         <img src="./assets/icons/github-light.png" alt="Logo GitHub" />
         <p class="social-tooltip">GITHUB</p>
       </a>
@@ -1003,16 +1009,17 @@
   </footer>
 
   <!-- Modale - Agrandissement des images des projets -->
-  <div id="image-modal" class="modal modal--image">
-    <span class="close modal-close--image">&times;</span>
-    <img class="modal-content modal-content--image" id="modal-image" />
+  <div id="image-modal" class="modal modal--image" role="dialog" aria-modal="true" aria-labelledby="image-modal-title"
+    tabindex="-1">
+    <button class="close modal-close--image" aria-label="Fermer l’image">&times;</button>
+    <img class="modal-content modal-content--image" id="modal-image" alt="Image agrandie" />
   </div>
 
   <!-- Modale - Mentions légales -->
   <div id="legalModal" class="modal modal--legal" role="dialog" aria-modal="true" aria-labelledby="legalModalTitle"
     aria-describedby="legalModalDesc" tabindex="-1">
     <div class="modal-content modal-content--legal">
-      <span class="close modal-close--legal" aria-label="Fermer les mentions légales">&times;</span>
+      <button class="close modal-close--legal" aria-label="Fermer les mentions légales">&times;</button>
       <h2 id="legalModalTitle" data-i18n="legalTitle"></h2>
       <img src="./assets/icons/legal-light.png" alt="Icône balance de justice pour les mentions légales" />
       <div id="legalModalDesc">
