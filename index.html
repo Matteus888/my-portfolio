@@ -1009,29 +1009,31 @@
   </div>
 
   <!-- Modale - Mentions légales -->
-  <div id="legalModal" class="modal modal--legal">
+  <div id="legalModal" class="modal modal--legal" role="dialog" aria-modal="true" aria-labelledby="legalModalTitle"
+    aria-describedby="legalModalDesc" tabindex="-1">
     <div class="modal-content modal-content--legal">
-      <span class="close modal-close--legal">&times;</span>
-      <h2 data-i18n="legalTitle"></h2>
-      <img src="./assets/icons/legal-light.png" alt="Legal Icon" />
-      <div>
+      <span class="close modal-close--legal" aria-label="Fermer les mentions légales">&times;</span>
+      <h2 id="legalModalTitle" data-i18n="legalTitle"></h2>
+      <img src="./assets/icons/legal-light.png" alt="Icône balance de justice pour les mentions légales" />
+      <div id="legalModalDesc">
         <h3 data-i18n="legalPublisherTitle"></h3>
         <p data-i18n="legalPublisherText"></p>
         <p>Email : <a href="mailto:matthieu888@gmail.com">matthieu888@gmail.com</a></p>
         <p>Website : <a href="https://www.votreportfolio.com" target="_blank"
-            rel="noopener">https://www.votreportfolio.com</a></p>
+            rel="noopener noreferrer">https://www.votreportfolio.com</a></p>
         <h3 data-i18n="legalHostTitle"></h3>
         <p data-i18n="legalHostText"></p>
         <p><strong>[Nom de l'hébergeur]</strong></p>
         <p>[Adresse de l'hébergeur]</p>
-        <p>Website : <a href="https://www.hebergeur.com" target="_blank" rel="noopener">https://www.hebergeur.com</a>
+        <p>Website : <a href="https://www.hebergeur.com" target="_blank"
+            rel="noopener noreferrer">https://www.hebergeur.com</a>
         </p>
         <h3 data-i18n="legalLiabilityTitle"></h3>
         <p data-i18n="legalLiabilityText"></p>
       </div>
-      <div class="modal-line"></div>
+      <div class="modal-line" aria-hidden="true"></div>
       <h2 data-i18n="privacyTitle"></h2>
-      <img src="./assets/icons/confidentiality-light.png" alt="Confidentiality Icon" />
+      <img src="./assets/icons/confidentiality-light.png" alt="Icône cadenas pour la confidentialité" />
       <div>
         <h3 data-i18n="privacyDataTitle"></h3>
         <p data-i18n="privacyDataText1"></p>
@@ -1043,7 +1045,7 @@
         <p data-i18n="privacyRightsText1"></p>
         <p data-i18n="privacyRightsText2"></p>
       </div>
-      <button class="modal-btn btn">OK</button>
+      <button class="modal-btn btn" aria-label="Fermer la fenêtre modale">OK</button>
     </div>
   </div>
 
