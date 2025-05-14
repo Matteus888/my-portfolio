@@ -121,6 +121,10 @@
 }
 
 .profile-id-item a {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   text-decoration: none;
   color: var(--text-color);
 }
@@ -225,7 +229,6 @@
 
   .profile-id-item {
     width: 100%;
-    flex-direction: row-reverse;
   }
 
   .profile-id-item p {
