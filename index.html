@@ -133,7 +133,7 @@
   </nav>
 
   <!-- Arrow-bar -->
-  <div id="arrow-bar" class="arrow-bar">
+  <div id="arrow-bar" class="arrow-bar" aria-label="Navigation vers le début du site">
     <a href="#top" aria-label="Retour en haut de la page">
       <img src="./assets/icons/up-arrow-light.png" alt="" aria-hidden="true" />
       <p class="arrow-bar-tooltip" data-i18n="top" aria-hidden="true"></p>
@@ -161,7 +161,7 @@
 
     <!-- Profile Section -->
     <section class="profile" id="profile" aria-label="Section profil">
-      <h2 class="profile-title" data-i18n="profileTitle" aria-live="polite"></h2>
+      <h2 class="profile-title" data-i18n="profileTitle" aria-live="polite">QUI SUIS-JE ?</h2>
       <div class="profile-card">
         <div class="profile-id">
           <div class="profile-image-container">
@@ -241,7 +241,7 @@
 
     <!-- Formation Section -->
     <section class="formation" id="formations" aria-label="Section formation">
-      <h2 class="formation-title" data-i18n="formationsTitle" aria-live="polite"></h2>
+      <h2 class="formation-title" data-i18n="formationsTitle" aria-live="polite">MON PARCOURS</h2>
       <div class="timeline" role="list">
         <div class="progress-line"></div>
         <div class="formation-item left" role="listitem" style="top: 0%">
@@ -456,7 +456,7 @@
 
     <!-- Skills Section -->
     <section class="skills" id="skills" aria-label="Section compétences">
-      <h2 class="skills-title" data-i18n="skillsTitle"></h2>
+      <h2 class="skills-title" data-i18n="skillsTitle">MES COMPÉTENCES</h2>
       <div class="skills-container">
         <div class="skills-hard-container">
           <h3 class="skills-hard-title" data-i18n="skillsHardTitle"></h3>
@@ -831,7 +831,7 @@
     <!-- Projects Section -->
     <section class="projects" id="projects" aria-label="Section projets">
       <div class="projects-container">
-        <h2 class="projects-title" data-i18n="projectsTitle"></h2>
+        <h2 class="projects-title" data-i18n="projectsTitle">MES PROJETS</h2>
         <div class="projects-wrapper">
           <div class="projects-thumbnail-container">
             <div class="projects-thumbnail" tabindex="0" aria-label="Projet My Social App">
@@ -926,34 +926,34 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="contact" id="contact">
+    <section class="contact" id="contact" aria-label="Section contact">
       <div class="contact-container">
-        <h2 class="contact-title" data-i18n="contactTitle"></h2>
+        <h2 class="contact-title" data-i18n="contactTitle" id="contact-title">CONTACTEZ MOI</h2>
         <div class="contact-card">
           <a href="tel:+33680175771">
-            <img src="./assets/icons/phone-light.png" alt="Phone logo" />
+            <img src="./assets/icons/phone-light.png" alt="Icône téléphone" />
             <p class="contact-tooltip" data-i18n="phoneCallText"></p>
-            <p>+33 6 80 17 57 71</p>
+            <p aria-label="Numéro de téléphone">+33 6 80 17 57 71</p>
           </a>
           <a href="mailto:matthieu888@gmail.com" target="_blank" rel="noopener">
-            <img src="./assets/icons/mail-light.png" alt="Email logo" />
+            <img src="./assets/icons/mail-light.png" alt="Icône email" />
             <p class="contact-tooltip" data-i18n="emailText"></p>
-            <p>matthieu888@gmail.com</p>
+            <p aria-label="Adresse email">matthieu888@gmail.com</p>
           </a>
           <a href="https://api.whatsapp.com/send?phone=+33680175771&text=Hello" target="_blank" rel="noopener">
-            <img src="./assets/icons/whatsapp-green.png" alt="Whatsapp logo" />
+            <img src="./assets/icons/whatsapp-green.png" alt="Icône Whatsapp" />
             <p class="contact-tooltip" data-i18n="whatsappText"></p>
-            <p>+33 6 80 17 57 71</p>
+            <p aria-label="Numéro de téléphone">+33 6 80 17 57 71</p>
           </a>
         </div>
-        <form action="submit" class="form-card">
+        <form action="submit" class="form-card" aria-labelledby="contact-title" role="form" autocomplete="on">
           <div class="double-input-container">
             <div class="input-container">
-              <label for="lastname" data-i18n="lastnameForm">Lastname</label>
+              <label for="lastname" data-i18n="lastnameForm">Nom</label>
               <input type="text" id="lastname" name="lastname" required />
             </div>
             <div class="input-container">
-              <label for="firstname" data-i18n="firstnameForm">Firstname</label>
+              <label for="firstname" data-i18n="firstnameForm">Prénom</label>
               <input type="text" id="firstname" name="firstname" required />
             </div>
           </div>
@@ -963,12 +963,12 @@
               <input type="email" id="email" name="email" required />
             </div>
             <div class="input-container">
-              <label for="phone" data-i18n="phoneForm">Phone</label>
-              <input type="text" id="phone" name="phone" />
+              <label for="phone" data-i18n="phoneForm">Téléphone</label>
+              <input type="tel" id="phone" name="phone" />
             </div>
           </div>
           <div class="input-container">
-            <label for="object" data-i18n="subjectForm">Object</label>
+            <label for="object" data-i18n="subjectForm">Objet</label>
             <input type="text" id="object" name="subject" required />
           </div>
           <div class="input-container">
@@ -976,10 +976,11 @@
             <textarea id="message" name="message" rows="6" required></textarea>
           </div>
           <div class="checkbox-container">
-            <input type="checkbox" id="accept" name="accept" required />
+            <input type="checkbox" id="accept" name="accept" required aria-required="true" />
             <label for="accept" data-i18n="checkboxText"></label>
           </div>
-          <button class="btn submitBtn" data-i18n="submitBtn"></button>
+          <button class="btn submitBtn" data-i18n="submitBtn" type="submit"
+            aria-label="Envoyer message">ENVOYER</button>
         </form>
       </div>
     </section>
@@ -1062,6 +1063,25 @@
 
   <!-- Toast - Formulaire de contact -->
   <div id="toastContainer" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Bloc JSON-LD pour SEO -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Matthieu",
+      "email": "mailto:matthieu888@gmail.com",
+      "telephone": "+33-6-80-17-57-71",
+      "url": "https://my-80store-frontend.vercel.app/", 
+      "contactType": "customer support",
+      "availableLanguage": ["French", "English"],
+      "sameAs": [
+        "https://www.linkedin.com/in/matthieu-chatelin",
+        "https://github.com/Matteus888"
+      ]
+    }
+    </script>
+
 </body>
 
 </html>
