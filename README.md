@@ -25,7 +25,7 @@ Ce portfolio a pour but de présenter mon profil de développeur fullstack, mes 
 
 ## 📸 Aperçu
 
-Ajoute ici une capture d’écran ou un GIF du site si possible.
+![Home](/assets/my-portfolio.webp)
 
 ## 🔧 Installation et utilisation
 
