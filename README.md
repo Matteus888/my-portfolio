@@ -31,4 +31,4 @@ Ajoute ici une capture d’écran ou un GIF du site si possible.
 
 1. Clonez ce dépôt :
    ```bash
-   git clone https://github.com/votre-utilisateur/mon-portfolio.git
+   git clone https://github.com/Matteus888/my-portfolio.git
