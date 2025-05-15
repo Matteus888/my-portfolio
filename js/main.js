@@ -114,16 +114,24 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   function checkScroll() {
+    let allShown = true;
+
     totalCards.forEach((card) => {
       const rect = card.getBoundingClientRect();
       const windowHeight = window.innerHeight;
 
-      if (rect.top < windowHeight * 1 && rect.bottom > 0) {
+      if (rect.top < windowHeight && rect.bottom > 0 && !card.classList.contains("show")) {
         card.classList.add("show");
-      } else {
-        card.classList.remove("show");
+      }
+
+      if (!card.classList.contains("show")) {
+        allShown = false;
       }
     });
+
+    if (allShown) {
+      window.removeEventListener("scroll", checkScroll);
+    }
   }
   window.addEventListener("scroll", checkScroll);
   checkScroll();

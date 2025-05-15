@@ -243,9 +243,9 @@
     font-size: 0.9rem;
   }
 
-  .submitBtn {
+  /* .submitBtn {
     width: 100%;
-  }
+  } */
 }
 
 @media screen and (max-width: 510px) {
