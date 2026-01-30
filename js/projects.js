@@ -46,7 +46,7 @@ const projects = [
     backLink: "https://github.com/Matteus888/Roll-in-NewYork-Backend",
     bdd: "MongoDB/Cloudinary",
     pack: "FontAwesome, React-Navigation, Redux, Camera, File-System, Font, Image-Picker, Expo-Location, Moment, Masonry-List, Modal, Paper, Vector Icons, Toastify, bcrypt, Mongoose, uid2",
-    qrcode: "./assets/images/projects/rollinnewyork/rollinnewyork_qrcode.png",
+    // qrcode: "./assets/images/projects/rollinnewyork/rollinnewyork_qrcode.png",
     images: [
       "./assets/images/projects/rollinnewyork/rollinnewyork1.webp",
       "./assets/images/projects/rollinnewyork/rollinnewyork2.webp",
