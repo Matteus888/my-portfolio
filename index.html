@@ -1,1087 +1,1187 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio de Matthieu Chatelin, développeur web passionné par le JavaScript, React, et les projets créatifs. Découvrez mes réalisations et contactez-moi."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <title>Matthieu Chatelin | Développeur Web Javascript & React - Portfolio</title>
+    <link rel="icon" href="./assets/icons/logo-dark.ico" title="Logo Matthieu Chatelin" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script type="module" src="./js/main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Portfolio de Matthieu Chatelin, développeur web passionné par le JavaScript, React, et les projets créatifs. Découvrez mes réalisations et contactez-moi." />
-  <meta name="color-scheme" content="light dark">
-  <title>Matthieu Chatelin | Développeur Web Javascript & React - Portfolio</title>
-  <link rel="icon" href="./assets/icons/logo-dark.ico" title="Logo Matthieu Chatelin" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="./css/main.css" />
-  <script type="module" src="./js/main.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-</head>
+  <body>
+    <a href="#main" class="skip-link">Aller au contenu principal</a>
+    <header class="header-container" id="top">
+      <div class="burger" id="burger" role="button" aria-label="Ouvrir le menu" aria-expanded="false" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <h1 class="site-title">MATTHIEU CHATELIN - PORTFOLIO</h1>
+      <nav class="nav-container" role="navigation" aria-label="Menu principal">
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#home" aria-label="Accueil - Matthieu Chatelin">
+              <img class="logo" src="./assets/icons/logo-light.png" alt="Logo Home" role="presentation" />
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#profile" data-i18n="profile" aria-label="Profils - Matthieu Chatelin">PROFIL</a>
+          </li>
+          <li class="nav-item">
+            <a href="#formations" aria-label="Formation - Matthieu Chatelin">FORMATION</a>
+          </li>
+          <li class="nav-item">
+            <a href="#skills" data-i18n="skills" aria-label="Compétences - Matthieu Chatelin">COMPÉTENCES</a>
+          </li>
+          <li class="nav-item">
+            <a href="#projects" data-i18n="projects" aria-label="Projets - Matthieu Chatelin">PROJETS</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" aria-label="Contact - Matthieu Chatelin">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="option-container">
+        <div class="lang-container">
+          <label class="lang-switch" aria-label="Changer la langue">
+            <input type="checkbox" class="lang-toggle" aria-label="Changer la langue en anglais ou français" />
+            <span class="slider">
+              <img src="./assets/icons/france.png" alt="Passer en français" class="flag fr" />
+              <img src="./assets/icons/united-kingdom.png" alt="Switch to English" class="flag en" />
+            </span>
+          </label>
+        </div>
+        <div class="theme-container">
+          <label class="theme-switch" aria-label="Changer le thème clair/sombre">
+            <input type="checkbox" class="theme-toggle" aria-label="Basculer entre thème clair et sombre" />
+            <span class="slider">
+              <p class="theme day" aria-hidden="true">☀️</p>
+              <p class="theme night" aria-hidden="true">🌙</p>
+            </span>
+          </label>
+        </div>
+      </div>
+    </header>
 
-<body>
-  <a href="#main" class="skip-link">Aller au contenu principal</a>
-  <header class="header-container" id="top">
-    <div class="burger" id="burger" role="button" aria-label="Ouvrir le menu" aria-expanded="false" tabindex="0">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <h1 class="site-title">MATTHIEU CHATELIN - PORTFOLIO</h1>
-    <nav class="nav-container" role="navigation" aria-label="Menu principal">
-      <ul class="nav-menu">
-        <li class="nav-item">
-          <a href="#home" aria-label="Accueil - Matthieu Chatelin">
-            <img class="logo" src="./assets/icons/logo-light.png" alt="Logo Home" role="presentation" />
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="#profile" data-i18n="profile" aria-label="Profils - Matthieu Chatelin">PROFIL</a>
-        </li>
-        <li class="nav-item">
-          <a href="#formations" aria-label="Formation - Matthieu Chatelin">FORMATION</a>
-        </li>
-        <li class="nav-item">
-          <a href="#skills" data-i18n="skills" aria-label="Compétences - Matthieu Chatelin">COMPÉTENCES</a>
-        </li>
-        <li class="nav-item">
-          <a href="#projects" data-i18n="projects" aria-label="Projets - Matthieu Chatelin">PROJETS</a>
-        </li>
-        <li class="nav-item">
-          <a href="#contact" aria-label="Contact - Matthieu Chatelin">CONTACT</a>
-        </li>
-      </ul>
-    </nav>
-    <div class="option-container">
+    <!-- Option-bar -->
+    <div id="option-bar" class="option-bar" role="region" aria-label="Options d'affichage">
       <div class="lang-container">
-        <label class="lang-switch" aria-label="Changer la langue">
-          <input type="checkbox" class="lang-toggle" aria-label="Changer la langue en anglais ou français" />
+        <label class="lang-switch" for="lang-toggle">
+          <span class="visually-hidden">Changer la langue</span>
+          <input
+            type="checkbox"
+            class="lang-toggle"
+            id="lang-toggle"
+            aria-label="Changer la langue : français ou anglais"
+          />
           <span class="slider">
-            <img src="./assets/icons/france.png" alt="Passer en français" class="flag fr" />
-            <img src="./assets/icons/united-kingdom.png" alt="Switch to English" class="flag en" />
+            <img src="./assets/icons/france.png" alt="Français" class="flag fr" />
+            <img src="./assets/icons/united-kingdom.png" alt="English" class="flag en" />
           </span>
         </label>
       </div>
       <div class="theme-container">
-        <label class="theme-switch" aria-label="Changer le thème clair/sombre">
-          <input type="checkbox" class="theme-toggle" aria-label="Basculer entre thème clair et sombre" />
-          <span class="slider">
+        <label class="theme-switch" for="theme-toggle">
+          <span class="visually-hidden">Changer le thème</span>
+          <input
+            type="checkbox"
+            class="theme-toggle"
+            id="theme-toggle"
+            aria-label="Changer le thème : clair ou sombre"
+          />
+          <span class="slider" aria-hidden="true">
             <p class="theme day" aria-hidden="true">☀️</p>
             <p class="theme night" aria-hidden="true">🌙</p>
           </span>
         </label>
       </div>
     </div>
-  </header>
 
-  <!-- Option-bar -->
-  <div id="option-bar" class="option-bar" role="region" aria-label="Options d'affichage">
-    <div class="lang-container">
-      <label class="lang-switch" for="lang-toggle">
-        <span class="visually-hidden">Changer la langue</span>
-        <input type="checkbox" class="lang-toggle" id="lang-toggle"
-          aria-label="Changer la langue : français ou anglais" />
-        <span class="slider">
-          <img src="./assets/icons/france.png" alt="Français" class="flag fr" />
-          <img src="./assets/icons/united-kingdom.png" alt="English" class="flag en" />
-        </span>
-      </label>
+    <!-- Sidebar -->
+    <nav id="sidebar" class="sidebar" aria-label="Navigation secondaire">
+      <a href="#home" aria-label="Section Accueil">
+        <img src="./assets/icons/logo-light.png" alt="" id="home-logo" aria-hidden="true" />
+        <p class="sidebar-tooltip" data-i18n="home" aria-hidden="true">ACCUEIL</p>
+        <span class="sidebar-indicator"></span>
+      </a>
+      <a href="#profile" aria-label="Section Profil">
+        <img src="./assets/icons/profile-light.png" alt="" aria-hidden="true" />
+        <p class="sidebar-tooltip" data-i18n="profile" aria-hidden="true">PROFIL</p>
+        <span class="sidebar-indicator"></span>
+      </a>
+      <a href="#formations" aria-label="Section Formation">
+        <img src="./assets/icons/formation-light.png" alt="" aria-hidden="true" />
+        <p class="sidebar-tooltip" aria-hidden="true">FORMATION</p>
+        <span class="sidebar-indicator"></span>
+      </a>
+      <a href="#skills" aria-label="Section Compétences">
+        <img src="./assets/icons/skills-light.png" alt="" aria-hidden="true" />
+        <p class="sidebar-tooltip" data-i18n="skills" aria-hidden="true">COMPÉTENCES</p>
+        <span class="sidebar-indicator"></span>
+      </a>
+      <a href="#projects" aria-label="Section Projets">
+        <img src="./assets/icons/projects-light.png" alt="" aria-hidden="true" />
+        <p class="sidebar-tooltip" data-i18n="projects" aria-hidden="true">PROJETS</p>
+        <span class="sidebar-indicator"></span>
+      </a>
+      <a href="#contact" aria-label="Section Contact">
+        <img src="./assets/icons/contact-light.png" alt="" aria-hidden="true" />
+        <p class="sidebar-tooltip" aria-hidden="true">CONTACT</p>
+        <span class="sidebar-indicator"></span>
+      </a>
+    </nav>
+
+    <!-- Arrow-bar -->
+    <div id="arrow-bar" class="arrow-bar" aria-label="Navigation vers le début du site">
+      <a href="#top" aria-label="Retour en haut de la page">
+        <img src="./assets/icons/up-arrow-light.png" alt="" aria-hidden="true" />
+        <p class="arrow-bar-tooltip" data-i18n="top" aria-hidden="true"></p>
+      </a>
     </div>
-    <div class="theme-container">
-      <label class="theme-switch" for="theme-toggle">
-        <span class="visually-hidden">Changer le thème</span>
-        <input type="checkbox" class="theme-toggle" id="theme-toggle" aria-label="Changer le thème : clair ou sombre" />
-        <span class="slider" aria-hidden="true">
-          <p class="theme day" aria-hidden="true">☀️</p>
-          <p class="theme night" aria-hidden="true">🌙</p>
-        </span>
-      </label>
-    </div>
-  </div>
 
-  <!-- Sidebar -->
-  <nav id="sidebar" class="sidebar" aria-label="Navigation secondaire">
-    <a href="#home" aria-label="Section Accueil">
-      <img src="./assets/icons/logo-light.png" alt="" id="home-logo" aria-hidden="true" />
-      <p class="sidebar-tooltip" data-i18n="home" aria-hidden="true">ACCUEIL</p>
-      <span class="sidebar-indicator"></span>
-    </a>
-    <a href="#profile" aria-label="Section Profil">
-      <img src="./assets/icons/profile-light.png" alt="" aria-hidden="true" />
-      <p class="sidebar-tooltip" data-i18n="profile" aria-hidden="true">PROFIL</p>
-      <span class="sidebar-indicator"></span>
-    </a>
-    <a href="#formations" aria-label="Section Formation">
-      <img src="./assets/icons/formation-light.png" alt="" aria-hidden="true" />
-      <p class="sidebar-tooltip" aria-hidden="true">FORMATION</p>
-      <span class="sidebar-indicator"></span>
-    </a>
-    <a href="#skills" aria-label="Section Compétences">
-      <img src="./assets/icons/skills-light.png" alt="" aria-hidden="true" />
-      <p class="sidebar-tooltip" data-i18n="skills" aria-hidden="true">COMPÉTENCES</p>
-      <span class="sidebar-indicator"></span>
-    </a>
-    <a href="#projects" aria-label="Section Projets">
-      <img src="./assets/icons/projects-light.png" alt="" aria-hidden="true" />
-      <p class="sidebar-tooltip" data-i18n="projects" aria-hidden="true">PROJETS</p>
-      <span class="sidebar-indicator"></span>
-    </a>
-    <a href="#contact" aria-label="Section Contact">
-      <img src="./assets/icons/contact-light.png" alt="" aria-hidden="true" />
-      <p class="sidebar-tooltip" aria-hidden="true">CONTACT</p>
-      <span class="sidebar-indicator"></span>
-    </a>
-  </nav>
+    <main id="main">
+      <!-- Home Section -->
+      <section class="home" id="home" aria-label="Section d'accueil">
+        <div class="background-image-container">
+          <img class="background-image" src="./assets/images/vscode-dark.webp" alt="" aria-hidden="true" />
+          <img class="background-image-sharp" src="./assets/images/vscode-light.webp" alt="" aria-hidden="true" />
+          <canvas id="zoom-canvas" aria-hidden="true"></canvas>
+        </div>
+        <div class="terminal" id="terminal">
+          <span id="text" data-i18n="welcome" aria-live="polite"></span>
+          <a id="terminalImg" href="#profile" aria-label="Aller à la section Profil">
+            <div class="terminalImg terminalImg-front"></div>
+            <div class="terminalImg terminalImg-back"></div>
+          </a>
+          <a class="btn" id="terminalBtn" data-i18n="profile" href="#profile" aria-label="Aller à la section Profil"
+            >PROFIL</a
+          >
+        </div>
+      </section>
 
-  <!-- Arrow-bar -->
-  <div id="arrow-bar" class="arrow-bar" aria-label="Navigation vers le début du site">
-    <a href="#top" aria-label="Retour en haut de la page">
-      <img src="./assets/icons/up-arrow-light.png" alt="" aria-hidden="true" />
-      <p class="arrow-bar-tooltip" data-i18n="top" aria-hidden="true"></p>
-    </a>
-  </div>
+      <!-- Profile Section -->
+      <section class="profile" id="profile" aria-label="Section profil">
+        <h2 class="profile-title" data-i18n="profileTitle" aria-live="polite">QUI SUIS-JE ?</h2>
+        <div class="profile-card">
+          <div class="profile-id">
+            <div class="profile-image-container">
+              <img src="./assets/images/avatar.webp" alt="" aria-hidden="true" class="profile-image-front" />
+              <img src="./assets/images/profile2.webp" alt="" aria-hidden="true" class="profile-image-back" />
+            </div>
+            <div class="profile-id-text">
+              <div class="profile-id-item">
+                <a href="#contact">
+                  <img src="./assets/icons/phone-light.png" alt="" aria-hidden="true" />
+                  <p>+33 6 80 17 57 71</p>
+                </a>
+              </div>
+              <div class="profile-id-item">
+                <a href="#contact">
+                  <img src="./assets/icons/mail-light.png" alt="" aria-hidden="true" />
+                  <p>matthieu888@gmail.com</p>
+                </a>
+              </div>
+              <div class="profile-id-item">
+                <a href="https://www.lemonde.fr/archives-du-monde/20-03-1980/" target="_blank" rel="noopener">
+                  <img src="./assets/icons/birth-light.png" alt="" aria-hidden="true" />
+                  <p>20/03/1980</p>
+                </a>
+              </div>
+              <div class="profile-id-item">
+                <a href="https://www.google.fr/maps/place/69290+Craponne/" target="_blank" rel="noopener">
+                  <img src="./assets/icons/location-light.png" alt="" aria-hidden="true" />
+                  <p data-i18n="profileLocation"></p>
+                </a>
+              </div>
+              <div class="profile-id-item">
+                <img src="./assets/icons/driving-license-light.png" alt="" aria-hidden="true" />
+                <p data-i18n="profileDriving"></p>
+              </div>
+            </div>
+          </div>
+          <div class="profile-text">
+            <p data-i18n="profileText"></p>
+          </div>
+        </div>
+        <div class="profile-card">
+          <div class="profile-download-container">
+            <p data-i18n="profileCV"></p>
+            <a
+              href="./assets/files/CV_2025_Matthieu_CHATELIN.pdf"
+              download="CV_2025_Matthieu_CHATELIN.pdf"
+              class="btn"
+              data-i18n="profileDownloadBtn"
+            >
+            </a>
+            <div class="profile-links">
+              <a
+                href="https://www.linkedin.com/in/matthieu-chatelin/"
+                target="_blank"
+                rel="noopener"
+                aria-label="Voir le profil LinkedIn de Matthieu Chatelin"
+              >
+                <img src="./assets/icons/linkedin-light.png" alt="" aria-hidden="true" />
+                <p class="profile-tooltip">LINKEDIN</p>
+              </a>
+              <a
+                href="https://github.com/Matteus888"
+                target="_blank"
+                rel="noopener"
+                aria-label="Voir le GitHub de Matthieu Chatelin"
+              >
+                <img src="./assets/icons/github-light.png" alt="" aria-hidden="true" />
+                <p class="profile-tooltip">GITHUB</p>
+              </a>
+            </div>
+            <div class="profile-line-container">
+              <div class="profile-horizontal-line"></div>
+              <p data-i18n="or">OR</p>
+              <div class="profile-horizontal-line"></div>
+            </div>
+            <p data-i18n="profileContactText"></p>
+            <a href="#contact" class="btn" data-i18n="profileContactBtn"> </a>
+          </div>
+          <div class="profile-vertical-line"></div>
+          <div class="cv-preview">
+            <a href="./assets/files/CV_2025_Matthieu_CHATELIN.pdf" target="_blank" rel="noopener">
+              <img src="./assets/images/cv_preview.webp" alt="Aperçu du CV de Matthieu Chatelin" />
+            </a>
+          </div>
+        </div>
+      </section>
 
-  <main id="main">
-    <!-- Home Section -->
-    <section class="home" id="home" aria-label="Section d'accueil">
-      <div class="background-image-container">
-        <img class="background-image" src="./assets/images/vscode-dark.webp" alt="" aria-hidden="true" />
-        <img class="background-image-sharp" src="./assets/images/vscode-light.webp" alt="" aria-hidden="true" />
-        <canvas id="zoom-canvas" aria-hidden="true"></canvas>
+      <!-- Formation Section -->
+      <section class="formation" id="formations" aria-label="Section formation">
+        <h2 class="formation-title" data-i18n="formationsTitle" aria-live="polite">MON PARCOURS</h2>
+        <div class="timeline" role="list">
+          <div class="progress-line"></div>
+          <div class="formation-item left" role="listitem" style="top: 0%">
+            <div class="formation-img-wrapper">
+              <img src="./assets/images/formations/La-Favorite.webp" alt="Logo de l'école La Favorite" loading="lazy" />
+            </div>
+            <div class="formation-text-container">
+              <span class="year"><time datetime="1998">1998</time></span>
+              <div>
+                <h3 data-i18n="formationsItem1Title">Lycée La Favorite</h3>
+                <p class="location" data-i18n="formationsItem1Location"></p>
+              </div>
+              <p class="details" data-i18n="formationsItem1Details"></p>
+            </div>
+          </div>
+          <div class="formation-item right" role="listitem">
+            <div class="formation-img-wrapper">
+              <img src="./assets/images/formations/Arfis.webp" alt="Logo de l'école ARFIS" loading="lazy" />
+            </div>
+            <div class="formation-text-container">
+              <span class="year"><time datetime="1998-2000">1998-2000</time></span>
+              <div>
+                <h3>ARFIS</h3>
+                <p class="location" data-i18n="formationsItem2Location"></p>
+              </div>
+              <p class="details" data-i18n="formationsItem2Details"></p>
+            </div>
+          </div>
+          <div class="formation-item left" role="listitem">
+            <div class="formation-img-wrapper">
+              <img
+                src="./assets/images/formations/circus.webp"
+                alt="Logo du Cirque d'Hiver"
+                loading="lazy"
+                style="transform: scale(0.8)"
+              />
+            </div>
+            <div class="formation-text-container">
+              <span class="year"><time datetime="2000-2001">2000-2001</time></span>
+              <div>
+                <h3 data-i18n="formationsItem3Title">Cirque d'Hiver Bouglione</h3>
+                <p class="location" data-i18n="formationsItem3Location"></p>
+              </div>
+              <p class="details" data-i18n="formationsItem3Details"></p>
+            </div>
+          </div>
+          <div class="formation-item right" role="listitem">
+            <div class="formation-img-wrapper">
+              <img src="./assets/images/formations/france3.webp" alt="Logo France 3" loading="lazy" />
+            </div>
+            <div class="formation-text-container">
+              <span class="year"><time datetime="2001-2002">2001-2002</time></span>
+              <div>
+                <h3>France 3 Rhône-Alpes</h3>
+                <p class="location">Le Puy-en-Velais</p>
+              </div>
+              <p class="details" data-i18n="formationsItem4Details"></p>
+            </div>
+          </div>
+          <div class="formation-item left" role="listitem">
+            <div class="formation-img-wrapper">
+              <img
+                src="./assets/images/formations/Université_Lumière_Lyon_2.webp"
+                alt="Logo de l'université Lyon 2"
+                loading="lazy"
+              />
+            </div>
+            <div class="formation-text-container">
+              <span class="year"><time datetime="2002-2004">2002-2004</time></span>
+              <div>
+                <h3 data-i18n="formationsItem5Title">Université Louis Lumière</h3>
+                <p class="location">Lyon / Bron</p>
+              </div>
+              <p class="details" data-i18n="formationsItem5Details"></p>
+            </div>
+          </div>
+          <div class="formation-item right" role="listitem">
+            <div class="formation-img-wrapper">
+              <img
+                src="./assets/images/formations/Utrecht_University.webp"
+                alt="Logo de l'université d'Utrecht"
+                loading="lazy"
+                style="transform: translateX(5px)"
+              />
+            </div>
+            <div class="formation-text-container">
+              <span class="year"><time datetime="2004-2005">2004-2005</time></span>
+              <div>
+                <h3 data-i18n="formationsItem6Title">Université d'Utrecht</h3>
+                <p class="location" data-i18n="formationsItem6Location"></p>
+              </div>
+              <p class="details" data-i18n="formationsItem6Details"></p>
+            </div>
+          </div>
+          <div class="formation-item left" role="listitem">
+            <div class="formation-img-wrapper">
+              <img src="./assets/images/formations/GMT-Productions.webp" alt="Logo de GMT Productions" loading="lazy" />
+            </div>
+            <div class="formation-text-container">
+              <span class="year"><time datetime="2006">2006</time></span>
+              <div>
+                <h3>GMT Productions</h3>
+                <p class="location">Ile-de-France</p>
+              </div>
+              <p class="details" data-i18n="formationsItem7Details"></p>
+            </div>
+          </div>
+          <div class="formation-item right" role="listitem">
+            <div class="formation-img-wrapper">
+              <img
+                src="./assets/images/formations/assistant_régisseur.webp"
+                alt="Icone d'une caméra"
+                loading="lazy"
+                style="object-fit: contain"
+              />
+            </div>
+            <div class="formation-text-container">
+              <span class="year"><time datetime="2006-2017">2006-2017</time></span>
+              <div>
+                <h3 data-i18n="formationsItem8Title">Assistant Régisseur adjoint</h3>
+                <p class="location">Ile-de-France</p>
+              </div>
+              <p class="details" data-i18n="formationsItem8Details"></p>
+            </div>
+          </div>
+          <div class="formation-item left" role="listitem">
+            <div class="formation-img-wrapper">
+              <img
+                src="./assets/images/formations/régisseur_adjoint.webp"
+                alt="Icone d'un talkie-walkie"
+                loading="lazy"
+                style="object-fit: contain; transform: scale(0.95)"
+              />
+            </div>
+            <div class="formation-text-container">
+              <span class="year"><time datetime="2017-2023">2017-2023</time></span>
+              <div>
+                <h3 data-i18n="formationsItem9Title">Régisseur adjoint</h3>
+                <p class="location">Ile-de-France</p>
+              </div>
+              <p class="details" data-i18n="formationsItem9Details"></p>
+            </div>
+          </div>
+          <div class="formation-item right" role="listitem">
+            <div class="formation-img-wrapper">
+              <img
+                src="./assets/images/formations/development.webp"
+                alt="Icone de formation"
+                loading="lazy"
+                style="object-fit: contain"
+              />
+            </div>
+            <div class="formation-text-container">
+              <span class="year"><time datetime="2022-2025">2022-2025</time></span>
+              <div>
+                <h3 data-i18n="formationsItem10Title">Formation en autodidacte</h3>
+                <p class="location" data-i18n="formationsItem10Location"></p>
+              </div>
+              <p class="details">Openclassroom, Codecademy, Grafikart, W3Schools, Microsoft Learn...</p>
+            </div>
+          </div>
+          <div class="formation-item left" role="listitem">
+            <div class="formation-img-wrapper">
+              <img
+                src="./assets/images/formations/LaCapsule.webp"
+                alt="Logo de la formation La Capsule"
+                loading="lazy"
+                style="object-fit: contain; transform: scale(0.9)"
+              />
+            </div>
+            <div class="formation-text-container">
+              <span class="year"><time datetime="2024">2024</time></span>
+              <div>
+                <h3>La Capsule</h3>
+                <p class="location" data-i18n="formationsItem11Location">Lyon 7ème</p>
+              </div>
+              <p class="details" data-i18n="formationsItem11Details"></p>
+            </div>
+          </div>
+          <div class="formation-item right" role="listitem">
+            <div class="formation-img-wrapper">
+              <img
+                src="./assets/images/formations/NY.webp"
+                alt="Logo de l'application mobile Roll-In New-York"
+                loading="lazy"
+                style="object-fit: contain; transform: scale(0.95)"
+              />
+            </div>
+            <div class="formation-text-container">
+              <span class="year" data-i18n="formationsItem12Date"></span>
+              <div>
+                <h3>Roll-In NewYork</h3>
+                <p class="location" data-i18n="formationsItem12Location"></p>
+              </div>
+              <p class="details" data-i18n="formationsItem12Details"></p>
+            </div>
+          </div>
+          <div class="formation-item left" role="listitem">
+            <div class="formation-img-wrapper">
+              <img
+                src="./assets/images/formations/mySocialApp.webp"
+                alt="Logo du réseau social My Social App"
+                loading="lazy"
+                style="object-fit: contain"
+              />
+            </div>
+            <div class="formation-text-container">
+              <span class="year" data-i18n="formationsItem13Date"></span>
+              <div>
+                <h3>My Social App</h3>
+                <p class="location" data-i18n="formationsItem13Location"></p>
+              </div>
+              <p class="details" data-i18n="formationsItem13Details"></p>
+            </div>
+          </div>
+          <div class="formation-item right" role="listitem">
+            <div class="formation-img-wrapper">
+              <img
+                src="./assets/images/formations/my80store.webp"
+                alt="Logo du site de e-commerce My 80's Store"
+                loading="lazy"
+                style="object-fit: contain; transform: scale(0.9)"
+              />
+            </div>
+            <div class="formation-text-container">
+              <span class="year" data-i18n="formationsItem14Date"></span>
+              <div>
+                <h3>My 80's Store</h3>
+                <p class="location" data-i18n="formationsItem14Location"></p>
+              </div>
+              <p class="details" data-i18n="formationsItem14Details"></p>
+            </div>
+          </div>
+          <div class="formation-item left" role="listitem" style="top: 100%">
+            <div class="formation-img-wrapper">
+              <img
+                src="./assets/icons/logo-dark.png"
+                alt="Logo de ce My Portfolio"
+                loading="lazy"
+                style="transform: translateY(6px); object-fit: contain"
+              />
+            </div>
+            <div class="formation-text-container">
+              <span class="year" data-i18n="formationsItem15Date"></span>
+              <div>
+                <h3>My Portfolio</h3>
+                <p class="location" data-i18n="formationsItem15Location"></p>
+              </div>
+              <p class="details" data-i18n="formationsItem15Details"></p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-placeholder"></div>
+      </section>
+
+      <!-- Skills Section -->
+      <section class="skills" id="skills" aria-label="Section compétences">
+        <h2 class="skills-title" data-i18n="skillsTitle">MES COMPÉTENCES</h2>
+        <div class="skills-container">
+          <div class="skills-hard-container">
+            <h3 class="skills-hard-title" data-i18n="skillsHardTitle"></h3>
+            <div class="skills-hard-content">
+              <div class="skills-item-container">
+                <div class="skills-card" aria-label="Compétence HTML5">
+                  <div class="skills-card-front">
+                    <img src="./assets/images/skills/hard/html-5.png" alt="Logo HTML" loading="lazy" />
+                  </div>
+                  <div class="skills-card-back">
+                    <p>HTML <span>v5</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="skills-item-container">
+                <div class="skills-card" aria-label="Compétence CSS3">
+                  <div class="skills-card-front">
+                    <img src="./assets/images/skills/hard/css-3.png" alt="Logo CSS" loading="lazy" />
+                  </div>
+                  <div class="skills-card-back">
+                    <p>CSS <span>v3</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="skills-item-container">
+                <div class="skills-card" aria-label="Compétence Javascript">
+                  <div class="skills-card-front">
+                    <img src="./assets/images/skills/hard/javascript.png" alt="Logo Javascript" loading="lazy" />
+                  </div>
+                  <div class="skills-card-back">
+                    <p>Javascript</p>
+                  </div>
+                </div>
+              </div>
+              <div class="skills-item-container">
+                <div class="skills-card" aria-label="Compétence Figma">
+                  <div class="skills-card-front">
+                    <img src="./assets/images/skills/hard/figma.png" alt="Logo Figma" loading="lazy" />
+                  </div>
+                  <div class="skills-card-back">
+                    <p>Figma</p>
+                  </div>
+                </div>
+              </div>
+              <div class="skills-item-container">
+                <div class="skills-card" aria-label="Compétence React">
+                  <div class="skills-card-front">
+                    <img src="./assets/images/skills/hard/react.png" alt="Logo React" loading="lazy" />
+                  </div>
+                  <div class="skills-card-back">
+                    <p>React <span>v19</span></p>
+                    <p>& Native</p>
+                  </div>
+                </div>
+              </div>
+              <div class="skills-item-container">
+                <div class="skills-card" aria-label="Compétence NextJS">
+                  <div class="skills-card-front">
+                    <img src="./assets/images/skills/hard/nextjs.png" alt="Logo NextJS" loading="lazy" />
+                  </div>
+                  <div class="skills-card-back">
+                    <p>NextJS <span>v15</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="skills-item-container">
+                <div class="skills-card" aria-label="Compétence Git">
+                  <div class="skills-card-front">
+                    <img src="./assets/images/skills/hard/git.png" alt="Logo Git" loading="lazy" />
+                  </div>
+                  <div class="skills-card-back">
+                    <p>Git/GitHub</p>
+                  </div>
+                </div>
+              </div>
+              <div class="skills-item-container">
+                <div class="skills-card" aria-label="Compétence Expo">
+                  <div class="skills-card-front">
+                    <img src="./assets/images/skills/hard/expo-go.png" alt="Logo Expo Go" loading="lazy" />
+                  </div>
+                  <div class="skills-card-back">
+                    <p>Expo Go</p>
+                  </div>
+                </div>
+              </div>
+              <div class="skills-item-container">
+                <div class="skills-card" aria-label="Compétence NodeJS">
+                  <div class="skills-card-front">
+                    <img src="./assets/images/skills/hard/nodejs.png" alt="Logo NodeJS" loading="lazy" />
+                  </div>
+                  <div class="skills-card-back">
+                    <p>NodeJS</p>
+                  </div>
+                </div>
+              </div>
+              <div class="skills-item-container">
+                <div class="skills-card" aria-label="Compétence ExpressJS">
+                  <div class="skills-card-front">
+                    <img src="./assets/images/skills/hard/expressjs.png" alt="Logo ExpressJS" loading="lazy" />
+                  </div>
+                  <div class="skills-card-back">
+                    <p>ExpressJS</p>
+                  </div>
+                </div>
+              </div>
+              <div class="skills-item-container">
+                <div class="skills-card" aria-label="Compétence MongoDB">
+                  <div class="skills-card-front">
+                    <img src="./assets/images/skills/hard/mongodb.png" alt="Logo MongoDB" loading="lazy" />
+                  </div>
+                  <div class="skills-card-back">
+                    <p>MongoDB</p>
+                  </div>
+                </div>
+              </div>
+              <div class="skills-item-container">
+                <div class="skills-card" aria-label="Compétence Vercel">
+                  <div class="skills-card-front">
+                    <img src="./assets/images/skills/hard/vercel.png" alt="Logo Vercel" loading="lazy" />
+                  </div>
+                  <div class="skills-card-back">
+                    <p>Vercel</p>
+                  </div>
+                </div>
+              </div>
+              <div class="skills-item-container">
+                <div class="skills-card" aria-label="Compétence Sass">
+                  <div class="skills-card-front">
+                    <img src="./assets/images/skills/hard/sass.png" alt="Logo Sass" loading="lazy" />
+                  </div>
+                  <div class="skills-card-back">
+                    <p>Sass</p>
+                  </div>
+                </div>
+              </div>
+              <div class="skills-item-container">
+                <div class="skills-card" aria-label="Compétence Bootstrap5">
+                  <div class="skills-card-front">
+                    <img src="./assets/images/skills/hard/bootstrap.png" alt="Logo Bootstrap" loading="lazy" />
+                  </div>
+                  <div class="skills-card-back">
+                    <p>Bootstrap <span>v5</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="skills-item-container">
+                <div class="skills-card" aria-label="Compétence Tailwind4">
+                  <div class="skills-card-front">
+                    <img src="./assets/images/skills/hard/tailwind.png" alt="Logo Tailwind" loading="lazy" />
+                  </div>
+                  <div class="skills-card-back">
+                    <p>Tailwind <span>v4</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skills-soft-container">
+            <h3 class="skills-soft-title" data-i18n="skillsSoftTitle"></h3>
+            <div class="skills-soft-content">
+              <div class="skills-item-container">
+                <div class="skills-card" aria-label="Compétence Organisation">
+                  <div class="skills-card-front">
+                    <img src="./assets/images/skills/soft/organiser.png" alt="Icône Organisation" loading="lazy" />
+                  </div>
+                  <div class="skills-card-back">
+                    <p data-i18n="organization">Organisation</p>
+                  </div>
+                </div>
+              </div>
+              <div class="skills-item-container">
+                <div class="skills-card" aria-label="Compétence Gestion du stress">
+                  <div class="skills-card-front">
+                    <img src="./assets/images/skills/soft/mediter.png" alt="Icône Gestion du stress" loading="lazy" />
+                  </div>
+                  <div class="skills-card-back">
+                    <p data-i18n="stress">Gestion du stress</p>
+                  </div>
+                </div>
+              </div>
+              <div class="skills-item-container">
+                <div class="skills-card" aria-label="Compétence Autonomie">
+                  <div class="skills-card-front">
+                    <img src="./assets/images/skills/soft/autonomie.png" alt="Icône Autonomie" loading="lazy" />
+                  </div>
+                  <div class="skills-card-back">
+                    <p data-i18n="autonomy">Autonomie</p>
+                  </div>
+                </div>
+              </div>
+              <div class="skills-item-container">
+                <div class="skills-card" aria-label="Compétence Initiative">
+                  <div class="skills-card-front">
+                    <img src="./assets/images/skills/soft/initiative.png" alt="Icône Initiative" loading="lazy" />
+                  </div>
+                  <div class="skills-card-back">
+                    <p>Initiative</p>
+                  </div>
+                </div>
+              </div>
+              <div class="skills-item-container">
+                <div class="skills-card" aria-label="Compétence Précision">
+                  <div class="skills-card-front">
+                    <img src="./assets/images/skills/soft/precision.png" alt="Icône Précision" loading="lazy" />
+                  </div>
+                  <div class="skills-card-back">
+                    <p data-i18n="precision">Précision</p>
+                  </div>
+                </div>
+              </div>
+              <div class="skills-item-container">
+                <div class="skills-card" aria-label="Compétence Résolution de problème">
+                  <div class="skills-card-front">
+                    <img
+                      src="./assets/images/skills/soft/resolution-de-probleme.png"
+                      alt="Icône Résolution de problème"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="skills-card-back">
+                    <p data-i18n="problem">Résolution de problèmes</p>
+                  </div>
+                </div>
+              </div>
+              <div class="skills-item-container">
+                <div class="skills-card" aria-label="Compétence Curiosité">
+                  <div class="skills-card-front">
+                    <img src="./assets/images/skills/soft/curiosite.png" alt="Icône Curiosité" loading="lazy" />
+                  </div>
+                  <div class="skills-card-back">
+                    <p data-i18n="curiosity">Curiosité technique</p>
+                  </div>
+                </div>
+              </div>
+              <div class="skills-item-container">
+                <div class="skills-card" aria-label="Compétence Travail en équipe">
+                  <div class="skills-card-front">
+                    <img src="./assets/images/skills/soft/cotravail.png" alt="Icône Travail en équipe" loading="lazy" />
+                  </div>
+                  <div class="skills-card-back">
+                    <p data-i18n="teamWork">Travail en équipe</p>
+                  </div>
+                </div>
+              </div>
+              <div class="skills-item-container">
+                <div class="skills-card" aria-label="Compétence Adaptabilité">
+                  <div class="skills-card-front">
+                    <img src="./assets/images/skills/soft/adaptabilite.png" alt="Icône Adaptabilité" loading="lazy" />
+                  </div>
+                  <div class="skills-card-back">
+                    <p data-i18n="adaptability">Adaptabilité</p>
+                  </div>
+                </div>
+              </div>
+              <div class="skills-item-container">
+                <div class="skills-card" aria-label="Compétence Sens du détail">
+                  <div class="skills-card-front">
+                    <img src="./assets/images/skills/soft/detail.png" alt="Icône Sens du détail" loading="lazy" />
+                  </div>
+                  <div class="skills-card-back">
+                    <p data-i18n="detail">Sens du détail</p>
+                  </div>
+                </div>
+              </div>
+              <div class="skills-item-container">
+                <div class="skills-card" aria-label="Compétence Communication">
+                  <div class="skills-card-front">
+                    <img src="./assets/images/skills/soft/communication.png" alt="Icône Communication" loading="lazy" />
+                  </div>
+                  <div class="skills-card-back">
+                    <p id="skill-communication" data-i18n="communication">Communication claire</p>
+                  </div>
+                </div>
+              </div>
+              <div class="skills-item-container">
+                <div class="skills-card" aria-label="Compétence Créativité">
+                  <div class="skills-card-front">
+                    <img src="./assets/images/skills/soft/creativite.png" alt="Icône Créativité" loading="lazy" />
+                  </div>
+                  <div class="skills-card-back">
+                    <p data-i18n="creativity">Créativité fonctionnelle</p>
+                  </div>
+                </div>
+              </div>
+              <div class="skills-item-container">
+                <div class="skills-card" aria-label="Compétence Apprentissage">
+                  <div class="skills-card-front">
+                    <img src="./assets/images/skills/soft/apprentissage.png" alt="Icône Apprentissage" loading="lazy" />
+                  </div>
+                  <div class="skills-card-back">
+                    <p data-i18n="learning">Assimilation rapide</p>
+                  </div>
+                </div>
+              </div>
+              <div class="skills-item-container">
+                <div class="skills-card" aria-label="Compétence Analytique">
+                  <div class="skills-card-front">
+                    <img src="./assets/images/skills/soft/analytique.png" alt="Icône Analytique" loading="lazy" />
+                  </div>
+                  <div class="skills-card-back">
+                    <p data-i18n="analytic">Esprit analytique</p>
+                  </div>
+                </div>
+              </div>
+              <div class="skills-item-container">
+                <div class="skills-card" aria-label="Compétence Fiabilité">
+                  <div class="skills-card-front">
+                    <img src="./assets/images/skills/soft/fiabilite.png" alt="Icône Fiabilité" loading="lazy" />
+                  </div>
+                  <div class="skills-card-back">
+                    <p data-i18n="reliability">Fiabilité</p>
+                  </div>
+                </div>
+              </div>
+              <div class="skills-item-container">
+                <div class="skills-card" aria-label="Compétence Priorité">
+                  <div class="skills-card-front">
+                    <img src="./assets/images/skills/soft/priorite.png" alt="Icône Priorité" loading="lazy" />
+                  </div>
+                  <div class="skills-card-back">
+                    <p data-i18n="priority">Sens des priorités</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skills-next-container">
+          <h3 class="skills-next-title" data-i18n="skillsNextTitle"></h3>
+          <div class="skills-next-content">
+            <div class="skills-item-container">
+              <div class="skills-card" aria-label="Compétence Python">
+                <div class="skills-card-front">
+                  <img src="./assets/images/skills/hard/python.png" alt="Logo Python" loading="lazy" />
+                </div>
+                <div class="skills-card-back">
+                  <p>Python</p>
+                </div>
+              </div>
+            </div>
+            <div class="skills-item-container">
+              <div class="skills-card" aria-label="Compétence PHP">
+                <div class="skills-card-front">
+                  <img src="./assets/images/skills/hard/php.png" alt="Logo PHP" loading="lazy" />
+                </div>
+                <div class="skills-card-back">
+                  <p>PHP</p>
+                </div>
+              </div>
+            </div>
+            <div class="skills-item-container">
+              <div class="skills-card" aria-label="Compétence Typescript">
+                <div class="skills-card-front">
+                  <img src="./assets/images/skills/hard/typescript.png" alt="Logo Typescript" loading="lazy" />
+                </div>
+                <div class="skills-card-back">
+                  <p>Typescript</p>
+                </div>
+              </div>
+            </div>
+            <div class="skills-item-container">
+              <div class="skills-card" aria-label="Compétence SQL">
+                <div class="skills-card-front">
+                  <img src="./assets/images/skills/hard/sql.png" alt="Logo SQL" loading="lazy" />
+                </div>
+                <div class="skills-card-back">
+                  <p>SQL</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section class="projects" id="projects" aria-label="Section projets">
+        <div class="projects-container">
+          <h2 class="projects-title" data-i18n="projectsTitle">MES PROJETS</h2>
+          <div class="projects-wrapper">
+            <div class="projects-thumbnail-container">
+              <div class="projects-thumbnail" tabindex="0" aria-label="Projet My Social App">
+                <div class="projects-thumbnail-title" aria-hidden="true">----------</div>
+                <div class="projects-thumbnail-body">
+                  <p>My Social App</p>
+                  <div class="projects-thumbnail-line" aria-hidden="true"></div>
+                  <p data-i18n="mySocialApp"></p>
+                </div>
+              </div>
+              <div class="projects-thumbnail" tabindex="0" aria-label="Projet My 80's Store">
+                <div class="projects-thumbnail-title" aria-hidden="true">----------</div>
+                <div class="projects-thumbnail-body">
+                  <p>My 80's Store</p>
+                  <div class="projects-thumbnail-line" aria-hidden="true"></div>
+                  <p data-i18n="my80Store"></p>
+                </div>
+              </div>
+              <div class="projects-thumbnail" tabindex="0" aria-label="Projet Roll-In New-York">
+                <div class="projects-thumbnail-title" aria-hidden="true">----------</div>
+                <div class="projects-thumbnail-body">
+                  <p>Roll-In New-York</p>
+                  <div class="projects-thumbnail-line" aria-hidden="true"></div>
+                  <p data-i18n="rollInNewYork"></p>
+                </div>
+              </div>
+            </div>
+            <div class="projects-focused" aria-live="polite">
+              <div class="projects-focused-title" role="heading" aria-level="3"></div>
+              <div class="projects-focused-body">
+                <div class="projects-focused-images" role="img" aria-label="Screenshots du projet séléctionné"></div>
+                <div class="projects-focused-details">
+                  <div class="projects-details">
+                    <div class="projects-details-item">
+                      <p class="projects-details-title">Description</p>
+                      <p class="projects-description-text"></p>
+                    </div>
+                    <div class="projects-details-item">
+                      <p class="projects-details-title">Technologies</p>
+                      <div class="projects-techno">
+                        <div class="projects-techno-item">
+                          <div class="projects-techno-text">
+                            <span>Front:</span>
+                            <p class="projects-front"></p>
+                          </div>
+                          <div class="projects-inner">
+                            <p class="projects-tooltip code-tooltip">FRONTEND CODE</p>
+                            <a id="frontGitHubLink" href="" target="_blank" rel="noopener"
+                              ><img src="./assets/icons/githubfill-light.png" alt="GitHub - Frontend"
+                            /></a>
+                          </div>
+                        </div>
+                        <div class="projects-techno-item">
+                          <div class="projects-techno-text">
+                            <span>Back:</span>
+                            <p class="projects-back"></p>
+                          </div>
+                          <div class="projects-inner">
+                            <p class="projects-tooltip code-tooltip">BACKEND CODE</p>
+                            <a id="backGitHubLink" href="" target="_blank" rel="noopener"
+                              ><img src="./assets/icons/githubfill-light.png" alt="GitHub - Backend"
+                            /></a>
+                          </div>
+                        </div>
+                        <div class="projects-techno-item">
+                          <div class="projects-techno-text">
+                            <span>BDD:</span>
+                            <p class="projects-bdd"></p>
+                          </div>
+                        </div>
+                        <div class="projects-techno-item">
+                          <div class="projects-techno-text">
+                            <span>Pack:</span>
+                            <p class="projects-pack"></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="projects-link">
+                      <div class="projects-inner">
+                        <p class="projects-tooltip visit-tooltip" data-i18n="projectsTooltip">VOIR PROJET</p>
+                        <a class="" href="javascript:void(0);" target="_blank" rel="noopener">
+                          <img src="" alt="Voir le projet" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="projects-click-message" data-i18n="clickOnFolder"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="contact" id="contact" aria-label="Section contact">
+        <div class="contact-container">
+          <h2 class="contact-title" data-i18n="contactTitle" id="contact-title">CONTACTEZ MOI</h2>
+          <div class="contact-card">
+            <a href="tel:+33680175771">
+              <img src="./assets/icons/phone-light.png" alt="Icône téléphone" />
+              <p class="contact-tooltip" data-i18n="phoneCallText"></p>
+              <p aria-label="Numéro de téléphone">+33 6 80 17 57 71</p>
+            </a>
+            <a href="mailto:matthieu888@gmail.com" target="_blank" rel="noopener">
+              <img src="./assets/icons/mail-light.png" alt="Icône email" />
+              <p class="contact-tooltip" data-i18n="emailText"></p>
+              <p aria-label="Adresse email">matthieu888@gmail.com</p>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=+33680175771&text=Hello" target="_blank" rel="noopener">
+              <img src="./assets/icons/whatsapp-green.png" alt="Icône Whatsapp" />
+              <p class="contact-tooltip" data-i18n="whatsappText"></p>
+              <p aria-label="Numéro de téléphone">+33 6 80 17 57 71</p>
+            </a>
+          </div>
+          <form action="submit" class="form-card" aria-labelledby="contact-title" role="form" autocomplete="on">
+            <div class="double-input-container">
+              <div class="input-container">
+                <label for="lastname" data-i18n="lastnameForm">Nom</label>
+                <input type="text" id="lastname" name="lastname" required />
+              </div>
+              <div class="input-container">
+                <label for="firstname" data-i18n="firstnameForm">Prénom</label>
+                <input type="text" id="firstname" name="firstname" required />
+              </div>
+            </div>
+            <div class="double-input-container">
+              <div class="input-container">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="input-container">
+                <label for="phone" data-i18n="phoneForm">Téléphone</label>
+                <input type="tel" id="phone" name="phone" />
+              </div>
+            </div>
+            <div class="input-container">
+              <label for="object" data-i18n="subjectForm">Objet</label>
+              <input type="text" id="object" name="subject" required />
+            </div>
+            <div class="input-container">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+            <div class="checkbox-container">
+              <input type="checkbox" id="accept" name="accept" required aria-required="true" />
+              <label for="accept" data-i18n="checkboxText"></label>
+            </div>
+            <button class="btn submitBtn" data-i18n="submitBtn" type="submit" aria-label="Envoyer message">
+              ENVOYER
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <div class="legal-container">
+        <button
+          class="legal"
+          data-modal-target="#legalModal"
+          data-i18n="legal"
+          aria-haspopup="dialog"
+          aria-controls="legalModal"
+          aria-expanded="false"
+        >
+          Mentions légales & Confidentialité
+        </button>
       </div>
-      <div class="terminal" id="terminal">
-        <span id="text" data-i18n="welcome" aria-live="polite"></span>
-        <a id="terminalImg" href="#profile" aria-label="Aller à la section Profil">
-          <div class="terminalImg terminalImg-front"></div>
-          <div class="terminalImg terminalImg-back"></div>
+      <p class="copyright" data-i18n="copyright">© 2025 Matthieu Chatelin. Tous droits réservés.</p>
+      <a id="arrow-up" href="#top" aria-label="Revenir en haut de la page">
+        <img src="./assets/icons/up-arrow-light.png" alt="" aria-hidden="true" />
+        <p data-i18n="top">BACK TO TOP</p>
+        <img src="./assets/icons/up-arrow-light.png" alt="" aria-hidden="true" />
+      </a>
+      <div class="social">
+        <a
+          href="https://www.linkedin.com/in/matthieu-chatelin/"
+          target="_blank"
+          rel="noopener"
+          aria-label="Profil LinkedIn de Matthieu Chatelin"
+        >
+          <img src="./assets/icons/linkedin-light.png" alt="Logo Linkedin" />
+          <p class="social-tooltip">LINKEDIN</p>
         </a>
-        <a class="btn" id="terminalBtn" data-i18n="profile" href="#profile"
-          aria-label="Aller à la section Profil">PROFIL</a>
+        <a
+          href="https://github.com/Matteus888"
+          target="_blank"
+          rel="noopener"
+          aria-label="Profil GitHub de Matthieu Chatelin"
+        >
+          <img src="./assets/icons/github-light.png" alt="Logo GitHub" />
+          <p class="social-tooltip">GITHUB</p>
+        </a>
       </div>
-    </section>
+    </footer>
 
-    <!-- Profile Section -->
-    <section class="profile" id="profile" aria-label="Section profil">
-      <h2 class="profile-title" data-i18n="profileTitle" aria-live="polite">QUI SUIS-JE ?</h2>
-      <div class="profile-card">
-        <div class="profile-id">
-          <div class="profile-image-container">
-            <img src="./assets/images/avatar.webp" alt="" aria-hidden="true" class="profile-image-front" />
-            <img src="./assets/images/profile.webp" alt="" aria-hidden="true" class="profile-image-back" />
-          </div>
-          <div class="profile-id-text">
-            <div class="profile-id-item">
-              <a href="#contact">
-                <img src="./assets/icons/phone-light.png" alt="" aria-hidden="true" />
-                <p>+33 6 80 17 57 71</p>
-              </a>
-            </div>
-            <div class="profile-id-item">
-              <a href="#contact">
-                <img src="./assets/icons/mail-light.png" alt="" aria-hidden="true" />
-                <p>matthieu888@gmail.com</p>
-              </a>
-            </div>
-            <div class="profile-id-item">
-              <a href="https://www.lemonde.fr/archives-du-monde/20-03-1980/" target="_blank" rel="noopener">
-                <img src="./assets/icons/birth-light.png" alt="" aria-hidden="true" />
-                <p>20/03/1980</p>
-              </a>
-            </div>
-            <div class="profile-id-item">
-              <a href="https://www.google.fr/maps/place/69290+Craponne/" target="_blank" rel="noopener">
-                <img src="./assets/icons/location-light.png" alt="" aria-hidden="true" />
-                <p data-i18n="profileLocation"></p>
-              </a>
-            </div>
-            <div class="profile-id-item">
-              <img src="./assets/icons/driving-license-light.png" alt="" aria-hidden="true" />
-              <p data-i18n="profileDriving"></p>
-            </div>
-          </div>
-        </div>
-        <div class="profile-text">
-          <p data-i18n="profileText"></p>
-        </div>
-      </div>
-      <div class="profile-card">
-        <div class="profile-download-container">
-          <p data-i18n="profileCV"></p>
-          <a href="./assets/files/CV_2025_Matthieu_CHATELIN.pdf" download="CV_2025_Matthieu_CHATELIN.pdf" class="btn"
-            data-i18n="profileDownloadBtn">
-          </a>
-          <div class="profile-links">
-            <a href="https://www.linkedin.com/in/matthieu-chatelin/" target="_blank" rel="noopener"
-              aria-label="Voir le profil LinkedIn de Matthieu Chatelin">
-              <img src="./assets/icons/linkedin-light.png" alt="" aria-hidden="true" />
-              <p class="profile-tooltip">LINKEDIN</p>
-            </a>
-            <a href="https://github.com/Matteus888" target="_blank" rel="noopener"
-              aria-label="Voir le GitHub de Matthieu Chatelin">
-              <img src="./assets/icons/github-light.png" alt="" aria-hidden="true" />
-              <p class="profile-tooltip">GITHUB</p>
-            </a>
-          </div>
-          <div class="profile-line-container">
-            <div class="profile-horizontal-line"></div>
-            <p data-i18n="or">OR</p>
-            <div class="profile-horizontal-line"></div>
-          </div>
-          <p data-i18n="profileContactText"></p>
-          <a href="#contact" class="btn" data-i18n="profileContactBtn">
-          </a>
-        </div>
-        <div class="profile-vertical-line"></div>
-        <div class="cv-preview">
-          <a href="./assets/files/CV_2025_Matthieu_CHATELIN.pdf" target="_blank" rel="noopener">
-            <img src="./assets/images/cv_preview.webp" alt="Aperçu du CV de Matthieu Chatelin" />
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Formation Section -->
-    <section class="formation" id="formations" aria-label="Section formation">
-      <h2 class="formation-title" data-i18n="formationsTitle" aria-live="polite">MON PARCOURS</h2>
-      <div class="timeline" role="list">
-        <div class="progress-line"></div>
-        <div class="formation-item left" role="listitem" style="top: 0%">
-          <div class="formation-img-wrapper">
-            <img src="./assets/images/formations/La-Favorite.webp" alt="Logo de l'école La Favorite" loading="lazy">
-          </div>
-          <div class="formation-text-container">
-            <span class="year"><time datetime="1998">1998</time></span>
-            <div>
-              <h3 data-i18n="formationsItem1Title">Lycée La Favorite</h3>
-              <p class="location" data-i18n="formationsItem1Location"></p>
-            </div>
-            <p class="details" data-i18n="formationsItem1Details"></p>
-          </div>
-        </div>
-        <div class="formation-item right" role="listitem">
-          <div class="formation-img-wrapper">
-            <img src="./assets/images/formations/Arfis.webp" alt="Logo de l'école ARFIS" loading="lazy">
-          </div>
-          <div class="formation-text-container">
-            <span class="year"><time datetime="1998-2000">1998-2000</time></span>
-            <div>
-              <h3>ARFIS</h3>
-              <p class="location" data-i18n="formationsItem2Location"></p>
-            </div>
-            <p class="details" data-i18n="formationsItem2Details"></p>
-          </div>
-        </div>
-        <div class="formation-item left" role="listitem">
-          <div class="formation-img-wrapper">
-            <img src="./assets/images/formations/circus.webp" alt="Logo du Cirque d'Hiver" loading="lazy"
-              style="transform: scale(0.8);">
-          </div>
-          <div class="formation-text-container">
-            <span class="year"><time datetime="2000-2001">2000-2001</time></span>
-            <div>
-              <h3 data-i18n="formationsItem3Title">Cirque d'Hiver Bouglione</h3>
-              <p class="location" data-i18n="formationsItem3Location"></p>
-            </div>
-            <p class="details" data-i18n="formationsItem3Details"></p>
-          </div>
-        </div>
-        <div class="formation-item right" role="listitem">
-          <div class="formation-img-wrapper">
-            <img src="./assets/images/formations/france3.webp" alt="Logo France 3" loading="lazy">
-          </div>
-          <div class="formation-text-container">
-            <span class="year"><time datetime="2001-2002">2001-2002</time></span>
-            <div>
-              <h3>France 3 Rhône-Alpes</h3>
-              <p class="location">Le Puy-en-Velais</p>
-            </div>
-            <p class="details" data-i18n="formationsItem4Details"></p>
-          </div>
-        </div>
-        <div class="formation-item left" role="listitem">
-          <div class="formation-img-wrapper">
-            <img src="./assets/images/formations/Université_Lumière_Lyon_2.webp" alt="Logo de l'université Lyon 2"
-              loading="lazy">
-          </div>
-          <div class="formation-text-container">
-            <span class="year"><time datetime="2002-2004">2002-2004</time></span>
-            <div>
-              <h3 data-i18n="formationsItem5Title">Université Louis Lumière</h3>
-              <p class="location">Lyon / Bron</p>
-            </div>
-            <p class="details" data-i18n="formationsItem5Details"></p>
-          </div>
-        </div>
-        <div class="formation-item right" role="listitem">
-          <div class="formation-img-wrapper">
-            <img src="./assets/images/formations/Utrecht_University.webp" alt="Logo de l'université d'Utrecht"
-              loading="lazy" style="transform: translateX(5px);">
-          </div>
-          <div class="formation-text-container">
-            <span class="year"><time datetime="2004-2005">2004-2005</time></span>
-            <div>
-              <h3 data-i18n="formationsItem6Title">Université d'Utrecht</h3>
-              <p class="location" data-i18n="formationsItem6Location"></p>
-            </div>
-            <p class="details" data-i18n="formationsItem6Details"></p>
-          </div>
-        </div>
-        <div class="formation-item left" role="listitem">
-          <div class="formation-img-wrapper">
-            <img src="./assets/images/formations/GMT-Productions.webp" alt="Logo de GMT Productions" loading="lazy">
-          </div>
-          <div class="formation-text-container">
-            <span class="year"><time datetime="2006">2006</time></span>
-            <div>
-              <h3>GMT Productions</h3>
-              <p class="location">Ile-de-France</p>
-            </div>
-            <p class="details" data-i18n="formationsItem7Details"></p>
-          </div>
-        </div>
-        <div class="formation-item right" role="listitem">
-          <div class="formation-img-wrapper">
-            <img src="./assets/images/formations/assistant_régisseur.webp" alt="Icone d'une caméra" loading="lazy"
-              style="object-fit: contain;">
-          </div>
-          <div class="formation-text-container">
-            <span class="year"><time datetime="2006-2017">2006-2017</time></span>
-            <div>
-              <h3 data-i18n="formationsItem8Title">Assistant Régisseur adjoint</h3>
-              <p class="location">Ile-de-France</p>
-            </div>
-            <p class="details" data-i18n="formationsItem8Details"></p>
-          </div>
-        </div>
-        <div class="formation-item left" role="listitem">
-          <div class="formation-img-wrapper">
-            <img src="./assets/images/formations/régisseur_adjoint.webp" alt="Icone d'un talkie-walkie" loading="lazy"
-              style="object-fit: contain; transform: scale(0.95);">
-          </div>
-          <div class="formation-text-container">
-            <span class="year"><time datetime="2017-2023">2017-2023</time></span>
-            <div>
-              <h3 data-i18n="formationsItem9Title">Régisseur adjoint</h3>
-              <p class="location">Ile-de-France</p>
-            </div>
-            <p class="details" data-i18n="formationsItem9Details"></p>
-          </div>
-        </div>
-        <div class="formation-item right" role="listitem">
-          <div class="formation-img-wrapper">
-            <img src="./assets/images/formations/development.webp" alt="Icone de formation" loading="lazy"
-              style="object-fit: contain;">
-          </div>
-          <div class="formation-text-container">
-            <span class="year"><time datetime="2022-2025">2022-2025</time></span>
-            <div>
-              <h3 data-i18n="formationsItem10Title">Formation en autodidacte</h3>
-              <p class="location" data-i18n="formationsItem10Location"></p>
-            </div>
-            <p class="details">Openclassroom, Codecademy, Grafikart, W3Schools, Microsoft Learn...</p>
-          </div>
-        </div>
-        <div class="formation-item left" role="listitem">
-          <div class="formation-img-wrapper">
-            <img src="./assets/images/formations/LaCapsule.webp" alt="Logo de la formation La Capsule" loading="lazy"
-              style="object-fit: contain; transform: scale(0.9);">
-          </div>
-          <div class="formation-text-container">
-            <span class="year"><time datetime="2024">2024</time></span>
-            <div>
-              <h3>La Capsule</h3>
-              <p class="location" data-i18n="formationsItem11Location">Lyon 7ème</p>
-            </div>
-            <p class="details" data-i18n="formationsItem11Details"></p>
-          </div>
-        </div>
-        <div class="formation-item right" role="listitem">
-          <div class="formation-img-wrapper">
-            <img src="./assets/images/formations/NY.webp" alt="Logo de l'application mobile Roll-In New-York"
-              loading="lazy" style="object-fit: contain; transform: scale(0.95);">
-          </div>
-          <div class="formation-text-container">
-            <span class="year" data-i18n="formationsItem12Date"></span>
-            <div>
-              <h3>Roll-In NewYork</h3>
-              <p class="location" data-i18n="formationsItem12Location"></p>
-            </div>
-            <p class="details" data-i18n="formationsItem12Details"></p>
-          </div>
-        </div>
-        <div class="formation-item left" role="listitem">
-          <div class="formation-img-wrapper">
-            <img src="./assets/images/formations/mySocialApp.webp" alt="Logo du réseau social My Social App"
-              loading="lazy" style="object-fit: contain;">
-          </div>
-          <div class="formation-text-container">
-            <span class="year" data-i18n="formationsItem13Date"></span>
-            <div>
-              <h3>My Social App</h3>
-              <p class="location" data-i18n="formationsItem13Location"></p>
-            </div>
-            <p class="details" data-i18n="formationsItem13Details"></p>
-          </div>
-        </div>
-        <div class="formation-item right" role="listitem">
-          <div class="formation-img-wrapper">
-            <img src="./assets/images/formations/my80store.webp" alt="Logo du site de e-commerce My 80's Store"
-              loading="lazy" style="object-fit: contain; transform: scale(0.9)">
-          </div>
-          <div class="formation-text-container">
-            <span class="year" data-i18n="formationsItem14Date"></span>
-            <div>
-              <h3>My 80's Store</h3>
-              <p class="location" data-i18n="formationsItem14Location"></p>
-            </div>
-            <p class="details" data-i18n="formationsItem14Details"></p>
-          </div>
-        </div>
-        <div class="formation-item left" role="listitem" style="top: 100%">
-          <div class="formation-img-wrapper">
-            <img src="./assets/icons/logo-dark.png" alt="Logo de ce My Portfolio" loading="lazy"
-              style="transform: translateY(6px); object-fit: contain;">
-          </div>
-          <div class="formation-text-container">
-            <span class="year" data-i18n="formationsItem15Date"></span>
-            <div>
-              <h3>My Portfolio</h3>
-              <p class="location" data-i18n="formationsItem15Location"></p>
-            </div>
-            <p class="details" data-i18n="formationsItem15Details"></p>
-          </div>
-        </div>
-      </div>
-      <div class="timeline-placeholder"></div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="skills" id="skills" aria-label="Section compétences">
-      <h2 class="skills-title" data-i18n="skillsTitle">MES COMPÉTENCES</h2>
-      <div class="skills-container">
-        <div class="skills-hard-container">
-          <h3 class="skills-hard-title" data-i18n="skillsHardTitle"></h3>
-          <div class="skills-hard-content">
-            <div class="skills-item-container">
-              <div class="skills-card" aria-label="Compétence HTML5">
-                <div class="skills-card-front">
-                  <img src="./assets/images/skills/hard/html-5.png" alt="Logo HTML" loading="lazy">
-                </div>
-                <div class="skills-card-back">
-                  <p>HTML <span>v5</span></p>
-                </div>
-              </div>
-            </div>
-            <div class="skills-item-container">
-              <div class="skills-card" aria-label="Compétence CSS3">
-                <div class="skills-card-front">
-                  <img src="./assets/images/skills/hard/css-3.png" alt="Logo CSS" loading="lazy">
-                </div>
-                <div class="skills-card-back">
-                  <p>CSS <span>v3</span></p>
-                </div>
-              </div>
-            </div>
-            <div class="skills-item-container">
-              <div class="skills-card" aria-label="Compétence Javascript">
-                <div class="skills-card-front">
-                  <img src="./assets/images/skills/hard/javascript.png" alt="Logo Javascript" loading="lazy">
-                </div>
-                <div class="skills-card-back">
-                  <p>Javascript</p>
-                </div>
-              </div>
-            </div>
-            <div class="skills-item-container">
-              <div class="skills-card" aria-label="Compétence Figma">
-                <div class="skills-card-front">
-                  <img src="./assets/images/skills/hard/figma.png" alt="Logo Figma" loading="lazy">
-                </div>
-                <div class="skills-card-back">
-                  <p>Figma</p>
-                </div>
-              </div>
-            </div>
-            <div class="skills-item-container">
-              <div class="skills-card" aria-label="Compétence React">
-                <div class="skills-card-front">
-                  <img src="./assets/images/skills/hard/react.png" alt="Logo React" loading="lazy">
-                </div>
-                <div class="skills-card-back">
-                  <p>React <span>v19</span></p>
-                  <p>& Native</p>
-                </div>
-              </div>
-            </div>
-            <div class="skills-item-container">
-              <div class="skills-card" aria-label="Compétence NextJS">
-                <div class="skills-card-front">
-                  <img src="./assets/images/skills/hard/nextjs.png" alt="Logo NextJS" loading="lazy">
-                </div>
-                <div class="skills-card-back">
-                  <p>NextJS <span>v15</span></p>
-                </div>
-              </div>
-            </div>
-            <div class="skills-item-container">
-              <div class="skills-card" aria-label="Compétence Git">
-                <div class="skills-card-front">
-                  <img src="./assets/images/skills/hard/git.png" alt="Logo Git" loading="lazy">
-                </div>
-                <div class="skills-card-back">
-                  <p>Git/GitHub</p>
-                </div>
-              </div>
-            </div>
-            <div class="skills-item-container">
-              <div class="skills-card" aria-label="Compétence Expo">
-                <div class="skills-card-front">
-                  <img src="./assets/images/skills/hard/expo-go.png" alt="Logo Expo Go" loading="lazy">
-                </div>
-                <div class="skills-card-back">
-                  <p>Expo Go</p>
-                </div>
-              </div>
-            </div>
-            <div class="skills-item-container">
-              <div class="skills-card" aria-label="Compétence NodeJS">
-                <div class="skills-card-front">
-                  <img src="./assets/images/skills/hard/nodejs.png" alt="Logo NodeJS" loading="lazy">
-                </div>
-                <div class="skills-card-back">
-                  <p>NodeJS</p>
-                </div>
-              </div>
-            </div>
-            <div class="skills-item-container">
-              <div class="skills-card" aria-label="Compétence ExpressJS">
-                <div class="skills-card-front">
-                  <img src="./assets/images/skills/hard/expressjs.png" alt="Logo ExpressJS" loading="lazy">
-                </div>
-                <div class="skills-card-back">
-                  <p>ExpressJS</p>
-                </div>
-              </div>
-            </div>
-            <div class="skills-item-container">
-              <div class="skills-card" aria-label="Compétence MongoDB">
-                <div class="skills-card-front">
-                  <img src="./assets/images/skills/hard/mongodb.png" alt="Logo MongoDB" loading="lazy">
-                </div>
-                <div class="skills-card-back">
-                  <p>MongoDB</p>
-                </div>
-              </div>
-            </div>
-            <div class="skills-item-container">
-              <div class="skills-card" aria-label="Compétence Vercel">
-                <div class="skills-card-front">
-                  <img src="./assets/images/skills/hard/vercel.png" alt="Logo Vercel" loading="lazy">
-                </div>
-                <div class="skills-card-back">
-                  <p>Vercel</p>
-                </div>
-              </div>
-            </div>
-            <div class="skills-item-container">
-              <div class="skills-card" aria-label="Compétence Sass">
-                <div class="skills-card-front">
-                  <img src="./assets/images/skills/hard/sass.png" alt="Logo Sass" loading="lazy">
-                </div>
-                <div class="skills-card-back">
-                  <p>Sass</p>
-                </div>
-              </div>
-            </div>
-            <div class="skills-item-container">
-              <div class="skills-card" aria-label="Compétence Bootstrap5">
-                <div class="skills-card-front">
-                  <img src="./assets/images/skills/hard/bootstrap.png" alt="Logo Bootstrap" loading="lazy">
-                </div>
-                <div class="skills-card-back">
-                  <p>Bootstrap <span>v5</span></p>
-                </div>
-              </div>
-            </div>
-            <div class="skills-item-container">
-              <div class="skills-card" aria-label="Compétence Tailwind4">
-                <div class="skills-card-front">
-                  <img src="./assets/images/skills/hard/tailwind.png" alt="Logo Tailwind" loading="lazy">
-                </div>
-                <div class="skills-card-back">
-                  <p>Tailwind <span>v4</span></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="skills-soft-container">
-          <h3 class="skills-soft-title" data-i18n="skillsSoftTitle"></h3>
-          <div class="skills-soft-content">
-            <div class="skills-item-container">
-              <div class="skills-card" aria-label="Compétence Organisation">
-                <div class="skills-card-front">
-                  <img src="./assets/images/skills/soft/organiser.png" alt="Icône Organisation" loading="lazy">
-                </div>
-                <div class="skills-card-back">
-                  <p data-i18n="organization">Organisation</p>
-                </div>
-              </div>
-            </div>
-            <div class="skills-item-container">
-              <div class="skills-card" aria-label="Compétence Gestion du stress">
-                <div class="skills-card-front">
-                  <img src="./assets/images/skills/soft/mediter.png" alt="Icône Gestion du stress" loading="lazy">
-                </div>
-                <div class="skills-card-back">
-                  <p data-i18n="stress">Gestion du stress</p>
-                </div>
-              </div>
-            </div>
-            <div class="skills-item-container">
-              <div class="skills-card" aria-label="Compétence Autonomie">
-                <div class="skills-card-front">
-                  <img src="./assets/images/skills/soft/autonomie.png" alt="Icône Autonomie" loading="lazy">
-                </div>
-                <div class="skills-card-back">
-                  <p data-i18n="autonomy">Autonomie</p>
-                </div>
-              </div>
-            </div>
-            <div class="skills-item-container">
-              <div class="skills-card" aria-label="Compétence Initiative">
-                <div class="skills-card-front">
-                  <img src="./assets/images/skills/soft/initiative.png" alt="Icône Initiative" loading="lazy">
-                </div>
-                <div class="skills-card-back">
-                  <p>Initiative</p>
-                </div>
-              </div>
-            </div>
-            <div class="skills-item-container">
-              <div class="skills-card" aria-label="Compétence Précision">
-                <div class="skills-card-front">
-                  <img src="./assets/images/skills/soft/precision.png" alt="Icône Précision" loading="lazy">
-                </div>
-                <div class="skills-card-back">
-                  <p data-i18n="precision">Précision</p>
-                </div>
-              </div>
-            </div>
-            <div class="skills-item-container">
-              <div class="skills-card" aria-label="Compétence Résolution de problème">
-                <div class="skills-card-front">
-                  <img src="./assets/images/skills/soft/resolution-de-probleme.png" alt="Icône Résolution de problème"
-                    loading="lazy">
-                </div>
-                <div class="skills-card-back">
-                  <p data-i18n="problem">Résolution de problèmes</p>
-                </div>
-              </div>
-            </div>
-            <div class="skills-item-container">
-              <div class="skills-card" aria-label="Compétence Curiosité">
-                <div class="skills-card-front">
-                  <img src="./assets/images/skills/soft/curiosite.png" alt="Icône Curiosité" loading="lazy">
-                </div>
-                <div class="skills-card-back">
-                  <p data-i18n="curiosity">Curiosité technique</p>
-                </div>
-              </div>
-            </div>
-            <div class="skills-item-container">
-              <div class="skills-card" aria-label="Compétence Travail en équipe">
-                <div class="skills-card-front">
-                  <img src="./assets/images/skills/soft/cotravail.png" alt="Icône Travail en équipe" loading="lazy">
-                </div>
-                <div class="skills-card-back">
-                  <p data-i18n="teamWork">Travail en équipe</p>
-                </div>
-              </div>
-            </div>
-            <div class="skills-item-container">
-              <div class="skills-card" aria-label="Compétence Adaptabilité">
-                <div class="skills-card-front">
-                  <img src="./assets/images/skills/soft/adaptabilite.png" alt="Icône Adaptabilité" loading="lazy">
-                </div>
-                <div class="skills-card-back">
-                  <p data-i18n="adaptability">Adaptabilité</p>
-                </div>
-              </div>
-            </div>
-            <div class="skills-item-container">
-              <div class="skills-card" aria-label="Compétence Sens du détail">
-                <div class="skills-card-front">
-                  <img src="./assets/images/skills/soft/detail.png" alt="Icône Sens du détail" loading="lazy">
-                </div>
-                <div class="skills-card-back">
-                  <p data-i18n="detail">Sens du détail</p>
-                </div>
-              </div>
-            </div>
-            <div class="skills-item-container">
-              <div class="skills-card" aria-label="Compétence Communication">
-                <div class="skills-card-front">
-                  <img src="./assets/images/skills/soft/communication.png" alt="Icône Communication" loading="lazy">
-                </div>
-                <div class="skills-card-back">
-                  <p id="skill-communication" data-i18n="communication">Communication claire</p>
-                </div>
-              </div>
-            </div>
-            <div class="skills-item-container">
-              <div class="skills-card" aria-label="Compétence Créativité">
-                <div class="skills-card-front">
-                  <img src="./assets/images/skills/soft/creativite.png" alt="Icône Créativité" loading="lazy">
-                </div>
-                <div class="skills-card-back">
-                  <p data-i18n="creativity">Créativité fonctionnelle</p>
-                </div>
-              </div>
-            </div>
-            <div class="skills-item-container">
-              <div class="skills-card" aria-label="Compétence Apprentissage">
-                <div class="skills-card-front">
-                  <img src="./assets/images/skills/soft/apprentissage.png" alt="Icône Apprentissage" loading="lazy">
-                </div>
-                <div class="skills-card-back">
-                  <p data-i18n="learning">Assimilation rapide</p>
-                </div>
-              </div>
-            </div>
-            <div class="skills-item-container">
-              <div class="skills-card" aria-label="Compétence Analytique">
-                <div class="skills-card-front">
-                  <img src="./assets/images/skills/soft/analytique.png" alt="Icône Analytique" loading="lazy">
-                </div>
-                <div class="skills-card-back">
-                  <p data-i18n="analytic">Esprit analytique</p>
-                </div>
-              </div>
-            </div>
-            <div class="skills-item-container">
-              <div class="skills-card" aria-label="Compétence Fiabilité">
-                <div class="skills-card-front">
-                  <img src="./assets/images/skills/soft/fiabilite.png" alt="Icône Fiabilité" loading="lazy">
-                </div>
-                <div class="skills-card-back">
-                  <p data-i18n="reliability">Fiabilité</p>
-                </div>
-              </div>
-            </div>
-            <div class="skills-item-container">
-              <div class="skills-card" aria-label="Compétence Priorité">
-                <div class="skills-card-front">
-                  <img src="./assets/images/skills/soft/priorite.png" alt="Icône Priorité" loading="lazy">
-                </div>
-                <div class="skills-card-back">
-                  <p data-i18n="priority">Sens des priorités</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="skills-next-container">
-        <h3 class="skills-next-title" data-i18n="skillsNextTitle"></h3>
-        <div class="skills-next-content">
-          <div class="skills-item-container">
-            <div class="skills-card" aria-label="Compétence Python">
-              <div class="skills-card-front">
-                <img src="./assets/images/skills/hard/python.png" alt="Logo Python" loading="lazy">
-              </div>
-              <div class="skills-card-back">
-                <p>Python</p>
-              </div>
-            </div>
-          </div>
-          <div class="skills-item-container">
-            <div class="skills-card" aria-label="Compétence PHP">
-              <div class="skills-card-front">
-                <img src="./assets/images/skills/hard/php.png" alt="Logo PHP" loading="lazy">
-              </div>
-              <div class="skills-card-back">
-                <p>PHP</p>
-              </div>
-            </div>
-          </div>
-          <div class="skills-item-container">
-            <div class="skills-card" aria-label="Compétence Typescript">
-              <div class="skills-card-front">
-                <img src="./assets/images/skills/hard/typescript.png" alt="Logo Typescript" loading="lazy">
-              </div>
-              <div class="skills-card-back">
-                <p>Typescript</p>
-              </div>
-            </div>
-          </div>
-          <div class="skills-item-container">
-            <div class="skills-card" aria-label="Compétence SQL">
-              <div class="skills-card-front">
-                <img src="./assets/images/skills/hard/sql.png" alt="Logo SQL" loading="lazy">
-              </div>
-              <div class="skills-card-back">
-                <p>SQL</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="projects" id="projects" aria-label="Section projets">
-      <div class="projects-container">
-        <h2 class="projects-title" data-i18n="projectsTitle">MES PROJETS</h2>
-        <div class="projects-wrapper">
-          <div class="projects-thumbnail-container">
-            <div class="projects-thumbnail" tabindex="0" aria-label="Projet My Social App">
-              <div class="projects-thumbnail-title" aria-hidden="true">----------</div>
-              <div class="projects-thumbnail-body">
-                <p>My Social App</p>
-                <div class="projects-thumbnail-line" aria-hidden="true"></div>
-                <p data-i18n="mySocialApp"></p>
-              </div>
-            </div>
-            <div class="projects-thumbnail" tabindex="0" aria-label="Projet My 80's Store">
-              <div class="projects-thumbnail-title" aria-hidden="true">----------</div>
-              <div class="projects-thumbnail-body">
-                <p>My 80's Store</p>
-                <div class="projects-thumbnail-line" aria-hidden="true"></div>
-                <p data-i18n="my80Store"></p>
-              </div>
-            </div>
-            <div class="projects-thumbnail" tabindex="0" aria-label="Projet Roll-In New-York">
-              <div class="projects-thumbnail-title" aria-hidden="true">----------</div>
-              <div class="projects-thumbnail-body">
-                <p>Roll-In New-York</p>
-                <div class="projects-thumbnail-line" aria-hidden="true"></div>
-                <p data-i18n="rollInNewYork"></p>
-              </div>
-            </div>
-          </div>
-          <div class="projects-focused" aria-live="polite">
-            <div class="projects-focused-title" role="heading" aria-level="3"></div>
-            <div class="projects-focused-body">
-              <div class="projects-focused-images" role="img" aria-label="Screenshots du projet séléctionné"></div>
-              <div class="projects-focused-details">
-                <div class="projects-details">
-                  <div class="projects-details-item">
-                    <p class="projects-details-title">Description</p>
-                    <p class="projects-description-text"></p>
-                  </div>
-                  <div class="projects-details-item">
-                    <p class="projects-details-title">Technologies</p>
-                    <div class="projects-techno">
-                      <div class="projects-techno-item">
-                        <div class="projects-techno-text">
-                          <span>Front:</span>
-                          <p class="projects-front"></p>
-                        </div>
-                        <div class="projects-inner">
-                          <p class="projects-tooltip code-tooltip">FRONTEND CODE</p>
-                          <a id="frontGitHubLink" href="" target="_blank" rel="noopener"><img
-                              src="./assets/icons/githubfill-light.png" alt="GitHub - Frontend"></a>
-                        </div>
-                      </div>
-                      <div class="projects-techno-item">
-                        <div class="projects-techno-text">
-                          <span>Back:</span>
-                          <p class="projects-back"></p>
-                        </div>
-                        <div class="projects-inner">
-                          <p class="projects-tooltip code-tooltip">BACKEND CODE</p>
-                          <a id="backGitHubLink" href="" target="_blank" rel="noopener"><img
-                              src="./assets/icons/githubfill-light.png" alt="GitHub - Backend"></a>
-                        </div>
-                      </div>
-                      <div class="projects-techno-item">
-                        <div class="projects-techno-text">
-                          <span>BDD:</span>
-                          <p class="projects-bdd"></p>
-                        </div>
-                      </div>
-                      <div class="projects-techno-item">
-                        <div class="projects-techno-text">
-                          <span>Pack:</span>
-                          <p class="projects-pack"></p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="projects-link">
-                    <div class="projects-inner">
-                      <p class="projects-tooltip visit-tooltip" data-i18n="projectsTooltip">VOIR PROJET</p>
-                      <a class="" href="javascript:void(0);" target="_blank" rel="noopener">
-                        <img src="" alt="Voir le projet">
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <p class="projects-click-message" data-i18n="clickOnFolder"></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact" aria-label="Section contact">
-      <div class="contact-container">
-        <h2 class="contact-title" data-i18n="contactTitle" id="contact-title">CONTACTEZ MOI</h2>
-        <div class="contact-card">
-          <a href="tel:+33680175771">
-            <img src="./assets/icons/phone-light.png" alt="Icône téléphone" />
-            <p class="contact-tooltip" data-i18n="phoneCallText"></p>
-            <p aria-label="Numéro de téléphone">+33 6 80 17 57 71</p>
-          </a>
-          <a href="mailto:matthieu888@gmail.com" target="_blank" rel="noopener">
-            <img src="./assets/icons/mail-light.png" alt="Icône email" />
-            <p class="contact-tooltip" data-i18n="emailText"></p>
-            <p aria-label="Adresse email">matthieu888@gmail.com</p>
-          </a>
-          <a href="https://api.whatsapp.com/send?phone=+33680175771&text=Hello" target="_blank" rel="noopener">
-            <img src="./assets/icons/whatsapp-green.png" alt="Icône Whatsapp" />
-            <p class="contact-tooltip" data-i18n="whatsappText"></p>
-            <p aria-label="Numéro de téléphone">+33 6 80 17 57 71</p>
-          </a>
-        </div>
-        <form action="submit" class="form-card" aria-labelledby="contact-title" role="form" autocomplete="on">
-          <div class="double-input-container">
-            <div class="input-container">
-              <label for="lastname" data-i18n="lastnameForm">Nom</label>
-              <input type="text" id="lastname" name="lastname" required />
-            </div>
-            <div class="input-container">
-              <label for="firstname" data-i18n="firstnameForm">Prénom</label>
-              <input type="text" id="firstname" name="firstname" required />
-            </div>
-          </div>
-          <div class="double-input-container">
-            <div class="input-container">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div class="input-container">
-              <label for="phone" data-i18n="phoneForm">Téléphone</label>
-              <input type="tel" id="phone" name="phone" />
-            </div>
-          </div>
-          <div class="input-container">
-            <label for="object" data-i18n="subjectForm">Objet</label>
-            <input type="text" id="object" name="subject" required />
-          </div>
-          <div class="input-container">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
-          </div>
-          <div class="checkbox-container">
-            <input type="checkbox" id="accept" name="accept" required aria-required="true" />
-            <label for="accept" data-i18n="checkboxText"></label>
-          </div>
-          <button class="btn submitBtn" data-i18n="submitBtn" type="submit"
-            aria-label="Envoyer message">ENVOYER</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer" role="contentinfo">
-    <div class="legal-container">
-      <button class="legal" data-modal-target="#legalModal" data-i18n="legal" aria-haspopup="dialog"
-        aria-controls="legalModal" aria-expanded="false">
-        Mentions légales & Confidentialité
-      </button>
+    <!-- Modale - Agrandissement des images des projets -->
+    <div
+      id="image-modal"
+      class="modal modal--image"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="image-modal-title"
+      tabindex="-1"
+    >
+      <button class="close modal-close--image" aria-label="Fermer l’image">&times;</button>
+      <img class="modal-content modal-content--image" id="modal-image" alt="Image agrandie" />
     </div>
-    <p class="copyright" data-i18n="copyright">© 2025 Matthieu Chatelin. Tous droits réservés.</p>
-    <a id="arrow-up" href="#top" aria-label="Revenir en haut de la page">
-      <img src="./assets/icons/up-arrow-light.png" alt="" aria-hidden="true" />
-      <p data-i18n="top">BACK TO TOP</p>
-      <img src="./assets/icons/up-arrow-light.png" alt="" aria-hidden="true" />
-    </a>
-    <div class="social">
-      <a href="https://www.linkedin.com/in/matthieu-chatelin/" target="_blank" rel="noopener"
-        aria-label="Profil LinkedIn de Matthieu Chatelin">
-        <img src="./assets/icons/linkedin-light.png" alt="Logo Linkedin" />
-        <p class="social-tooltip">LINKEDIN</p>
-      </a>
-      <a href="https://github.com/Matteus888" target="_blank" rel="noopener"
-        aria-label="Profil GitHub de Matthieu Chatelin">
-        <img src="./assets/icons/github-light.png" alt="Logo GitHub" />
-        <p class="social-tooltip">GITHUB</p>
-      </a>
-    </div>
-  </footer>
 
-  <!-- Modale - Agrandissement des images des projets -->
-  <div id="image-modal" class="modal modal--image" role="dialog" aria-modal="true" aria-labelledby="image-modal-title"
-    tabindex="-1">
-    <button class="close modal-close--image" aria-label="Fermer l’image">&times;</button>
-    <img class="modal-content modal-content--image" id="modal-image" alt="Image agrandie" />
-  </div>
-
-  <!-- Modale - Mentions légales -->
-  <div id="legalModal" class="modal modal--legal" role="dialog" aria-modal="true" aria-labelledby="legalModalTitle"
-    aria-describedby="legalModalDesc" tabindex="-1">
-    <div class="modal-content modal-content--legal">
-      <button class="close modal-close--legal" aria-label="Fermer les mentions légales">&times;</button>
-      <h2 id="legalModalTitle" data-i18n="legalTitle"></h2>
-      <img src="./assets/icons/legal-light.png" alt="Icône balance de justice pour les mentions légales" />
-      <div id="legalModalDesc">
-        <h3 data-i18n="legalPublisherTitle"></h3>
-        <p data-i18n="legalPublisherText"></p>
-        <p>Email : <a href="mailto:matthieu888@gmail.com">matthieu888@gmail.com</a></p>
-        <p>Website : <a href="https://www.votreportfolio.com" target="_blank"
-            rel="noopener noreferrer">https://www.votreportfolio.com</a></p>
-        <h3 data-i18n="legalHostTitle"></h3>
-        <p data-i18n="legalHostText"></p>
-        <p><strong>[Nom de l'hébergeur]</strong></p>
-        <p>[Adresse de l'hébergeur]</p>
-        <p>Website : <a href="https://www.hebergeur.com" target="_blank"
-            rel="noopener noreferrer">https://www.hebergeur.com</a>
-        </p>
-        <h3 data-i18n="legalLiabilityTitle"></h3>
-        <p data-i18n="legalLiabilityText"></p>
+    <!-- Modale - Mentions légales -->
+    <div
+      id="legalModal"
+      class="modal modal--legal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="legalModalTitle"
+      aria-describedby="legalModalDesc"
+      tabindex="-1"
+    >
+      <div class="modal-content modal-content--legal">
+        <button class="close modal-close--legal" aria-label="Fermer les mentions légales">&times;</button>
+        <h2 id="legalModalTitle" data-i18n="legalTitle"></h2>
+        <img src="./assets/icons/legal-light.png" alt="Icône balance de justice pour les mentions légales" />
+        <div id="legalModalDesc">
+          <h3 data-i18n="legalPublisherTitle"></h3>
+          <p data-i18n="legalPublisherText"></p>
+          <p>Email : <a href="mailto:matthieu888@gmail.com">matthieu888@gmail.com</a></p>
+          <p>
+            Website :
+            <a href="https://www.votreportfolio.com" target="_blank" rel="noopener noreferrer"
+              >https://www.votreportfolio.com</a
+            >
+          </p>
+          <h3 data-i18n="legalHostTitle"></h3>
+          <p data-i18n="legalHostText"></p>
+          <p><strong>[Nom de l'hébergeur]</strong></p>
+          <p>[Adresse de l'hébergeur]</p>
+          <p>
+            Website :
+            <a href="https://www.hebergeur.com" target="_blank" rel="noopener noreferrer">https://www.hebergeur.com</a>
+          </p>
+          <h3 data-i18n="legalLiabilityTitle"></h3>
+          <p data-i18n="legalLiabilityText"></p>
+        </div>
+        <div class="modal-line" aria-hidden="true"></div>
+        <h2 data-i18n="privacyTitle"></h2>
+        <img src="./assets/icons/confidentiality-light.png" alt="Icône cadenas pour la confidentialité" />
+        <div>
+          <h3 data-i18n="privacyDataTitle"></h3>
+          <p data-i18n="privacyDataText1"></p>
+          <p data-i18n="privacyDataText2"></p>
+          <p data-i18n="privacyDataText3"></p>
+          <h3 data-i18n="privacyCookiesTitle"></h3>
+          <p data-i18n="privacyCookiesText"></p>
+          <h3 data-i18n="privacyRightsTitle"></h3>
+          <p data-i18n="privacyRightsText1"></p>
+          <p data-i18n="privacyRightsText2"></p>
+        </div>
+        <button class="modal-btn btn" aria-label="Fermer la fenêtre modale">OK</button>
       </div>
-      <div class="modal-line" aria-hidden="true"></div>
-      <h2 data-i18n="privacyTitle"></h2>
-      <img src="./assets/icons/confidentiality-light.png" alt="Icône cadenas pour la confidentialité" />
-      <div>
-        <h3 data-i18n="privacyDataTitle"></h3>
-        <p data-i18n="privacyDataText1"></p>
-        <p data-i18n="privacyDataText2"></p>
-        <p data-i18n="privacyDataText3"></p>
-        <h3 data-i18n="privacyCookiesTitle"></h3>
-        <p data-i18n="privacyCookiesText"></p>
-        <h3 data-i18n="privacyRightsTitle"></h3>
-        <p data-i18n="privacyRightsText1"></p>
-        <p data-i18n="privacyRightsText2"></p>
-      </div>
-      <button class="modal-btn btn" aria-label="Fermer la fenêtre modale">OK</button>
     </div>
-  </div>
 
-  <!-- Toast - Formulaire de contact -->
-  <div id="toastContainer" role="status" aria-live="polite" aria-atomic="true"></div>
+    <!-- Toast - Formulaire de contact -->
+    <div id="toastContainer" role="status" aria-live="polite" aria-atomic="true"></div>
 
-  <!-- Bloc JSON-LD pour SEO -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Matthieu",
-      "email": "mailto:matthieu888@gmail.com",
-      "telephone": "+33-6-80-17-57-71",
-      "url": "https://my-80store-frontend.vercel.app/", 
-      "contactType": "customer support",
-      "availableLanguage": ["French", "English"],
-      "sameAs": [
-        "https://www.linkedin.com/in/matthieu-chatelin",
-        "https://github.com/Matteus888"
-      ]
-    }
+    <!-- Bloc JSON-LD pour SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Matthieu",
+        "email": "mailto:matthieu888@gmail.com",
+        "telephone": "+33-6-80-17-57-71",
+        "url": "https://my-80store-frontend.vercel.app/",
+        "contactType": "customer support",
+        "availableLanguage": ["French", "English"],
+        "sameAs": ["https://www.linkedin.com/in/matthieu-chatelin", "https://github.com/Matteus888"]
+      }
     </script>
-
-</body>
-
+  </body>
 </html>
